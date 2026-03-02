@@ -1,8 +1,12 @@
 import React from "react";
+import { useLocation } from "react-router-dom";
 import LastCurve from "../assets/images/Homepage/Asset 1.svg";
 import "../styles/components.css";
 
 const ExploreSection = () => {
+    const location = useLocation();
+    const isStoryPage = location.pathname === '/story';
+
     return (
         <section className="explore-section hidden md:block">
             <div className="footer-wave-container">
@@ -43,13 +47,21 @@ const ExploreSection = () => {
                         }}
                     >
                         <textPath href="#goldWavePath">
-                            {[...Array(6)].map((_, i) => (
-                                <React.Fragment key={i}>
-                                    <tspan fill="var(--color-navy)">Learning that goes beyond the classroom.{"\u00A0\u00A0\u00A0\u00A0"} </tspan>
-                                    <tspan fill="var(--color-navy)">The habits of mind that build character.{"\u00A0\u00A0\u00A0\u00A0"} </tspan>
-                                    <tspan fill="var(--color-navy)">Build them early. Build them with intention.{"\u00A0\u00A0\u00A0\u00A0"} </tspan>
-                                </React.Fragment>
-                            ))}
+                            {isStoryPage ? (
+                                [...Array(10)].map((_, i) => (
+                                    <React.Fragment key={i}>
+                                        <tspan fill="#ffffff">Learning that goes beyond the classroom{"\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0"} </tspan>
+                                    </React.Fragment>
+                                ))
+                            ) : (
+                                [...Array(6)].map((_, i) => (
+                                    <React.Fragment key={i}>
+                                        <tspan fill="var(--color-navy)">Learning that goes beyond the classroom.{"\u00A0\u00A0\u00A0\u00A0"} </tspan>
+                                        <tspan fill="var(--color-navy)">The habits of mind that build character.{"\u00A0\u00A0\u00A0\u00A0"} </tspan>
+                                        <tspan fill="var(--color-navy)">Build them early. Build them with intention.{"\u00A0\u00A0\u00A0\u00A0"} </tspan>
+                                    </React.Fragment>
+                                ))
+                            )}
                             <animate
                                 attributeName="startOffset"
                                 from="-100%"
@@ -63,9 +75,11 @@ const ExploreSection = () => {
                 </svg>
 
                 {/* 🔘 Button */}
-                <button className="footer-wave-button">
-                    OUR JOURNEY
-                </button>
+                {!isStoryPage && (
+                    <button className="footer-wave-button">
+                        OUR JOURNEY
+                    </button>
+                )}
 
             </div>
         </section>
