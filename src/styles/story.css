@@ -21,7 +21,13 @@
     align-items: center;
 }
 
-.story-hero {
+.story-section.compact-section {
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+}
+
+.story-hero,
+.story-banner-container {
     width: 100%;
     height: auto;
     max-width: 1150px;
@@ -29,6 +35,14 @@
     padding: 1rem 5% 0 5%;
     display: block;
     margin: 0 auto;
+    overflow: visible;
+}
+
+.story-banner-svg {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: visible;
 }
 
 .story-hero-text {
@@ -282,82 +296,92 @@
 /* Our Advisor Section */
 .advisor-section-container {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
-    max-width: 1200px;
+    max-width: 1250px;
     width: 100%;
-    margin: 4rem auto;
-    gap: 4rem;
+    margin: 0 auto 0 auto;
+    gap: 5rem;
+    background-color: var(--color-white);
+    padding: 6rem 4rem 6rem 0.5rem;
+    border-radius: 40px;
 }
 
 .advisor-left {
-    flex: 0 0 54%;
+    flex: 0 0 57%;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
+    justify-content: space-between;
+    padding-top: 3rem;
 }
 
 .advisor-title {
     font-size: 2.5rem;
-    color: var(--color-dark-navy, var(--color-dark-navy));
+    color: var(--color-dark-navy);
     font-weight: 800;
     margin-top: 0;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
     line-height: 1;
     text-transform: uppercase;
 }
 
+.advisor-subtitle-main {
+    font-size: 1.1rem;
+    color: var(--color-grey-text);
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 .advisor-subtitle {
     font-size: 1.25rem;
-    color: var(--color-grey-text, var(--color-grey-text));
+    color: var(--color-dark-navy, var(--color-dark-navy));
     font-weight: 700;
-    margin-top: 0;
+    margin-top: -0.2rem;
     margin-bottom: 0.5rem;
+    text-transform: uppercase;
 }
 
 .advisor-left p {
-    font-size: 1.05rem;
+    font-size: 1.15rem;
     color: var(--color-grey-text);
-    line-height: 1.6;
-    margin-top: 0;
-    margin-bottom: 2rem;
-    text-align: justify;
+    line-height: 1.7;
+    margin-bottom: 0.5rem;
+    text-align: left;
 }
 
 .advisor-left p strong {
-    color: var(--color-grey-text, var(--color-grey-text));
-    font-weight: 700;
+    color: #444;
+    font-weight: 800;
 }
 
 .advisor-logo-row {
     display: flex;
     align-items: center;
-    gap: 1.5rem;
-    margin-top: 1rem;
+    gap: 0;
+    margin-top: -5rem;
 }
 
-.advisor-logo-placeholder {
-    width: 150px;
-    height: 150px;
-    border: 2px dashed #ccc;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--color-grey-text);
-    font-size: 0.9rem;
-    text-align: center;
+.advisor-logo-img {
+    width: 400px;
+    height: auto;
+    object-fit: contain;
+    margin-left: -90px;
 }
 
 .advisor-logo-text {
-    border-left: 2px solid #ccc;
-    padding-left: 1.5rem;
+    border-left: 1px solid #ccc;
+    padding-left: 0.5rem;
+    margin-left: -6rem;
+    margin-top: 6rem;
+    display: flex;
+    align-items: center;
+    min-height: 100px;
 }
 
 .advisor-logo-text p {
     margin: 0;
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: var(--color-grey-text);
     line-height: 1.4;
     text-align: left;
@@ -370,17 +394,77 @@
     align-items: center;
 }
 
-.advisor-placeholder-box {
-    width: 100%;
-    aspect-ratio: 1;
-    border: 3px dashed var(--color-teal, var(--color-teal));
-    border-radius: 20px;
+.advisor-card {
+    position: relative;
+    width: 340px;
+    height: 520px;
+    background-color: var(--color-white);
+    border-radius: 10px;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    color: var(--color-grey-text);
-    background-color: rgba(255, 255, 255, 0.5);
-    font-size: 1.2rem;
+    justify-content: flex-end;
+    padding-bottom: 2rem;
+    margin: 50px auto;
+    overflow: visible;
+}
+
+.advisor-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 6px solid var(--color-teal);
+    border-radius: 10px;
+    pointer-events: none;
+    z-index: 5;
+}
+
+.advisor-card-img {
+    position: absolute;
+    top: -85px;
+    left: 43%;
+    transform: translateX(-50%) rotate(-4deg);
+    width: 560px;
+    max-width: none;
+    height: auto;
+    display: block;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.advisor-card-info {
+    text-align: center;
+    position: relative;
+    z-index: 20;
+    width: 100%;
+}
+
+.advisor-name-text {
+    font-size: 1.5rem;
+    color: var(--color-dark-navy);
+    font-weight: 800;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+}
+
+.advisor-role-text {
+    font-size: 1.1rem;
+    color: #ed0081;
+    font-weight: 700;
+    margin: 0.3rem 0 0.1rem 0;
+}
+
+.advisor-board-text {
+    font-size: 1.1rem;
+    color: #ed0081;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.2;
 }
 
 /* Charvi My Story Section */
@@ -390,7 +474,7 @@
     justify-content: space-between;
     max-width: 1200px;
     width: 100%;
-    margin: 3rem auto;
+    margin: 2rem auto 0 auto;
     gap: 2rem;
 }
 

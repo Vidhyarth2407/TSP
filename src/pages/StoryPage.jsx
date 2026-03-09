@@ -8,12 +8,10 @@ import BannerTop from '../assets/Story/BAnner.svg';
 import Guiding from '../assets/Story/Guiding.svg';
 import InnerWorld from '../assets/Story/Inner World.svg';
 import Path from '../assets/Story/Path.svg';
-import InnerStars from '../assets/Story/Inner Stars.svg';
-import TheBigSix from '../assets/Story/The Big Six.svg';
-import Tutoring from '../assets/Story/Tutoring.svg';
 import Charvi from '../assets/Story/Charvi.svg';
-import Different from '../assets/Story/Different.svg';
-import StarBreath from '../assets/Story/Star Breath.svg';
+import Aakriti from '../assets/Story/Aakriti.svg';
+import CalmConnectLogo from '../assets/Story/Calm Connect Therapy.svg';
+
 
 const StoryPage = () => {
     useEffect(() => {
@@ -24,7 +22,7 @@ const StoryPage = () => {
     return (
         <div className="story-page">
             <section className="story-section pt-0" data-aos="fade-in">
-                <img src={BannerTop} alt="Why The Starry Path Exists" className="story-hero" />
+                <img src={BannerTop} alt="Why The Starry Path Exists" className="story-hero animated-banner" />
                 <div className="story-hero-text">
                     <h4>A child's inner world is made of many pieces.</h4>
                     <p>Understanding how those pieces work together builds habits of mind and character.</p>
@@ -92,7 +90,7 @@ const StoryPage = () => {
             </section>
 
             {/* My Story - Charvi Section */}
-            <section className="story-section" data-aos="fade-up">
+            <section className="story-section compact-section" data-aos="fade-up">
                 <div className="charvi-section-container">
                     <div className="charvi-left">
                         <div>
@@ -115,42 +113,45 @@ const StoryPage = () => {
             </section>
 
             {/* Our Advisor Section */}
-            <section className="story-section" data-aos="fade-up">
+            <section className="story-section compact-section" data-aos="fade-up">
                 <div className="advisor-section-container">
                     <div className="advisor-left">
                         <h2 className="advisor-title">OUR ADVISOR</h2>
-                        <h3 className="advisor-subtitle">The Starry Path Advisor</h3>
+                        <h3 className="advisor-subtitle-main">The Starry Path Advisor</h3>
                         <p>Aakriti is a dual-certified Clinical Psychologist (India &amp; New Zealand) helping women break cycles of <strong>anxiety, self-doubt, perfectionism, and people-pleasing.</strong> With over 12 years of experience across India, Malaysia, and New Zealand, she supports adults to heal and reconnect with their authentic selves using evidence-based therapy.</p>
 
                         <div className="advisor-logo-row">
-                            <div className="advisor-logo-placeholder">
-                                Logo Placeholder
-                            </div>
+                            <img src={CalmConnectLogo} alt="Calm Connect Therapy Logo" className="advisor-logo-img" />
                             <div className="advisor-logo-text">
                                 <p>Learn more<br />at <strong>calmconnecttherapy.com</strong><br />or follow her journey online.</p>
                             </div>
                         </div>
                     </div>
                     <div className="advisor-right">
-                        <div className="advisor-placeholder-box">
-                            Provide SVG Here
+                        <div className="advisor-card">
+                            <img src={Aakriti} alt="Aakriti - Our Advisor" className="advisor-card-img" />
+                            <div className="advisor-card-info">
+                                <h4 className="advisor-name-text">AAKRITI MALIK</h4>
+                                <p className="advisor-role-text">Clinical Psychologist</p>
+                                <p className="advisor-board-text">New Zealand Psychologists Board</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
 
             {/* Guiding Children's Growth Section */}
-            <section className="story-section guiding-section" data-aos="fade-up">
+            <section className="story-section guiding-section compact-section" data-aos="fade-up">
                 <div className="guiding-container">
                     <img src={Guiding} alt="Guiding Background" className="guiding-bg" />
                     <div className="guiding-content">
-                        <h2>GUIDING{" "}<br className="hidden md:block" />CHILDREN'S GROWTH</h2>
-                        <h3>The Starry Path is named{" "}<br className="hidden md:block" />for what it aims to nurture:</h3>
-                        <p>Awareness and resilience in how children{" "}<br className="hidden md:block" />think, learn, and live.</p>
-                        <p>Their inner strengths become guiding{" "}<br className="hidden md:block" />lights for learning and for life beyond{" "}<br className="hidden md:block" />the classroom.</p>
+                        <h2 data-aos="fade-right" data-aos-delay="200">GUIDING{" "}<br className="hidden md:block" />CHILDREN'S GROWTH</h2>
+                        <h3 data-aos="fade-right" data-aos-delay="400">The Starry Path is named{" "}<br className="hidden md:block" />for what it aims to nurture:</h3>
+                        <p data-aos="fade-up" data-aos-delay="600">Awareness and resilience in how children{" "}<br className="hidden md:block" />think, learn, and live.</p>
+                        <p data-aos="fade-up" data-aos-delay="800">Their inner strengths become guiding{" "}<br className="hidden md:block" />lights for learning and for life beyond{" "}<br className="hidden md:block" />the classroom.</p>
                     </div>
                 </div>
-                <div className="guiding-btn-wrapper">
+                <div className="guiding-btn-wrapper" data-aos="zoom-in" data-aos-delay="1000">
                     <button className="btn-join font-bold">JOIN THE JOURNEY</button>
                 </div>
             </section>

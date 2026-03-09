@@ -26,7 +26,13 @@ const Header = () => {
                 <nav className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
                     <ul>
                         <li><Link to="/story" onClick={() => setIsMenuOpen(false)}>Story</Link></li>
-                        <li><Link to="/programs" onClick={() => setIsMenuOpen(false)}>Programs</Link></li>
+                        <li className="nav-item-dropdown">
+                            <Link to="/programs" onClick={() => setIsMenuOpen(false)}>Programs</Link>
+                            <div className="dropdown-menu">
+                                <Link to="/inner-stars" className="dropdown-item inner-stars-btn" onClick={() => setIsMenuOpen(false)}>Inner Stars</Link>
+                                <Link to="/programs#learning-stars" className="dropdown-item learning-stars-btn" onClick={() => setIsMenuOpen(false)}>Learning Stars</Link>
+                            </div>
+                        </li>
                         <li><span className="nav-disabled">Resources</span></li>
                         <li className="mobile-cta">
                             <button className="btn-join font-bold">Book now</button>
