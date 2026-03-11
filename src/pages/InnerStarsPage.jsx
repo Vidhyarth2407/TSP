@@ -59,7 +59,7 @@ const InnerStarsPage = () => {
     ];
 
     useEffect(() => {
-        AOS.init({ duration: 1000, once: true });
+        AOS.init({ duration: 1000, once: false });
         window.scrollTo(0, 0);
 
         const timer = setInterval(() => {
@@ -350,52 +350,52 @@ const InnerStarsPage = () => {
             <section className="two-ways-to-join-section pt-4 lg:pt-6 pb-20 lg:pb-32 bg-white">
                 <div className="max-w-[1000px] mx-auto px-6">
                     <div className="text-center mb-6 lg:mb-8" data-aos="fade-up">
-                        <h2 className="mb-0" style={{ color: 'var(--color-dark-navy)', fontFamily: 'var(--font-heading)', fontSize: '2.5rem', fontWeight: 700, letterSpacing: '0.05em', textTransform: 'uppercase' }}>
+                        <h2 className="ls-join-section-title">
                             TWO WAYS TO JOIN
                         </h2>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-8 lg:gap-16">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 lg:gap-16">
 
                         {/* Pink Card */}
-                        <div className="relative w-full aspect-[430/620] overflow-hidden mx-auto max-w-[450px]" data-aos="fade-up" data-aos-delay="100">
+                        <div className="ls-join-card pink-variant" data-aos="fade-up" data-aos-delay="100">
                             {/* SVG Background Slice (Left Half) */}
-                            <img src={HowToJoinSvg} alt="" aria-hidden="true" className="absolute top-0 h-[105%] w-[220%] max-w-none origin-top-left" style={{ left: '-5%', top: '-2%' }} />
+                            <img src={HowToJoinSvg} alt="" aria-hidden="true" className="ls-join-svg-bg left-slice" />
 
                             {/* Text Content */}
-                            <div className="absolute inset-0 pl-20 sm:pl-24 pr-8 pt-[180px] sm:pt-[200px] pb-[40px] flex flex-col justify-start text-[var(--color-white)] z-10">
-                                <div className="mb-8 pl-4 lg:pl-6">
-                                    <h3 className="font-bold text-xl sm:text-[1.35rem] italic tracking-wide text-[#fcb116] mb-1">SATURDAYS SESSIONS</h3>
-                                    <p className="font-semibold text-[1.1rem] sm:text-lg text-[#fcb116]">Weekend Sessions</p>
+                            <div className="ls-join-card-content pink-text-offset">
+                                <div className="ls-join-card-header">
+                                    <h3 className="ls-join-card-title pink-title">SATURDAYS SESSIONS</h3>
+                                    <p className="ls-join-card-subtitle pink-subtitle">Weekend Sessions</p>
                                 </div>
 
-                                <ul className="space-y-6 text-base sm:text-[1.05rem] font-bold pl-4 lg:pl-6">
-                                    <li className="leading-snug">Two inner strengths<br />each term</li>
-                                    <li className="leading-snug">All six strengths explored<br />over the year</li>
-                                    <li className="leading-snug">Builds skills step by step<br />through the term</li>
+                                <ul className="ls-join-card-list">
+                                    <li>Two inner strengths<br />each term</li>
+                                    <li>All six strengths explored<br />over the year</li>
+                                    <li>Builds skills step by step<br />through the term</li>
                                 </ul>
                             </div>
                         </div>
 
                         {/* Green Card */}
-                        <div className="relative w-full aspect-[430/620] overflow-hidden mx-auto max-w-[450px]" data-aos="fade-up" data-aos-delay="200">
+                        <div className="ls-join-card green-variant" data-aos="fade-up" data-aos-delay="200">
                             {/* SVG Background Slice (Right Half) */}
-                            <img src={HowToJoinSvg} alt="" aria-hidden="true" className="absolute top-0 h-[105%] w-[220%] max-w-none origin-top-left" style={{ left: '-114%', top: '-2%' }} />
+                            <img src={HowToJoinSvg} alt="" aria-hidden="true" className="ls-join-svg-bg right-slice" />
 
                             {/* Text Content */}
-                            <div className="absolute inset-0 pl-16 sm:pl-20 pr-8 pt-[180px] sm:pt-[200px] pb-[40px] flex flex-col justify-start text-[var(--color-white)] z-10">
-                                <div className="mb-8 pl-3 lg:pl-4">
-                                    <h3 className="font-bold text-xl sm:text-[1.35rem] italic tracking-wide text-[#523cac] mb-1">HOLIDAYS INTENSIVES</h3>
-                                    <p className="font-semibold text-[1.1rem] sm:text-lg text-[#523cac]">2 to 6 Days Over 2 Weeks*</p>
+                            <div className="ls-join-card-content green-text-offset">
+                                <div className="ls-join-card-header">
+                                    <h3 className="ls-join-card-title green-title">HOLIDAYS INTENSIVES</h3>
+                                    <p className="ls-join-card-subtitle green-subtitle">2 to 6 Days Over 2 Weeks*</p>
                                 </div>
 
-                                <ul className="space-y-6 text-base sm:text-[1.05rem] font-bold pl-4 lg:pl-6">
-                                    <li className="leading-snug">Two inner strengths<br />at a time</li>
-                                    <li className="leading-snug">Immersive, hands on,<br />and fun</li>
-                                    <li className="leading-snug">Ideal for school holiday<br />learning</li>
+                                <ul className="ls-join-card-list">
+                                    <li>Two inner strengths<br />at a time</li>
+                                    <li>Immersive, hands on,<br />and fun</li>
+                                    <li>Ideal for school holiday<br />learning</li>
                                 </ul>
 
-                                <p className="absolute bottom-10 left-20 sm:left-24 pl-4 lg:pl-6 text-xs sm:text-sm font-light text-[#fff] opacity-90">*Starting mid 2026</p>
+                                <p className="ls-join-card-disclaimer">*Starting mid 2026</p>
                             </div>
                         </div>
 
@@ -404,17 +404,17 @@ const InnerStarsPage = () => {
             </section>
 
             {/* Bottom Tail Graphic */}
-            <div className="w-full overflow-hidden mt-[-120px] lg:mt-[-250px] bg-white relative z-0" data-aos="fade-up">
+            <div className="ls-tail-container" data-aos="fade-up">
                 <img
                     src={InnerStarsTailSvg}
                     alt=""
                     aria-hidden="true"
-                    className="w-full h-auto block min-w-[1440px] relative left-1/2 -translate-x-1/2"
+                    className="ls-tail-image"
                 />
             </div>
 
             {/* Enrollment Form Section */}
-            <section id="enrollment-form" className="enrollment-section py-16 lg:py-24  relative z-10 mt-[-120px] lg:mt-[-220px]">
+            <section id="enrollment-form" className="ls-enrollment-section">
                 <div className="max-w-[800px] mx-auto px-6">
                     <div className="text-center mb-12" data-aos="fade-up">
                         <h2 className="text-[1.8rem] lg:text-[2.2rem] font-bold tracking-wider uppercase text-[#122f52]" style={{ fontFamily: 'var(--font-heading)' }}>
@@ -494,6 +494,37 @@ const InnerStarsPage = () => {
                             </button>
                         </div>
                     </form>
+                </div>
+            </section>
+
+            {/* Testimonial Section */}
+            <section className="is-testimonial-section pt-4 pb-16 lg:pt-6 lg:pb-24">
+                <div className="max-w-[1200px] mx-auto px-6">
+                    <div className="testimonial-container relative bg-[#002147] rounded-[2.5rem] lg:rounded-[4rem] p-10 lg:p-20 overflow-hidden" data-aos="zoom-in">
+                        <div className="testimonial-card relative bg-[#f15a24] rounded-[2rem] lg:rounded-[3rem] p-8 lg:p-16 z-10 flex flex-col items-center text-center">
+                            {/* Quote Icon Top */}
+                            <div className="absolute top-6 left-8 lg:top-10 lg:left-12 opacity-80">
+                                <svg width="60" height="45" viewBox="0 0 75 56" fill="#002147">
+                                    <path d="M0 56V34C0 23.3333 2.33333 14.8333 7 8.5C11.6667 2.16667 19.3333 0 30 0V11C23.3333 11 19 12.5 17 15.5C15 18.5 14 22.5 14 27.5V31H30V56H0ZM45 56V34C45 23.3333 47.3333 14.8333 52 8.5C56.6667 2.16667 64.3333 0 75 0V11C68.3333 11 64 12.5 62 15.5C60 18.5 59 22.5 59 27.5V31H75V56H45Z" />
+                                </svg>
+                            </div>
+
+                            <p className="testimonial-text text-white text-lg lg:text-2xl font-medium leading-relaxed mb-8 relative z-10 px-4 lg:px-12">
+                                As a mum, I've been amazed by the positive impact Inner Stars has had. My child is learning to understand their feelings, and I've noticed they are better able to express themselves and calm down when upset. I feel so grateful to have found a program that nurtures both the heart and the mind.
+                            </p>
+
+                            <div className="testimonial-author px-4 lg:px-8">
+                                <p className="text-[#002147] font-bold text-lg lg:text-xl">— Mansi, parent of a 5 year old</p>
+                            </div>
+
+                            {/* Quote Icon Bottom */}
+                            <div className="absolute bottom-6 right-8 lg:bottom-12 lg:right-16 opacity-80 rotate-180">
+                                <svg width="60" height="45" viewBox="0 0 75 56" fill="#002147">
+                                    <path d="M0 56V34C0 23.3333 2.33333 14.8333 7 8.5C11.6667 2.16667 19.3333 0 30 0V11C23.3333 11 19 12.5 17 15.5C15 18.5 14 22.5 14 27.5V31H30V56H0ZM45 56V34C45 23.3333 47.3333 14.8333 52 8.5C56.6667 2.16667 64.3333 0 75 0V11C68.3333 11 64 12.5 62 15.5C60 18.5 59 22.5 59 27.5V31H75V56H45Z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
         </div>

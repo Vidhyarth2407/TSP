@@ -120,7 +120,7 @@
 
 @media (max-width: 768px) {
     .inner-stars-page {
-        padding-top: 100px;
+        padding-top: 0;
     }
 
     .inner-stars-card {
@@ -152,6 +152,64 @@
 .carousel-container {
     position: relative;
     width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 1024px) {
+    .why-carousel-section {
+        padding: 40px 0 !important;
+    }
+
+    .why-carousel-section>div {
+        height: auto !important;
+        min-height: unset !important;
+    }
+
+    .carousel-container {
+        height: auto !important;
+    }
+
+    .carousel-slide {
+        position: relative !important;
+        display: none;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+    }
+
+    .carousel-slide.active {
+        display: block;
+        opacity: 1;
+    }
+
+    .carousel-card {
+        padding: 2.5rem 1.5rem !important;
+        gap: 2rem !important;
+        height: auto !important;
+    }
+
+    .carousel-dots {
+        display: none !important;
+    }
+
+    .why-title {
+        font-size: 1.8rem !important;
+        margin-bottom: 1.5rem !important;
+    }
+
+    .why-questions {
+        margin-bottom: 1.5rem !important;
+    }
+
+    .why-questions div {
+        font-size: 1rem !important;
+    }
+
+    .why-cta-btn {
+        width: 100%;
+        text-align: center;
+        padding: 1rem 1.5rem !important;
+        font-size: 0.9rem !important;
+    }
 }
 
 .carousel-card {
@@ -227,5 +285,217 @@
 @media (max-width: 1024px) {
     .why-title {
         font-size: 2rem;
+    }
+}
+
+/* Testimonial Section */
+.is-testimonial-section {
+    background-color: var(--color-bg);
+    width: 100%;
+}
+
+.testimonial-container {
+    box-shadow: 0 30px 60px rgba(0, 33, 71, 0.2);
+}
+
+.testimonial-card {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-text {
+    font-family: var(--font-accent);
+}
+
+@media (max-width: 768px) {
+    .testimonial-container {
+        padding: 4rem 1.5rem;
+        border-radius: 30px;
+    }
+
+    .testimonial-card {
+        padding: 4rem 1.5rem;
+        border-radius: 20px;
+    }
+
+    .testimonial-text {
+        font-size: 1.1rem;
+        padding: 0;
+    }
+
+    .testimonial-author p {
+        font-size: 1rem;
+    }
+
+    .testimonial-container svg {
+        width: 40px;
+        height: auto;
+    }
+}
+
+/* Two Ways to Join Section Styles */
+.ls-join-section-title {
+    color: var(--color-dark-navy);
+    font-family: var(--font-heading);
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.ls-join-card {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 430/620;
+    overflow: hidden;
+    margin: 0 auto;
+    max-width: 450px;
+}
+
+.ls-join-svg-bg {
+    position: absolute;
+    top: 0;
+    height: 105%;
+    width: 220%;
+    max-width: none;
+    transform-origin: top left;
+}
+
+.left-slice {
+    left: -5%;
+    top: -2%;
+}
+
+.right-slice {
+    left: -114%;
+    top: -2%;
+}
+
+.ls-join-card-content {
+    position: absolute;
+    inset: 0;
+    padding-right: 10%;
+    padding-bottom: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    color: var(--color-white);
+    z-index: 10;
+}
+
+.pink-text-offset {
+    padding-left: 25%;
+    padding-top: 42%;
+}
+
+.green-text-offset {
+    padding-left: 22%;
+    padding-top: 42%;
+}
+
+.ls-join-card-header {
+    margin-bottom: 5%;
+}
+
+.ls-join-card-title {
+    font-weight: 800;
+    font-size: clamp(1.1rem, 3vw, 1.35rem);
+    font-style: italic;
+    letter-spacing: 0.025em;
+    margin-bottom: 0.25rem;
+}
+
+.pink-title,
+.pink-subtitle {
+    color: #fcb116;
+}
+
+.green-title,
+.green-subtitle {
+    color: #523cac;
+}
+
+.ls-join-card-subtitle {
+    font-weight: 600;
+    font-size: clamp(0.95rem, 2.5vw, 1.125rem);
+}
+
+.ls-join-card-list {
+    list-style: none;
+    padding-left: 1rem;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.ls-join-card-list li {
+    font-weight: 700;
+    font-size: clamp(0.875rem, 2.2vw, 1.05rem);
+    line-height: 1.3;
+}
+
+.ls-join-card-disclaimer {
+    position: absolute;
+    bottom: 2rem;
+    left: 5rem;
+    font-size: 0.75rem;
+    font-weight: 300;
+    opacity: 0.9;
+}
+
+@media (max-width: 767px) {
+    .ls-join-card {
+        aspect-ratio: 400/580;
+    }
+
+    .pink-text-offset {
+        padding-left: 24%;
+        padding-top: 48%;
+    }
+
+    .green-text-offset {
+        padding-left: 25%;
+        padding-top: 48%;
+    }
+
+    .ls-join-card-header {
+        margin-bottom: 3%;
+    }
+
+    .ls-join-card-list {
+        gap: 0.75rem;
+        padding-left: 0.5rem;
+    }
+
+    .ls-join-card-list li {
+        font-size: 0.9rem;
+    }
+
+    .ls-join-card-disclaimer {
+        bottom: 5%;
+        left: 28%;
+    }
+
+    .ls-join-card.green-variant {
+        margin-top: -6.5rem;
+        /* Pushes only the green card up significantly more */
+    }
+
+    @media (max-width: 480px) {
+        .ls-join-card {
+            aspect-ratio: 320/500;
+        }
+
+        .pink-text-offset {
+            padding-left: 28%;
+            padding-top: 52%;
+        }
+
+        .green-text-offset {
+            padding-left: 28%;
+            padding-top: 52%;
+        }
     }
 }

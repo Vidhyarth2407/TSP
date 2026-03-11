@@ -6,9 +6,11 @@ import "../styles/components.css";
 const ExploreSection = () => {
     const location = useLocation();
     const isStoryPage = location.pathname === '/story';
+    const isLearningStarsPage = location.pathname === '/learning-stars';
+    const isInnerStarsPage = location.pathname === '/inner-stars';
 
     return (
-        <section className="explore-section hidden md:block">
+        <section className={`explore-section hidden md:block ${isLearningStarsPage ? 'bg-[var(--color-dark-navy)]' : ''}`}>
             <div className="footer-wave-container">
 
                 {/* 🌊 Background Wave */}
@@ -53,12 +55,24 @@ const ExploreSection = () => {
                                         <tspan fill="#ffffff">Learning that goes beyond the classroom{"\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0"} </tspan>
                                     </React.Fragment>
                                 ))
+                            ) : isLearningStarsPage ? (
+                                [...Array(12)].map((_, i) => (
+                                    <React.Fragment key={i}>
+                                        <tspan fill="var(--color-navy)">Learning Stars builds literacy{"\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0"} </tspan>
+                                    </React.Fragment>
+                                ))
+                            ) : isInnerStarsPage ? (
+                                [...Array(12)].map((_, i) => (
+                                    <React.Fragment key={i}>
+                                        <tspan fill="var(--color-navy)">Inner Stars builds character{"\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0"} </tspan>
+                                    </React.Fragment>
+                                ))
                             ) : (
                                 [...Array(6)].map((_, i) => (
                                     <React.Fragment key={i}>
-                                        <tspan fill="var(--color-navy)">Learning that goes beyond the classroom.{"\u00A0\u00A0\u00A0\u00A0"} </tspan>
-                                        <tspan fill="var(--color-navy)">The habits of mind that build character.{"\u00A0\u00A0\u00A0\u00A0"} </tspan>
-                                        <tspan fill="var(--color-navy)">Build them early. Build them with intention.{"\u00A0\u00A0\u00A0\u00A0"} </tspan>
+                                        <tspan fill="var(--color-navy)">Learning that goes beyond the classroom{"\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0"} </tspan>
+                                        <tspan fill="var(--color-navy)">The habits of mind that build character{"\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0"} </tspan>
+                                        <tspan fill="var(--color-navy)">Build them early. Build them with intention{"\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0"} </tspan>
                                     </React.Fragment>
                                 ))
                             )}

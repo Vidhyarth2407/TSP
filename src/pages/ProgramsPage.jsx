@@ -12,7 +12,7 @@ import ProgramCTA from '../components/Programs/ProgramCTA';
 
 const ProgramsPage = () => {
     useEffect(() => {
-        AOS.init({ duration: 1000, once: true });
+        AOS.init({ duration: 1000, once: false });
 
         // Handle anchor scroll
         const handleHashScroll = () => {

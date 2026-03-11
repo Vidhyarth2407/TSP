@@ -10,7 +10,7 @@ const MainLayout = ({ children }) => {
     const location = useLocation();
     // Default to true on initial load
     const [loading, setLoading] = useState(true);
-    const showExploreSection = !['/programs', '/inner-stars'].includes(location.pathname);
+    const showExploreSection = !['/programs'].includes(location.pathname);
 
     useEffect(() => {
         window.scrollTo(0, 0);

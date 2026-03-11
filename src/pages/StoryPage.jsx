@@ -15,7 +15,7 @@ import CalmConnectLogo from '../assets/Story/Calm Connect Therapy.svg';
 
 const StoryPage = () => {
     useEffect(() => {
-        AOS.init({ duration: 1000, once: true });
+        AOS.init({ duration: 1000, once: false });
         window.scrollTo(0, 0);
     }, []);
 
@@ -121,9 +121,11 @@ const StoryPage = () => {
                         <p>Aakriti is a dual-certified Clinical Psychologist (India &amp; New Zealand) helping women break cycles of <strong>anxiety, self-doubt, perfectionism, and people-pleasing.</strong> With over 12 years of experience across India, Malaysia, and New Zealand, she supports adults to heal and reconnect with their authentic selves using evidence-based therapy.</p>
 
                         <div className="advisor-logo-row">
-                            <img src={CalmConnectLogo} alt="Calm Connect Therapy Logo" className="advisor-logo-img" />
+                            <a href="https://calmconnecttherapy.com/" target="_blank" rel="noopener noreferrer">
+                                <img src={CalmConnectLogo} alt="Calm Connect Therapy Logo" className="advisor-logo-img" />
+                            </a>
                             <div className="advisor-logo-text">
-                                <p>Learn more<br />at <strong>calmconnecttherapy.com</strong><br />or follow her journey online.</p>
+                                <p>Learn more<br />at <a href="https://calmconnecttherapy.com/" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit' }}><strong>calmconnecttherapy.com</strong></a><br />or follow her journey online.</p>
                             </div>
                         </div>
                     </div>
