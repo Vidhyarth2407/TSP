@@ -163,7 +163,7 @@ const InnerStarsPage = () => {
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 max-w-[1200px] mx-auto" data-aos="fade-up" data-aos-delay="200">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-0 md:gap-8 lg:gap-12 max-w-[1200px] mx-auto" data-aos="fade-up" data-aos-delay="200">
                         {/* Card 1: Growing Strong Humans */}
                         <div className="relative w-full aspect-[377.77/424.54] overflow-hidden group hover:-translate-y-2 transition-transform duration-300">
                             <img src={LifeSkillsSvg} alt="" aria-hidden="true" className="absolute top-0 h-full w-[347.603%] max-w-none" style={{ left: '-13.94%' }} />
@@ -173,7 +173,7 @@ const InnerStarsPage = () => {
                         </div>
 
                         {/* Card 2: Building Habits of Mind */}
-                        <div className="relative w-full aspect-[377.77/424.54] overflow-hidden group hover:-translate-y-2 transition-transform duration-300">
+                        <div className="relative w-full aspect-[377.77/424.54] overflow-hidden group hover:-translate-y-2 transition-transform duration-300 -mt-[100px] md:mt-0">
                             <img src={LifeSkillsSvg} alt="" aria-hidden="true" className="absolute top-0 h-full w-[347.603%] max-w-none" style={{ left: '-123.8%' }} />
                             <div className="absolute left-0 right-0 flex items-center justify-center px-4 pointer-events-none" style={{ top: '56.78%', height: '26.89%' }}>
                                 <h3 className="text-white font-bold text-center text-base sm:text-lg lg:text-xl leading-tight mt-8 sm:mt-10 lg:mt-12">Building Habits of Mind</h3>
@@ -181,7 +181,7 @@ const InnerStarsPage = () => {
                         </div>
 
                         {/* Card 3: Shaping Character & Values */}
-                        <div className="relative w-full aspect-[377.77/424.54] overflow-hidden group hover:-translate-y-2 transition-transform duration-300">
+                        <div className="relative w-full aspect-[377.77/424.54] overflow-hidden group hover:-translate-y-2 transition-transform duration-300 -mt-[100px] md:mt-0">
                             <img src={LifeSkillsSvg} alt="" aria-hidden="true" className="absolute top-0 h-full w-[347.603%] max-w-none" style={{ left: '-233.66%' }} />
                             <div className="absolute left-0 right-0 flex items-center justify-center px-2 pointer-events-none" style={{ top: '56.78%', height: '26.89%' }}>
                                 <h3 className="text-white font-bold text-center text-base sm:text-lg lg:text-xl leading-tight mt-8 sm:mt-10 lg:mt-12">Shaping Character & Values</h3>
@@ -347,15 +347,15 @@ const InnerStarsPage = () => {
                 </div>
             </section>
 
-            <section className="two-ways-to-join-section pt-4 lg:pt-6 pb-20 lg:pb-32 bg-white">
+            <section className="two-ways-to-join-section pt-0 lg:pt-6 pb-0 lg:pb-8 bg-white">
                 <div className="max-w-[1000px] mx-auto px-6">
-                    <div className="text-center mb-6 lg:mb-8" data-aos="fade-up">
+                    <div className="text-center mb-0 lg:mb-8" data-aos="fade-up">
                         <h2 className="ls-join-section-title">
                             TWO WAYS TO JOIN
                         </h2>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 lg:gap-16">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 lg:gap-16 -mt-12 md:mt-0">
 
                         {/* Pink Card */}
                         <div className="ls-join-card pink-variant" data-aos="fade-up" data-aos-delay="100">

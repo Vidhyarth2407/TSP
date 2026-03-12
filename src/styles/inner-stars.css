@@ -451,13 +451,21 @@
     }
 
     .pink-text-offset {
-        padding-left: 24%;
+        padding-left: 21%;
         padding-top: 48%;
     }
 
     .green-text-offset {
-        padding-left: 25%;
+        padding-left: 21%;
         padding-top: 48%;
+    }
+
+    .left-slice {
+        left: -11%;
+    }
+
+    .right-slice {
+        left: -120%;
     }
 
     .ls-join-card-header {
@@ -479,7 +487,7 @@
     }
 
     .ls-join-card.green-variant {
-        margin-top: -6.5rem;
+        margin-top: -9rem;
         /* Pushes only the green card up significantly more */
     }
 
@@ -489,13 +497,48 @@
         }
 
         .pink-text-offset {
-            padding-left: 28%;
+            padding-left: 18%;
             padding-top: 52%;
         }
 
         .green-text-offset {
-            padding-left: 28%;
+            padding-left: 18%;
             padding-top: 52%;
         }
+    }
+}
+
+/* Tail Graphic & Enrollment Section Spacing */
+.ls-tail-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: -6rem;
+    /* Reduced from -10rem to create a small gap below the holiday card */
+    margin-bottom: -3rem;
+    position: relative;
+    z-index: 5;
+}
+
+.ls-tail-image {
+    width: 100%;
+    height: auto;
+}
+
+.ls-enrollment-section {
+    padding-top: 2rem;
+    padding-bottom: 5rem;
+    background-color: var(--color-white);
+}
+
+@media (min-width: 768px) {
+    .ls-tail-container {
+        margin-top: -12rem;
+        margin-bottom: -4rem;
+    }
+
+    .ls-enrollment-section {
+        padding-top: 0;
+        padding-bottom: 4rem;
     }
 }

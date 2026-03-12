@@ -728,6 +728,89 @@
         margin: 1.5rem auto 0;
     }
 
+    .advisor-section-container {
+        flex-direction: column-reverse;
+        padding: 4rem 1.5rem 3rem;
+        gap: 2rem;
+        border-radius: 25px;
+    }
+
+    .advisor-left {
+        flex: none;
+        width: 100%;
+        padding-top: 0;
+        text-align: center;
+    }
+
+    .advisor-title {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    .advisor-subtitle-main {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .advisor-left p {
+        text-align: justify;
+        font-size: 1rem;
+    }
+
+    .advisor-logo-row {
+        flex-direction: column;
+        margin-top: 1rem;
+        gap: 1.5rem;
+        align-items: center;
+    }
+
+    .advisor-logo-img {
+        width: 250px;
+        margin-left: 0;
+    }
+
+    .advisor-logo-text {
+        border-left: none;
+        border-top: 1px solid #ccc;
+        padding-left: 0;
+        padding-top: 1rem;
+        margin-left: 0;
+        margin-top: 0;
+        text-align: center;
+        min-height: auto;
+    }
+
+    .advisor-logo-text p {
+        text-align: center;
+    }
+
+    .advisor-right {
+        flex: none;
+        width: 100%;
+    }
+
+    .advisor-card {
+        width: 280px;
+        height: 420px;
+        margin: 40px auto 20px;
+    }
+
+    .advisor-card-img {
+        width: 440px;
+        top: -80px;
+        left: 45%;
+    }
+
+    .advisor-name-text {
+        font-size: 1.3rem;
+    }
+
+    .advisor-role-text,
+    .advisor-board-text {
+        font-size: 0.95rem;
+    }
+
     .guiding-section {
         padding: 0 1rem;
     }

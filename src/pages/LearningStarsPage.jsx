@@ -356,11 +356,11 @@ const LearningStarsPage = () => {
 
                     <div className="ls-difference-rows lg:-mt-10">
                         {/* Learning Stars Row */}
-                        <div className="ls-diff-row flex flex-col md:flex-row items-center gap-12 lg:gap-16 pt-0" data-aos="fade-up">
+                        <div className="ls-diff-row flex flex-col md:flex-row items-center gap-0 md:gap-12 lg:gap-16 pt-0" data-aos="fade-up">
                             <div className="ls-diff-image-wrapper w-full md:w-[45%] max-w-[600px]">
                                 <img src={LearningStarsDiffSvg} alt="Learning Stars Approach" className="w-full h-auto object-contain drop-shadow-xl" />
                             </div>
-                            <div className="ls-diff-content flex-1 py-8">
+                            <div className="ls-diff-content flex-1 -mt-12 md:mt-0 pt-0 pb-8 md:py-8">
                                 <h3 className="text-[#E44C17] text-2xl font-bold font-heading mb-4 tracking-wide">
                                     LEARNING STARS
                                 </h3>
@@ -375,11 +375,11 @@ const LearningStarsPage = () => {
                         </div>
 
                         {/* Tutoring Row */}
-                        <div className="ls-diff-row flex flex-col md:flex-row items-center gap-12 lg:gap-16 md:-mt-12 lg:-mt-20" data-aos="fade-up" data-aos-delay="200">
+                        <div className="ls-diff-row flex flex-col md:flex-row items-center gap-0 md:gap-12 lg:gap-16 md:-mt-12 lg:-mt-20" data-aos="fade-up" data-aos-delay="200">
                             <div className="ls-diff-image-wrapper w-full md:w-[45%] max-w-[600px]">
                                 <img src={TutoringSvg} alt="Traditional Tutoring" className="w-full h-auto object-contain drop-shadow-xl" />
                             </div>
-                            <div className="ls-diff-content flex-1 py-8">
+                            <div className="ls-diff-content flex-1 -mt-12 md:mt-0 pt-0 pb-8 md:py-8">
                                 <h3 className="text-[#2DD4BF] text-2xl font-bold font-heading mb-4 tracking-wide">
                                     TUTORING
                                 </h3>
