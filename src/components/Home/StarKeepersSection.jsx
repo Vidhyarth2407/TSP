@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const StarKeepersSection = () => {
     return (
@@ -51,9 +52,9 @@ const StarKeepersSection = () => {
                     </div>
                     {/* Button overlapping the bottom of the card */}
                     <div className="relative -mt-10 md:-mt-20 z-20 flex justify-center md:block">
-                        <button className="btn-join font-bold uppercase whitespace-nowrap text-sm px-8 py-3 shadow-md" style={{ borderRadius: '10px' }}>
+                        <Link to="/story" className="btn-join font-bold uppercase whitespace-nowrap text-sm px-8 py-3 shadow-md" style={{ borderRadius: '10px' }}>
                             READ OUR STORY
-                        </button>
+                        </Link>
                     </div>
                 </div>
 

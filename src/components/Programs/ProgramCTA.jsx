@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import WaveImg from '../../assets/images/Programs/Wave.svg';
 import "../../styles/components.css";
 
@@ -61,9 +62,9 @@ const ProgramCTA = () => {
                 </svg>
 
                 {/* 🔘 Button - Using footer-wave-button for consistency with ExploreSection */}
-                <button className="footer-wave-button" data-aos="zoom-in">
+                <Link to="/inner-stars#enrollment-form" className="footer-wave-button flex items-center justify-center text-center no-underline" data-aos="zoom-in">
                     START YOUR CHILD'S JOURNEY
-                </button>
+                </Link>
             </div>
         </section>
     );

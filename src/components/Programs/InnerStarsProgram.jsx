@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import InnerStarsImg from '../../assets/images/Programs/Inner Stars.svg';
 
 const InnerStarsProgram = () => {
@@ -31,9 +32,9 @@ const InnerStarsProgram = () => {
                         <strong style={{ color: 'var(--color-dark-navy)' }}>Perfect for:</strong> For every child aged 5-12 because healthy habits of mind matter.
                     </p>
                     <div className="flex justify-center md:justify-start">
-                        <button className="btn-join uppercase text-sm md:text-xl px-10 py-3 md:px-12 md:py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 font-bold">
+                        <Link to="/inner-stars" className="btn-join uppercase text-sm md:text-xl px-10 py-3 md:px-12 md:py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 font-bold">
                             Learn More
-                        </button>
+                        </Link>
                     </div>
                 </div>
             </section>

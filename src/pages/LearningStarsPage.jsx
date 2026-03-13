@@ -1,6 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import emailjs from '@emailjs/browser';
+import { EMAILJS_CONFIG } from '../config/emailConfig';
 import '../styles/learning-stars.css';
 
 // Assets
@@ -30,6 +32,7 @@ const LearningStarsPage = () => {
 
     useEffect(() => {
         AOS.init({ duration: 1000, once: false });
+        emailjs.init(EMAILJS_CONFIG.PUBLIC_KEY);
         window.scrollTo(0, 0);
 
         const timer = setInterval(() => {
@@ -38,6 +41,57 @@ const LearningStarsPage = () => {
 
         return () => clearInterval(timer);
     }, []);
+
+    const handleAssessmentSubmit = (e) => {
+        e.preventDefault();
+        
+        const form = e.target;
+        
+        // Prepare template parameters to ensure all common aliases are covered
+        const templateParams = {
+            child_name: form.child_name.value,
+            child_age: form.child_age.value,
+            parent_name: form.parent_name.value,
+            parent_email: form.parent_email.value,
+            parent_phone: form.parent_phone.value,
+            preferred_time: form.preferred_time.value,
+            message: form.message.value,
+            // Aliases for common EmailJS template variables
+            user_name: form.parent_name.value,
+            user_email: form.parent_email.value,
+            reply_to: form.parent_email.value,
+            to_email: form.parent_email.value,
+            from_name: form.parent_name.value
+        };
+        
+        emailjs.send(
+            EMAILJS_CONFIG.SERVICE_ID,
+            EMAILJS_CONFIG.TEMPLATE_ID,
+            templateParams,
+            EMAILJS_CONFIG.PUBLIC_KEY
+        ).then((result) => {
+            console.log('Email successfully sent!', result.text);
+            alert('Thank you! Your assessment request has been sent successfully.');
+        }, (error) => {
+            console.error('Email failed to send:', error);
+            alert('Something went wrong. Please try again later.');
+        });
+
+        // Trigger Calendly Popup
+        if (window.Calendly) {
+            window.Calendly.showPopupWidget('https://calendly.com/hello-thestarrypath-mglz/free-literacy-assessment');
+        }
+        
+        // Reset form
+        form.reset();
+    };
+
+    const openCalendly = (e) => {
+        e.preventDefault();
+        if (window.Calendly) {
+            window.Calendly.showPopupWidget('https://calendly.com/hello-thestarrypath-mglz/learning-stars-parent-call');
+        }
+    };
 
     const skills = [
         { icon: PhonemicSvg, title: "PHONEMIC\nAWARENESS", color: 'var(--color-yellow-gold)', delay: 100 },
@@ -168,8 +222,12 @@ const LearningStarsPage = () => {
                             </p>
                         </div>
 
-                        <div className="mt-12">
-                            <a href="https://calendly.com" target="_blank" rel="noopener noreferrer" className="why-cta-btn">
+                        <div className="mt-12" data-aos="fade-up">
+                            <a 
+                                href="#" 
+                                onClick={openCalendly}
+                                className="why-cta-btn"
+                            >
                                 BOOK A FREE 15 MINUTE CALL
                             </a>
                         </div>
@@ -433,50 +491,63 @@ const LearningStarsPage = () => {
             </section>
 
             {/* Assessment Booking Form Section */}
-            <section className="ls-booking-section pt-4 pb-20 bg-[var(--color-dark-navy)]">
+            <section id="assessment-section" className="ls-booking-section pt-4 pb-20 bg-[var(--color-dark-navy)]">
                 <div className="max-w-[1000px] mx-auto px-6" data-aos="fade-up">
-                    <form className="ls-booking-form space-y-6">
-                        {/* First Row: Child Name & Age */}
-                        <div className="flex flex-col md:flex-row gap-6">
-                            <div className="flex-[3]">
-                                <input
-                                    type="text"
-                                    placeholder="Child Name"
-                                    className="w-full bg-[#002B49] border border-[#E2E8F0]/30 rounded-2xl px-6 py-4 text-white placeholder:text-[#E2E8F0]/60 focus:outline-none focus:border-[#FBB03B] transition-colors"
-                                />
-                            </div>
-                            <div className="flex-1">
-                                <input
-                                    type="text"
-                                    placeholder="Age"
-                                    className="w-full bg-[#002B49] border border-[#E2E8F0]/30 rounded-2xl px-6 py-4 text-white placeholder:text-[#E2E8F0]/60 focus:outline-none focus:border-[#FBB03B] transition-colors"
-                                />
-                            </div>
+                    <form className="ls-booking-form space-y-6" onSubmit={handleAssessmentSubmit}>
+                        <div className="text-center mb-10">
+                            <h2 className="text-[#FBB03B] text-2xl lg:text-3xl font-extrabold uppercase tracking-wider font-heading">
+                                BOOK A FREE LITERACY ASSESSMENT
+                            </h2>
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <input
+                                type="text"
+                                name="child_name"
+                                placeholder="Child's Name"
+                                required
+                                className="w-full bg-[#002B49] border border-[#E2E8F0]/30 rounded-2xl px-6 py-4 text-white placeholder:text-[#E2E8F0]/60 focus:outline-none focus:border-[#FBB03B] transition-colors"
+                            />
+                            <input
+                                type="text"
+                                name="child_age"
+                                placeholder="Child's Age"
+                                required
+                                className="w-full bg-[#002B49] border border-[#E2E8F0]/30 rounded-2xl px-6 py-4 text-white placeholder:text-[#E2E8F0]/60 focus:outline-none focus:border-[#FBB03B] transition-colors"
+                            />
                         </div>
 
                         {/* Other Fields */}
                         <div className="space-y-6">
                             <input
                                 type="text"
+                                name="parent_name"
                                 placeholder="Parent Name"
+                                required
                                 className="w-full bg-[#002B49] border border-[#E2E8F0]/30 rounded-2xl px-6 py-4 text-white placeholder:text-[#E2E8F0]/60 focus:outline-none focus:border-[#FBB03B] transition-colors"
                             />
                             <input
                                 type="email"
+                                name="parent_email"
                                 placeholder="Email"
+                                required
                                 className="w-full bg-[#002B49] border border-[#E2E8F0]/30 rounded-2xl px-6 py-4 text-white placeholder:text-[#E2E8F0]/60 focus:outline-none focus:border-[#FBB03B] transition-colors"
                             />
                             <input
                                 type="tel"
+                                name="parent_phone"
                                 placeholder="Phone"
+                                required
                                 className="w-full bg-[#002B49] border border-[#E2E8F0]/30 rounded-2xl px-6 py-4 text-white placeholder:text-[#E2E8F0]/60 focus:outline-none focus:border-[#FBB03B] transition-colors"
                             />
                             <input
                                 type="text"
+                                name="preferred_time"
                                 placeholder="Preferred Day or Time for Screening (open text)"
                                 className="w-full bg-[#002B49] border border-[#E2E8F0]/30 rounded-2xl px-6 py-4 text-white placeholder:text-[#E2E8F0]/60 focus:outline-none focus:border-[#FBB03B] transition-colors"
                             />
                             <textarea
+                                name="message"
                                 placeholder="Brief Notes About Your Child&#10;(Are there any prior assessments, diagnoses, challenges, or reports you would like to share)"
                                 rows="5"
                                 className="w-full bg-[#002B49] border border-[#E2E8F0]/30 rounded-2xl px-6 py-4 text-white placeholder:text-[#E2E8F0]/60 focus:outline-none focus:border-[#FBB03B] transition-colors resize-none"
@@ -485,7 +556,7 @@ const LearningStarsPage = () => {
 
                         {/* Submit Button */}
                         <div className="pt-8 flex justify-center">
-                            <button className="ls-booking-btn text-white px-10 py-4 rounded-xl font-bold uppercase tracking-wider shadow-lg transition-transform active:scale-95">
+                            <button type="submit" className="ls-booking-btn text-white px-10 py-4 rounded-xl font-bold uppercase tracking-wider shadow-lg transition-transform active:scale-95">
                                 BOOK A FREE LITERACY ASSESSMENT
                             </button>
                         </div>

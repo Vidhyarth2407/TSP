@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import '../styles/story.css';
@@ -72,7 +73,7 @@ const StoryPage = () => {
                             as essential as reading or numeracy.
                         </p>
 
-                        <button className="btn-inner-world">HELP YOUR CHILD BUILD LIFELONG STRENGTHS</button>
+                        <Link to="/inner-stars" className="btn-inner-world">HELP YOUR CHILD BUILD LIFELONG STRENGTHS</Link>
                     </div>
                 </div>
             </section>
@@ -154,7 +155,7 @@ const StoryPage = () => {
                     </div>
                 </div>
                 <div className="guiding-btn-wrapper" data-aos="zoom-in" data-aos-delay="1000">
-                    <button className="btn-join font-bold">JOIN THE JOURNEY</button>
+                    <Link to="/programs" className="btn-join font-bold">JOIN THE JOURNEY</Link>
                 </div>
             </section>
         </div >

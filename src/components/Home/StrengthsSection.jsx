@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { useScrollAnimation } from '../../hooks/useScrollAnimation';
 import BounceBack from '../../assets/images/Homepage/Bounce back.svg';
 import StandTall from '../../assets/images/Homepage/Stand Tall.svg';
@@ -91,9 +92,9 @@ const StrengthsSection = () => {
             </div>
 
             <div className="flex justify-center mb-8 md:mb-16 px-4" data-aos="zoom-in" data-aos-offset="100">
-                <button className="btn-join font-bold uppercase text-sm md:text-2xl px-6 py-3 md:px-12 md:py-4 w-full md:w-auto rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
-                    HELP YOUR CHILD BUILD LIFELONG STRENGTHS
-                </button>
+                <Link to="/inner-stars" className="btn-join font-bold uppercase text-sm md:text-2xl px-6 py-3 md:px-12 md:py-4 w-full md:w-auto rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
+                    BUILD LIFELONG STRENGTHS
+                </Link>
             </div>
         </section>
     );

@@ -88,12 +88,7 @@ const ExploreSection = () => {
 
                 </svg>
 
-                {/* 🔘 Button */}
-                {!isStoryPage && (
-                    <button className="footer-wave-button">
-                        OUR JOURNEY
-                    </button>
-                )}
+
 
             </div>
         </section>

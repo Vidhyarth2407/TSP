@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import emailjs from '@emailjs/browser';
+import { EMAILJS_CONFIG } from '../config/emailConfig';
 import '../styles/inner-stars.css';
 
 // Asset Import
@@ -60,14 +62,79 @@ const InnerStarsPage = () => {
 
     useEffect(() => {
         AOS.init({ duration: 1000, once: false });
-        window.scrollTo(0, 0);
+        emailjs.init(EMAILJS_CONFIG.PUBLIC_KEY);
+
+        // Handle anchor scroll
+        const handleHashScroll = () => {
+            const hash = window.location.hash;
+            if (hash) {
+                const id = hash.replace('#', '');
+                const element = document.getElementById(id);
+                if (element) {
+                    setTimeout(() => {
+                        element.scrollIntoView({ behavior: 'smooth' });
+                    }, 100);
+                }
+            } else {
+                window.scrollTo(0, 0);
+            }
+        };
+
+        handleHashScroll();
+        window.addEventListener('hashchange', handleHashScroll);
 
         const timer = setInterval(() => {
             setCurrentSlide((prev) => (prev + 1) % slides.length);
         }, 5000);
 
-        return () => clearInterval(timer);
+        return () => {
+            clearInterval(timer);
+            window.removeEventListener('hashchange', handleHashScroll);
+        };
     }, [slides.length]);
+
+    const openCalendly = (e) => {
+        e.preventDefault();
+        if (window.Calendly) {
+            window.Calendly.showPopupWidget('https://calendly.com/hello-thestarrypath-mglz/inner-stars-parent-call');
+        }
+    };
+
+    const handleEnrollSubmit = (e) => {
+        e.preventDefault();
+        
+        const form = e.target;
+
+        const templateParams = {
+            child_name: form.child_name.value,
+            child_age: form.child_age.value,
+            parent_name: form.parent_name.value,
+            parent_email: form.parent_email.value,
+            parent_phone: form.parent_phone.value,
+            program: form.program.value,
+            // Aliases
+            user_name: form.parent_name.value,
+            user_email: form.parent_email.value,
+            reply_to: form.parent_email.value,
+            to_email: form.parent_email.value,
+            from_name: form.parent_name.value
+        };
+
+        emailjs.send(
+            EMAILJS_CONFIG.SERVICE_ID,
+            EMAILJS_CONFIG.TEMPLATE_ID,
+            templateParams,
+            EMAILJS_CONFIG.PUBLIC_KEY
+        ).then((result) => {
+            console.log('Email successfully sent!', result.text);
+            alert('Thank you! Your enrollment request has been sent successfully.');
+        }, (error) => {
+            console.error('Email failed to send:', error);
+            alert('Something went wrong. Please try again later.');
+        });
+
+        form.reset();
+    };
 
     return (
         <div className="inner-stars-page">
@@ -128,7 +195,11 @@ const InnerStarsPage = () => {
                                         <p className="text-[var(--color-grey-text)] opacity-80 text-base md:text-lg mb-10 max-w-md mx-auto lg:mx-0">
                                             {slide.description}
                                         </p>
-                                        <a href="https://calendly.com" target="_blank" rel="noopener noreferrer" className="why-cta-btn">
+                                        <a 
+                                            href="#" 
+                                            onClick={openCalendly}
+                                            className="why-cta-btn"
+                                        >
                                             BOOK A FREE 15 MINUTE CALL
                                         </a>
                                     </div>
@@ -422,20 +493,24 @@ const InnerStarsPage = () => {
                         </h2>
                     </div>
 
-                    <form className="space-y-6" data-aos="fade-up" data-aos-delay="200">
+                    <form className="space-y-6" data-aos="fade-up" data-aos-delay="200" onSubmit={handleEnrollSubmit}>
                         {/* Row 1: Child Name & Age */}
                         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
                             <div className="sm:col-span-2">
                                 <input
                                     type="text"
+                                    name="child_name"
                                     placeholder="Child Name"
+                                    required
                                     className="w-full px-6 py-4 rounded-[20px] border border-gray-300 bg-white/50 focus:outline-none focus:border-[var(--color-hot-pink)] text-gray-600 font-medium placeholder:text-gray-400"
                                 />
                             </div>
                             <div className="sm:col-span-1">
                                 <input
                                     type="text"
+                                    name="child_age"
                                     placeholder="Age"
+                                    required
                                     className="w-full px-6 py-4 rounded-[20px] border border-gray-300 bg-white/50 focus:outline-none focus:border-[var(--color-hot-pink)] text-gray-600 font-medium placeholder:text-gray-400"
                                 />
                             </div>
@@ -445,7 +520,9 @@ const InnerStarsPage = () => {
                         <div>
                             <input
                                 type="text"
+                                name="parent_name"
                                 placeholder="Parent Name"
+                                required
                                 className="w-full px-6 py-4 rounded-[20px] border border-gray-300 bg-white/50 focus:outline-none focus:border-[var(--color-hot-pink)] text-gray-600 font-medium placeholder:text-gray-400"
                             />
                         </div>
@@ -454,7 +531,9 @@ const InnerStarsPage = () => {
                         <div>
                             <input
                                 type="email"
+                                name="parent_email"
                                 placeholder="Email"
+                                required
                                 className="w-full px-6 py-4 rounded-[20px] border border-gray-300 bg-white/50 focus:outline-none focus:border-[var(--color-hot-pink)] text-gray-600 font-medium placeholder:text-gray-400"
                             />
                         </div>
@@ -463,7 +542,9 @@ const InnerStarsPage = () => {
                         <div>
                             <input
                                 type="tel"
+                                name="parent_phone"
                                 placeholder="Phone"
+                                required
                                 className="w-full px-6 py-4 rounded-[20px] border border-gray-300 bg-white/50 focus:outline-none focus:border-[var(--color-hot-pink)] text-gray-600 font-medium placeholder:text-gray-400"
                             />
                         </div>
@@ -471,6 +552,8 @@ const InnerStarsPage = () => {
                         {/* Row 5: Program Selection */}
                         <div className="relative">
                             <select
+                                name="program"
+                                required
                                 className="w-full px-6 py-4 rounded-[20px] border border-gray-300 bg-white/50 focus:outline-none focus:border-[var(--color-hot-pink)] text-gray-400 font-medium appearance-none"
                                 defaultValue=""
                             >

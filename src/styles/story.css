@@ -218,7 +218,7 @@
 
 .btn-inner-world {
     background: linear-gradient(90deg, var(--color-hot-pink) 0%, var(--color-deep-purple) 100%);
-    color: white;
+    color: white !important;
     border: none;
     padding: 0.9rem 1.8rem;
     border-radius: 12px;
@@ -231,6 +231,11 @@
     transition: all 0.3s ease;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none !important;
+    text-align: center;
 }
 
 .btn-inner-world:hover {
@@ -614,6 +619,11 @@
     border-radius: 12px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none !important;
 }
 
 @media (max-width: 768px) {

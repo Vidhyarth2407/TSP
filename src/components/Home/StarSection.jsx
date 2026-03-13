@@ -19,7 +19,7 @@ const StarSection = () => {
                 {/* Right: Text Content */}
                 <div className="flex-1 text-left" data-aos="fade-left">
                     <h2 className="text-[var(--color-dark-navy)] font-[var(--font-heading)] text-3xl md:text-4xl mb-6 uppercase leading-tight font-bold">
-                        WHAT CHILDREN LEARN<br />(AGES 5-12)
+                        WHAT WILL YOUR CHILD LEARN?<br />(AGES 5-12)
                     </h2>
                     <ul className="space-y-4 font-[var(--font-accent)] text-lg" style={{ color: '#636466' }}>
                         {[
@@ -41,7 +41,7 @@ const StarSection = () => {
 
                     <div className="mt-10">
                         <Link to="/programs" className="btn-join inline-block uppercase text-sm md:text-xl px-8 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 no-underline font-bold">
-                            Learn more
+                            UNLOCK THEIR POTENTIAL
                         </Link>
                     </div>
                 </div>

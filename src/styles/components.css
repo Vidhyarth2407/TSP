@@ -331,7 +331,7 @@
 
 .btn-join {
     background: linear-gradient(90deg, #E91E63 0%, #673AB7 100%);
-    color: white;
+    color: white !important;
     border: none;
     padding: 0.6rem 2rem;
     border-radius: 12px;
@@ -342,6 +342,11 @@
     box-shadow: 0 4px 10px rgba(103, 58, 183, 0.3);
     position: relative;
     overflow: hidden;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none !important;
+    text-align: center;
 }
 
 .btn-join::after {
@@ -397,7 +402,8 @@
 }
 
 .footer-wave-button {
-    display: block;
+    display: flex;
+    width: fit-content;
     margin: -3rem auto 2rem;
     background: linear-gradient(90deg, #E91E63 0%, #673AB7 100%);
     color: white;

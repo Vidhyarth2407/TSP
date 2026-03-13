@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Puzzle from '../../assets/images/Homepage/Puzzle.svg';
 
 const DifferenceSection = () => {
@@ -54,9 +55,9 @@ const DifferenceSection = () => {
 
 
             <div className="flex justify-center mb-8 md:mb-16 px-4" data-aos="zoom-in">
-                <button className="btn-join font-bold uppercase text-sm md:text-2xl px-6 py-3 md:px-12 md:py-4 w-full md:w-auto rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
+                <Link to="/story" className="btn-join font-bold uppercase text-sm md:text-2xl px-6 py-3 md:px-12 md:py-4 w-full md:w-auto rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
                     OUR JOURNEY
-                </button>
+                </Link>
             </div>
         </React.Fragment>
     );
