@@ -39,7 +39,7 @@ const StarSection = () => {
                         ))}
                     </ul>
 
-                    <div className="mt-10">
+                    <div className="mt-10 flex justify-center md:justify-start">
                         <Link to="/programs" className="btn-join inline-block uppercase text-sm md:text-xl px-8 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 no-underline font-bold">
                             UNLOCK THEIR POTENTIAL
                         </Link>
