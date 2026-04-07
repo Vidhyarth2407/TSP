@@ -8,9 +8,10 @@ const ExploreSection = () => {
     const isStoryPage = location.pathname === '/story';
     const isLearningStarsPage = location.pathname === '/learning-stars';
     const isInnerStarsPage = location.pathname === '/inner-stars';
+    const isProgramsPage = location.pathname === '/programs';
 
     return (
-        <section className={`explore-section hidden md:block ${isLearningStarsPage ? 'bg-[var(--color-dark-navy)]' : ''}`}>
+        <section className={`explore-section hidden md:block ${isLearningStarsPage ? 'bg-[var(--color-dark-navy)]' : ''}`} style={isProgramsPage ? { marginTop: '0', marginBottom: '3rem' } : {}}>
             <div className="footer-wave-container">
 
                 {/* 🌊 Background Wave */}
@@ -35,10 +36,10 @@ const ExploreSection = () => {
                         />
                         {/* 🎭 SVG-native gradient mask — fixed to viewport coords */}
                         <linearGradient id="goldFadeGrad" gradientUnits="userSpaceOnUse" x1="0" x2="1375.03" y1="0" y2="0">
-                            <stop offset="0"        stopColor="white" stopOpacity="0" />
-                            <stop offset="110"      stopColor="white" stopOpacity="1" />
-                            <stop offset="1265"     stopColor="white" stopOpacity="1" />
-                            <stop offset="1375.03"  stopColor="white" stopOpacity="0" />
+                            <stop offset="0" stopColor="white" stopOpacity="0" />
+                            <stop offset="110" stopColor="white" stopOpacity="1" />
+                            <stop offset="1265" stopColor="white" stopOpacity="1" />
+                            <stop offset="1375.03" stopColor="white" stopOpacity="0" />
                         </linearGradient>
                         <mask id="goldTextFade" maskUnits="userSpaceOnUse">
                             <rect x="0" y="0" width="1375.03" height="483.06" fill="url(#goldFadeGrad)" />
@@ -78,12 +79,19 @@ const ExploreSection = () => {
                                         <tspan fill="var(--color-navy)">Inner Stars builds character{"\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0"} </tspan>
                                     </React.Fragment>
                                 ))
+                            ) : isProgramsPage ? (
+                                [...Array(6)].map((_, i) => (
+                                    <React.Fragment key={i}>
+                                        <tspan fill="var(--color-orange)">INNER STARS BUILDS CHARACTER {"\u00A0\u00A0\u00A0\u00A0"} </tspan>
+                                        <tspan fill="var(--color-navy)">LEARNING STARS BUILDS LITERACY {"\u00A0\u00A0\u00A0\u00A0"} </tspan>
+                                    </React.Fragment>
+                                ))
                             ) : (
                                 [...Array(6)].map((_, i) => (
                                     <React.Fragment key={i}>
                                         <tspan fill="var(--color-navy)">Learning that goes beyond the classroom{"\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0"} </tspan>
                                         <tspan fill="var(--color-navy)">The habits of mind that build character{"\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0"} </tspan>
-                                        <tspan fill="var(--color-navy)">Build them early. Build them with intention{"\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0"} </tspan>
+                                        <tspan fill="var(--color-navy)">Build them early Build them with intention{"\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0"} </tspan>
                                     </React.Fragment>
                                 ))
                             )}

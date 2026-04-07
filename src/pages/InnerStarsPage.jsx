@@ -106,7 +106,7 @@ const InnerStarsPage = () => {
 
     const handleEnrollSubmit = (e) => {
         e.preventDefault();
-        
+
         const form = e.target;
 
         const programName = form.program.options[form.program.selectedIndex].text;
@@ -165,42 +165,45 @@ const InnerStarsPage = () => {
 
     return (
         <div className="inner-stars-page">
-            <SEO 
+            <SEO
                 title="Building Resilience & Life Skills for Children | Inner Stars"
                 description="Strengthen your child's emotional intelligence, courage, and resilience with the Inner Stars program. Evidence-based life skills coaching for children aged 5-12."
             />
             <section className="inner-stars-hero-section">
                 <div className="inner-stars-card" data-aos="fade-up">
                     <div className="card-content flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-16">
-                        <div className="card-image w-full lg:w-1/2 flex justify-center lg:justify-start" data-aos="fade-right" data-aos-delay="200">
+                        <div className="card-image w-full lg:w-[55%] flex justify-center lg:justify-start" data-aos="fade-right" data-aos-delay="200">
                             <img src={BoxSvg} alt="Inner Stars Box" className="box-svg-asset" />
                         </div>
-                        <div className="card-text w-full lg:w-1/2 text-center lg:text-left" data-aos="fade-left" data-aos-delay="400">
+                        <div className="card-text w-full lg:w-[45%] text-center lg:text-left" data-aos="fade-left" data-aos-delay="400">
                             <h1 className="is-title">INNER STARS</h1>
                             <h2 className="is-subtitle">Character building</h2>
                             <p className="is-description">
-                                Foundations for resilience and habits<br className="hidden lg:block" />
-                                of mind for learning and life
+                                Habits of minds for resilience<br />
+                                and life skills for learning and life
                             </p>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section className="why-carousel-section pt-20 lg:pt-32 pb-10 lg:pb-16 overflow-hidden">
-                <div className="max-w-[1280px] mx-auto px-6 relative h-[800px] md:h-[600px] lg:h-[550px]">
-                    <div className="carousel-container h-full">
-                        {slides.map((slide, index) => (
-                            <div
-                                key={index}
-                                className={`carousel-slide absolute inset-0 transition-opacity duration-1000 
-                                ${index === currentSlide ? 'opacity-1 active' : 'opacity-0 pointer-events-none'}`}
-                            >
-                                <div className="carousel-card bg-white rounded-[2rem] p-8 md:p-12 lg:p-16 flex flex-col lg:flex-row items-center gap-12 lg:gap-24 h-full">
-                                    <div className="flex-1 order-2 lg:order-1 slide-text-content text-center lg:text-left">
-                                        <h2 className="why-title mb-6">WHY INNER STRENGTHS MATTER</h2>
-                                        <div className="why-questions mb-8">
-                                            <div className="text-[var(--color-grey-text)] text-lg md:text-xl leading-relaxed">
+            <section className="why-carousel-section pt-12 md:pt-20 lg:pt-32 pb-10 lg:pb-16 overflow-hidden">
+                <div className="max-w-[1280px] mx-auto px-6 relative h-auto">
+                    <div className="carousel-card bg-white rounded-[2rem] p-8 md:p-12 lg:p-16 h-auto flex flex-col lg:flex-row items-center gap-8 lg:gap-24 relative overflow-hidden shadow-sm">
+                        
+                        {/* Static Text Side Container */}
+                        <div className="flex-1 order-2 lg:order-1 flex flex-col w-full h-full">
+                            <h2 className="why-title mb-6 md:mb-8 text-center lg:text-left">WHY INNER STRENGTHS MATTER</h2>
+
+                            {/* Transitioning Text Box Container - Uses Grid for stacking */}
+                            <div className="grid grid-cols-1 grid-rows-1">
+                                {slides.map((slide, index) => (
+                                    <div
+                                        key={index}
+                                        className={`col-start-1 row-start-1 transition-all duration-1000 ${index === currentSlide ? 'opacity-100 translate-y-0 z-10' : 'opacity-0 translate-y-4 z-0 pointer-events-none'}`}
+                                    >
+                                        <div className="why-questions mb-6 md:mb-8 text-center lg:text-left">
+                                            <div className="text-[var(--color-grey-text)] text-lg md:text-xl lg:text-2xl leading-relaxed">
                                                 <span
                                                     className={slide.isBoldSubtitle ? 'font-bold' : ''}
                                                     style={{ color: slide.subtitleColor || 'var(--color-grey-text)' }}
@@ -223,27 +226,41 @@ const InnerStarsPage = () => {
                                                 )}
                                             </div>
                                         </div>
-                                        <p className="text-[var(--color-grey-text)] opacity-80 text-base md:text-lg mb-10 max-w-md mx-auto lg:mx-0">
+                                        <p className="text-[var(--color-grey-text)] opacity-80 text-base md:text-lg lg:text-xl mb-8 md:mb-12 max-w-md mx-auto lg:mx-0 text-center lg:text-left">
                                             {slide.description}
                                         </p>
-                                        <a 
-                                            href="#" 
-                                            onClick={openCalendly}
-                                            className="why-cta-btn"
-                                        >
-                                            BOOK A FREE 15 MINUTE CALL
-                                        </a>
                                     </div>
-                                    <div className="flex-1 order-1 lg:order-2 flex justify-center lg:justify-end slide-image-content">
-                                        <img src={slide.image} alt="Why Strengths Matter" className="w-full max-w-[450px] h-auto" />
-                                    </div>
-                                </div>
+                                ))}
                             </div>
-                        ))}
+
+                            <div className="text-center lg:text-left mt-4 md:mt-8">
+                                <a
+                                    href="#"
+                                    onClick={openCalendly}
+                                    className="why-cta-btn"
+                                >
+                                    BOOK A FREE 15-MINUTE CALL
+                                </a>
+                            </div>
+                        </div>
+
+                        {/* Static Image Side Container with Grid Stacking */}
+                        <div className="flex-1 order-1 lg:order-2 flex justify-center lg:justify-end w-full h-[300px] md:h-[400px] lg:h-[450px] relative">
+                            <div className="grid grid-cols-1 grid-rows-1 w-full h-full">
+                                {slides.map((slide, index) => (
+                                    <div
+                                        key={index}
+                                        className={`col-start-1 row-start-1 flex items-center justify-center lg:justify-end transition-opacity duration-1000 ${index === currentSlide ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'}`}
+                                    >
+                                        <img src={slide.image} alt="Why Strengths Matter" className="w-full max-w-[320px] md:max-w-[450px] h-full object-contain" />
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
                     </div>
 
                     {/* Pagination Dots */}
-                    <div className="carousel-dots flex justify-center gap-4 absolute bottom-0 left-0 right-0 z-10 p-4">
+                    <div className="carousel-dots flex justify-center gap-4 py-8">
                         {slides.map((_, index) => (
                             <button
                                 key={index}
@@ -256,16 +273,16 @@ const InnerStarsPage = () => {
                 </div>
             </section>
 
-            <section className="life-skills-section pt-10 lg:pt-16 pb-4 lg:pb-8 bg-[var(--color-white)] text-center">
+            <section className="life-skills-section py-10 lg:py-24 bg-[var(--color-white)] text-center">
                 <div className="max-w-[1280px] mx-auto px-6">
                     <div data-aos="fade-up">
-                        <h2 className="life-skills-title " style={{ color: 'var(--color-dark-navy)', fontFamily: 'var(--font-heading)', fontSize: '2.5rem', fontWeight: 700, letterSpacing: '0.05em', textTransform: 'uppercase' }}>LIFE SKILLS</h2>
-                        <p className="life-skills-subtitle text-[var(--color-grey-text)] text-lg md:text-xl max-w-2xl mx-auto opacity-80">
+                        <h2 className="is-section-title" style={{ color: 'var(--color-dark-navy)', textAlign: 'center' }}>LIFE SKILLS IN EDUCATION</h2>
+                        <p className="life-skills-subtitle text-[var(--color-grey-text)] text-lg md:text-xl max-w-2xl mx-auto opacity-80 mb-8 md:mb-12">
                             Inner Stars brings life skills into education by building resilience.
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-0 md:gap-8 lg:gap-12 max-w-[1200px] mx-auto" data-aos="fade-up" data-aos-delay="200">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-4 lg:gap-12 max-w-[1200px] mx-auto mb-[-60px] md:mb-0" data-aos="fade-up" data-aos-delay="200">
                         {/* Card 1: Growing Strong Humans */}
                         <div className="relative w-full aspect-[377.77/424.54] overflow-hidden group hover:-translate-y-2 transition-transform duration-300">
                             <img src={LifeSkillsSvg} alt="" aria-hidden="true" className="absolute top-0 h-full w-[347.603%] max-w-none" style={{ left: '-13.94%' }} />
@@ -293,10 +310,10 @@ const InnerStarsPage = () => {
                 </div>
             </section>
 
-            <section className="what-children-learn-section pt-4 lg:pt-8 pb-16 lg:pb-24">
+            <section className="what-children-learn-section py-10 lg:py-24">
                 <div className="max-w-[1280px] mx-auto px-6">
                     <div data-aos="fade-up" className="text-center mb-8 lg:mb-12">
-                        <h2 className="mb-4" style={{ color: 'var(--color-dark-navy)', fontFamily: 'var(--font-heading)', fontSize: '2.5rem', fontWeight: 700, letterSpacing: '0.05em', textTransform: 'uppercase' }}>
+                        <h2 className="is-section-title" style={{ color: 'var(--color-dark-navy)' }}>
                             WHAT CHILDREN LEARN
                         </h2>
                     </div>
@@ -305,7 +322,7 @@ const InnerStarsPage = () => {
                         {/* Card 1: Yellow */}
                         <div className="relative w-full aspect-[377.77/230.79] overflow-hidden rounded-[23px] group hover:-translate-y-1 transition-transform duration-300 shadow-sm hover:shadow-md">
                             <img src={WhatChildrenLearnSvg} alt="" aria-hidden="true" className="absolute top-0 h-auto w-[347.603%] max-w-none" style={{ left: '-14.97%', top: '-21.43%' }} />
-                            <div className="absolute inset-0 p-6 sm:p-8 flex flex-col items-center justify-start text-white text-center pt-8 sm:pt-10">
+                            <div className="absolute inset-0 p-6 sm:p-8 flex flex-col items-start justify-start text-white text-left pt-8 sm:pt-10 pl-10 sm:pl-12">
                                 <h3 className="font-bold text-base sm:text-lg leading-tight tracking-wide mb-1">NOTICE & NAME</h3>
                                 <p className="text-xs sm:text-sm leading-tight">Emotions to build</p>
                                 <p className="font-bold text-xs sm:text-sm mt-0.5">Resilience</p>
@@ -356,7 +373,7 @@ const InnerStarsPage = () => {
                         {/* Card 6: Teal */}
                         <div className="relative w-full aspect-[377.77/230.79] overflow-hidden rounded-[23px] group hover:-translate-y-1 transition-transform duration-300 shadow-sm hover:shadow-md">
                             <img src={WhatChildrenLearnSvg} alt="" aria-hidden="true" className="absolute top-0 h-auto w-[347.603%] max-w-none" style={{ left: '-232.63%', top: '-137.31%' }} />
-                            <div className="absolute inset-0 p-6 sm:p-8 flex flex-col items-center justify-start text-white text-center pt-8 sm:pt-10">
+                            <div className="absolute inset-0 p-6 sm:p-8 flex flex-col items-start justify-start text-white text-left pt-8 sm:pt-10 pl-10 sm:pl-12">
                                 <h3 className="font-bold text-base sm:text-lg leading-tight tracking-wide mb-1">MAKE CHOICES</h3>
                                 <p className="text-xs sm:text-sm leading-tight">that match their values</p>
                                 <p className="text-xs sm:text-sm leading-tight mt-1">to build <span className="font-bold">Integrity</span></p>
@@ -366,10 +383,10 @@ const InnerStarsPage = () => {
                 </div>
             </section>
 
-            <section className="inside-a-lesson-section pt-10 lg:pt-16 pb-10 lg:pb-16">
+            <section className="inside-a-lesson-section py-20 lg:py-24">
                 <div className="max-w-[1280px] mx-auto px-6">
                     <div data-aos="fade-up" className="text-center mb-8 lg:mb-12">
-                        <h2 className="mb-4" style={{ color: 'var(--color-dark-navy)', fontFamily: 'var(--font-heading)', fontSize: '2.5rem', fontWeight: 700, letterSpacing: '0.05em', textTransform: 'uppercase' }}>
+                        <h2 className="is-section-title" style={{ color: 'var(--color-dark-navy)' }}>
                             INSIDE A LESSON
                         </h2>
                     </div>
@@ -395,13 +412,13 @@ const InnerStarsPage = () => {
                 </div>
             </section>
 
-            <section className="how-different-section pt-12 lg:pt-20 pb-4 lg:pb-6">
+            <section className="how-different-section py-12 lg:py-24">
                 <div className="max-w-[1280px] mx-auto px-6">
                     <div className="bg-[var(--color-dark-navy)] rounded-[2.5rem] lg:rounded-[4rem] px-8 py-10 lg:px-16 lg:py-16 flex flex-col shadow-lg" data-aos="fade-up">
 
                         {/* Title */}
-                        <div className="text-center mb-10 lg:mb-16">
-                            <h2 className="mb-0" style={{ color: '#ecaa19', fontFamily: 'var(--font-heading)', fontSize: '2.5rem', fontWeight: 700, letterSpacing: '0.05em', textTransform: 'uppercase' }}>
+                        <div className="text-center mb-8 md:mb-12">
+                            <h2 className="is-diff-title">
                                 HOW INNER STARS IS DIFFERENT
                             </h2>
                         </div>
@@ -449,15 +466,15 @@ const InnerStarsPage = () => {
                 </div>
             </section>
 
-            <section className="two-ways-to-join-section pt-0 lg:pt-6 pb-0 lg:pb-8 bg-white">
+            <section className="two-ways-to-join-section pt-0 pb-20 lg:pt-6 lg:pb-24 bg-white">
                 <div className="max-w-[1000px] mx-auto px-6">
-                    <div className="text-center mb-0 lg:mb-8" data-aos="fade-up">
+                    <div className="text-center mb-0 lg:mb-4" data-aos="fade-up">
                         <h2 className="ls-join-section-title">
                             TWO WAYS TO JOIN
                         </h2>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 lg:gap-16 -mt-12 md:mt-0">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 lg:gap-16 -mt-16 md:-mt-8">
 
                         {/* Pink Card */}
                         <div className="ls-join-card pink-variant" data-aos="fade-up" data-aos-delay="100">
@@ -465,17 +482,19 @@ const InnerStarsPage = () => {
                             <img src={HowToJoinSvg} alt="" aria-hidden="true" className="ls-join-svg-bg left-slice" />
 
                             {/* Text Content */}
-                            <div className="ls-join-card-content pink-text-offset">
-                                <div className="ls-join-card-header">
-                                    <h3 className="ls-join-card-title pink-title">SATURDAYS SESSIONS</h3>
-                                    <p className="ls-join-card-subtitle pink-subtitle">Weekend Sessions</p>
-                                </div>
+                            <div className="ls-join-card-content ls-pink-nudge">
+                                <div className="flex flex-col items-start">
+                                    <div className="ls-join-card-header">
+                                        <h3 className="ls-join-card-title pink-title">SATURDAYS SESSIONS</h3>
+                                        <p className="ls-join-card-subtitle pink-subtitle">Weekend Sessions</p>
+                                    </div>
 
-                                <ul className="ls-join-card-list">
-                                    <li>Two inner strengths<br />each term</li>
-                                    <li>All six strengths explored<br />over the year</li>
-                                    <li>Builds skills step by step<br />through the term</li>
-                                </ul>
+                                    <ul className="ls-join-card-list">
+                                        <li>Two inner strengths<br />each term</li>
+                                        <li>All six strengths explored<br />over the year</li>
+                                        <li>Builds skills step by step<br />through the term</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
 
@@ -485,19 +504,20 @@ const InnerStarsPage = () => {
                             <img src={HowToJoinSvg} alt="" aria-hidden="true" className="ls-join-svg-bg right-slice" />
 
                             {/* Text Content */}
-                            <div className="ls-join-card-content green-text-offset">
-                                <div className="ls-join-card-header">
-                                    <h3 className="ls-join-card-title green-title">HOLIDAYS INTENSIVES</h3>
-                                    <p className="ls-join-card-subtitle green-subtitle">2 to 6 Days Over 2 Weeks*</p>
+                            <div className="ls-join-card-content ls-green-nudge">
+                                <div className="flex flex-col items-start">
+                                    <div className="ls-join-card-header">
+                                        <h3 className="ls-join-card-title green-title">HOLIDAYS INTENSIVES</h3>
+                                        <p className="ls-join-card-subtitle green-subtitle">2 to 6 Days Over 2 Weeks*</p>
+                                    </div>
+
+                                    <ul className="ls-join-card-list">
+                                        <li>Two inner strengths<br />at a time</li>
+                                        <li>Immersive, hands on,<br />and fun</li>
+                                        <li>Ideal for school holiday<br />learning</li>
+                                    </ul>
+                                    <p className="ls-join-card-disclaimer">*Starting mid 2026</p>
                                 </div>
-
-                                <ul className="ls-join-card-list">
-                                    <li>Two inner strengths<br />at a time</li>
-                                    <li>Immersive, hands on,<br />and fun</li>
-                                    <li>Ideal for school holiday<br />learning</li>
-                                </ul>
-
-                                <p className="ls-join-card-disclaimer">*Starting mid 2026</p>
                             </div>
                         </div>
 
@@ -519,7 +539,7 @@ const InnerStarsPage = () => {
             <section id="enrollment-form" className="ls-enrollment-section">
                 <div className="max-w-[800px] mx-auto px-6">
                     <div className="text-center mb-12" data-aos="fade-up">
-                        <h2 className="text-[1.8rem] lg:text-[2.2rem] font-bold tracking-wider uppercase text-[#122f52]" style={{ fontFamily: 'var(--font-heading)' }}>
+                        <h2 className="is-enroll-title">
                             SECURE YOUR CHILD'S PLACE
                         </h2>
                     </div>
@@ -653,11 +673,11 @@ const InnerStarsPage = () => {
                 </div>
             </section>
 
-            <Snackbar 
-                show={snackbar.show} 
-                message={snackbar.message} 
-                type={snackbar.type} 
-                onClose={() => setSnackbar({ ...snackbar, show: false })} 
+            <Snackbar
+                show={snackbar.show}
+                message={snackbar.message}
+                type={snackbar.type}
+                onClose={() => setSnackbar({ ...snackbar, show: false })}
             />
         </div>
     );

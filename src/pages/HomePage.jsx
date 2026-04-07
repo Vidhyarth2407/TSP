@@ -19,16 +19,16 @@ const HomePage = () => {
 
   return (
     <div className="home-page">
-      <SEO 
+      <SEO
         title="The Starry Path | Resilience, Life Skills & Literacy for Children"
         description="Empower your child with The Starry Path. We combine child psychology and education to build resilience, emotional intelligence, and science-based literacy skills in children aged 5-12."
       />
-      <Hero />
       <ScaleSection />
+      <InnerStarsSection />
+      <Hero />
+      <DifferenceSection />
       <StarSection />
       <StrengthsSection />
-      <InnerStarsSection />
-      <DifferenceSection />
       <BigIdeasSection />
       <StarKeepersSection />
     </div>

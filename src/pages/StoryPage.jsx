@@ -33,8 +33,8 @@ const StoryPage = () => {
             <section className="story-section pt-0" data-aos="fade-in">
                 <img src={bannerUrl} alt="Why The Starry Path Exists" className="story-hero animated-banner" />
                 <div className="story-hero-text">
-                    <h4>A child's inner world is made of many pieces.</h4>
-                    <p>Understanding how those pieces work together builds habits of mind and character.</p>
+                    <h4>A child's inner world is made of many&nbsp;pieces </h4>
+                    <p>Understanding how those pieces work together builds habits of mind and&nbsp;character </p>
                 </div>
             </section>
 
@@ -44,18 +44,18 @@ const StoryPage = () => {
                     <div className="path-text-content">
                         <h2>WHY THE STARRY{" "}<br className="hidden md:block" />PATH EXISTS?</h2>
                         <p className="path-highlight">
-                            Education builds knowledge and skills.{" "}
+                            Education builds knowledge and&nbsp;skills.
                             <br className="hidden md:block" />
-                            <strong>Habits of mind help children use them{" "}
+                            <strong>Habits of mind help children use them
                                 <br className="hidden md:block" />
-                                in real situations.</strong>
+                                in real&nbsp;situations.</strong>
                         </p>
                         <p>
-                            Meaningful learning builds life skills{" "}
+                            Meaningful learning builds life&nbsp;skills
                             <br className="hidden md:block" />
-                            for real life. These habits of mind should{" "}
+                            for real&nbsp;life. These habits of mind&nbsp;should
                             <br className="hidden md:block" />
-                            be part of <strong>every child's education.</strong>
+                            be part of <strong>every child's&nbsp;education.</strong>
                         </p>
                     </div>
                     <div className="path-image-content">
@@ -75,13 +75,15 @@ const StoryPage = () => {
                         <h3>Children learn about the world around them.</h3>
                         <p className="sub-text">Planets, oceans, and gravity.</p>
 
-                        <h3>But rarely do they learn about the world within them.</h3>
+                        <h3>But rarely do they learn about the world
+                            <br />
+                            within them.</h3>
                         <p className="sub-text">
                             Understanding their inner world should be<br />
                             as essential as reading or numeracy.
                         </p>
 
-                        <Link to="/inner-stars" className="btn-inner-world">HELP YOUR CHILD BUILD LIFELONG STRENGTHS</Link>
+                        <Link to="/inner-stars" className="btn-inner-world">Build Lifelong Strengths</Link>
                     </div>
                 </div>
             </section>
@@ -109,32 +111,34 @@ const StoryPage = () => {
                         <img src={Charvi} alt="My Story - Charvi" className="charvi-img" />
                     </div>
                     <div className="charvi-right">
-                        <p>As a teacher with a background in psychology, I've always noticed what's missing in education: <strong>the human skills of character, values, and healthy habits of mind.</strong></p>
-                        <p>This belief is deeply personal.</p>
-                        <p>As a teenager and young adult, I lived through a life-threatening medical condition that tested resilience and grit more than once.</p>
-                        <p>The Starry Path grew from that lived experience and one simple question:<br />If we teach children how the world works, <strong>why not also teach them how their mind works?</strong></p>
-                        <p>These aren't skills for later. They're skills for childhood.</p>
-                        <p><strong>By bringing psychology and education together, </strong>I created a practical, child-friendly way to help children understand their thoughts, emotions, and connections. The foundations that shape how they learn and who they become.</p>
-                        <p>As a mum, what I want most for my child is simple:<br />to understand herself, to try again, and to act with courage.</p>
-                        <p>That is the purpose of The Starry Path:<br /><strong>helping children understand themselves and grow with strength.</strong></p>
+                        <p>As a teacher with a background in psychology, I've always noticed what's missing in education: <strong>the human skills of character, values, and healthy habits of&nbsp;mind.</strong></p>
+                        <p>This belief is deeply&nbsp;personal.</p>
+                        <p>As a teenager and young adult, I lived through a life-threatening medical condition that tested resilience and grit more than&nbsp;once.</p>
+                        <p>The Starry Path grew from that lived experience and one simple question:<br />If we teach children how the world works, <strong>why not also teach them how their mind&nbsp;works?</strong></p>
+                        <p>These aren't skills for later. They're skills for&nbsp;childhood.</p>
+                        <p><strong>By bringing psychology and education together, </strong>I created a practical, child-friendly way to help children understand their thoughts, emotions, and connections. The foundations that shape how they learn and who they&nbsp;become.</p>
+                        <p>As a mum, what I want most for my child is simple:<br />to understand herself, to try again, and to act with&nbsp;courage.</p>
+                        <p>That is the purpose of The Starry Path:<br /><strong>helping children understand themselves and grow with&nbsp;strength.</strong></p>
                     </div>
                 </div>
             </section>
 
             {/* Our Advisor Section */}
-            <section className="story-section compact-section" data-aos="fade-up">
+            <section className="story-section advisor-section" data-aos="fade-up">
                 <div className="advisor-section-container">
                     <div className="advisor-left">
-                        <h2 className="advisor-title">OUR ADVISOR</h2>
-                        <h3 className="advisor-subtitle-main">The Starry Path Advisor</h3>
-                        <p>Aakriti is a dual-certified Clinical Psychologist (India &amp; New Zealand) helping women break cycles of <strong>anxiety, self-doubt, perfectionism, and people-pleasing.</strong> With over 12 years of experience across India, Malaysia, and New Zealand, she supports adults to heal and reconnect with their authentic selves using evidence-based therapy.</p>
+                        <div className="advisor-left-text-group">
+                            <h2 className="advisor-title">OUR ADVISOR</h2>
+
+                            <p>Aakriti is a dual-certified Clinical Psychologist (India &amp; New Zealand) helping women break cycles of <strong>anxiety, self-doubt, perfectionism, and people-pleasing.</strong> With over 12 years of experience across India, Malaysia, and New Zealand, she supports adults to heal and reconnect with their authentic selves using evidence-based&nbsp;therapy.</p>
+                        </div>
 
                         <div className="advisor-logo-row">
                             <a href="https://calmconnecttherapy.com/" target="_blank" rel="noopener noreferrer">
-                                <img src={CalmConnectLogo} alt="Calm Connect Therapy Logo" className="advisor-logo-img" />
+                                <img src={CalmConnectLogo} alt="Calm Connect Therapy Logo" className="calm-connect-logo" />
                             </a>
                             <div className="advisor-logo-text">
-                                <p>Learn more<br />at <a href="https://calmconnecttherapy.com/" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit' }}><strong>calmconnecttherapy.com</strong></a><br />or follow her journey online.</p>
+                                <p>Learn more<br />at <a href="https://calmconnecttherapy.com/" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', fontWeight: 'bold' }}>calmconnecttherapy.com</a><br />or follow her journey online.</p>
                             </div>
                         </div>
                     </div>
@@ -156,10 +160,10 @@ const StoryPage = () => {
                 <div className="guiding-container">
                     <img src={Guiding} alt="Guiding Background" className="guiding-bg" />
                     <div className="guiding-content">
-                        <h2 data-aos="fade-right" data-aos-delay="200">GUIDING{" "}<br className="hidden md:block" />CHILDREN'S GROWTH</h2>
-                        <h3 data-aos="fade-right" data-aos-delay="400">The Starry Path is named{" "}<br className="hidden md:block" />for what it aims to nurture:</h3>
-                        <p data-aos="fade-up" data-aos-delay="600">Awareness and resilience in how children{" "}<br className="hidden md:block" />think, learn, and live.</p>
-                        <p data-aos="fade-up" data-aos-delay="800">Their inner strengths become guiding{" "}<br className="hidden md:block" />lights for learning and for life beyond{" "}<br className="hidden md:block" />the classroom.</p>
+                        <h2 data-aos="fade-right" data-aos-delay="200">GUIDING CHILDREN'S{" "}<br className="hidden md:block" />GROWTH</h2>
+                        <h3 data-aos="fade-right" data-aos-delay="400">The Starry Path is named{" "}<br className="hidden md:block" />for what it aims to&nbsp;nurture:</h3>
+                        <p data-aos="fade-up" data-aos-delay="600">Awareness and resilience in how children{" "}<br className="hidden md:block" />think, learn, and&nbsp;live.</p>
+                        <p data-aos="fade-up" data-aos-delay="800">Their inner strengths become guiding{" "}<br className="hidden md:block" />lights for learning and for life beyond{" "}<br className="hidden md:block" />the&nbsp;classroom.</p>
                     </div>
                 </div>
                 <div className="guiding-btn-wrapper" data-aos="zoom-in" data-aos-delay="1000">

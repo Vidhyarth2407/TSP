@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import BigIdeasBg from '../../assets/images/Homepage/Big Ideas.svg';
+import BigIdeasBg from '../../assets/images/Homepage/Big Ideas copy.svg';
 
 const BigIdeasSection = () => {
     return (

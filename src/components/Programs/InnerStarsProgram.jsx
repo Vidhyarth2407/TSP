@@ -29,7 +29,7 @@ const InnerStarsProgram = () => {
                         ))}
                     </ul>
                     <p className="text-lg md:text-xl font-[var(--font-body)] mb-8 opacity-90 mx-auto md:mx-0 max-w-lg" style={{ color: 'var(--color-grey-text)' }}>
-                        <strong style={{ color: 'var(--color-dark-navy)' }}>Perfect for:</strong> For every child aged 5-12 because healthy habits of mind matter.
+                        <strong style={{ color: 'var(--color-dark-navy)' }}>Perfect for:</strong> Every child aged 5-12 because healthy habits of mind matter.
                     </p>
                     <div className="flex justify-center md:justify-start">
                         <Link to="/inner-stars" className="btn-join uppercase text-sm md:text-xl px-10 py-3 md:px-12 md:py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 font-bold">

@@ -55,7 +55,7 @@ const StrengthsSection = () => {
                 SIX ESSENTIAL STRENGTHS<br />THAT SHAPE CHARACTER
             </h2>
             <p className="text-base md:text-lg mb-8 md:mb-12 font-[var(--font-accent)]" style={{ color: '#636466' }} data-aos="fade-up" data-aos-delay="100">
-                Values of life that define thoughts and actions.
+                Values of life that define thoughts and actions
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12 items-start" data-aos="fade-up" data-aos-delay="200">

@@ -75,6 +75,15 @@
         mix-blend-mode: screen;
         opacity: .75;
       }
+      
+      @keyframes svgFloat {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-5px); }
+      }
+      
+      .st9 {
+        animation: svgFloat 4s ease-in-out infinite;
+      }
     </style>
     <filter id="luminosity-invert" x="603.32" y="504.5" width="243" height="230" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
       <feColorMatrix result="cm" values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0"/>

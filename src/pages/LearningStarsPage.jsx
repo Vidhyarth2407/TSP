@@ -136,7 +136,7 @@ const LearningStarsPage = () => {
         { icon: ReadingFluencySvg, title: "READING\nFLUENCY", color: 'var(--color-red-orange)', delay: 300 },
         { icon: VocabularySvg, title: "VOCABULARY\n& MORPHOLOGY", color: 'var(--color-lime-green)', delay: 400 },
         { icon: ComprehensionSvg, title: "READING\nCOMPREHENSION", color: 'var(--color-teal)', delay: 500 },
-        { icon: SentenceStructureSvg, title: "SENTENCE STRUCTURE\nFOR CLEAR WRITING.", color: 'var(--color-deep-purple)', delay: 600 }
+        { icon: SentenceStructureSvg, title: "SENTENCE STRUCTURE\nFOR CLEAR WRITING", color: 'var(--color-deep-purple)', delay: 600 }
     ];
 
     const researchSlides = [
@@ -144,23 +144,25 @@ const LearningStarsPage = () => {
             leftHeading: "THE RESEARCH BEHIND OUR APPROACH",
             leftText: (
                 <>
-                    <p>Research across Australian literacy organisations is consistent:</p>
+                    <p>Research across Australian literacy<br />organisations is consistent:</p>
                     <ul className="ls-research-bullets space-y-4">
-                        <li>Foundational reading skills must be taught directly and practised</li>
-                        <li>Early intervention leads to stronger long term outcomes</li>
+                        <li>Foundational reading skills must<br />be taught directly and practised</li>
+                        <li>Early intervention leads to stronger<br />long term outcomes</li>
                     </ul>
                 </>
             ),
-            rightHeading: "LEARNING STARS HELPS CHILDREN:",
+            rightHeading: <>LEARNING STARS<br />HELPS CHILDREN:</>,
             rightContent: (
-                <ul className="ls-research-checklist text-white space-y-4 text-xl lg:text-2xl font-light">
-                    <li>• Hear sounds in words</li>
-                    <li>• Work with sounds</li>
-                    <li>• Decode words</li>
-                    <li>• Read smoothly</li>
-                    <li>• Spell accurately</li>
-                    <li>• Write clearly</li>
-                </ul>
+                <div className="flex justify-center w-full">
+                    <ul className="ls-research-checklist text-white space-y-1.5 text-xl lg:text-2xl font-light text-left inline-block">
+                        <li>• Hear sounds in words</li>
+                        <li>• Work with sounds</li>
+                        <li>• Decode words</li>
+                        <li>• Read smoothly</li>
+                        <li>• Spell accurately</li>
+                        <li>• Write clearly</li>
+                    </ul>
+                </div>
             ),
             panelColor: "ls-orange-panel",
             headingStyle: "ls-research-heading-white"
@@ -169,10 +171,10 @@ const LearningStarsPage = () => {
             leftHeading: "THE RESEARCH BEHIND OUR APPROACH",
             leftText: (
                 <>
-                    <p>Research across Australian literacy organisations is consistent:</p>
+                    <p>Research across Australian literacy<br />organisations is consistent:</p>
                     <ul className="ls-research-bullets space-y-4">
-                        <li>Foundational reading skills must be taught directly and practised</li>
-                        <li>Early intervention leads to stronger long term outcomes</li>
+                        <li>Foundational reading skills must<br />be taught directly and practised</li>
+                        <li>Early intervention leads to stronger<br />long term outcomes</li>
                     </ul>
                 </>
             ),
@@ -193,10 +195,10 @@ const LearningStarsPage = () => {
             leftHeading: "THE RESEARCH BEHIND OUR APPROACH",
             leftText: (
                 <>
-                    <p>Research across Australian literacy organisations is consistent:</p>
+                    <p>Research across Australian literacy<br />organisations is consistent:</p>
                     <ul className="ls-research-bullets space-y-4">
-                        <li>Foundational reading skills must be taught directly and practised</li>
-                        <li>Early intervention leads to stronger long term outcomes</li>
+                        <li>Foundational reading skills must<br />be taught directly and practised</li>
+                        <li>Early intervention leads to stronger<br />long term outcomes</li>
                     </ul>
                 </>
             ),
@@ -213,7 +215,7 @@ const LearningStarsPage = () => {
 
     return (
         <div className="learning-stars-page">
-            <SEO 
+            <SEO
                 title="Science-Based Literacy Support & Free Assessment | Learning Stars"
                 description="Is your child struggling with reading or spelling? Book a free literacy assessment and join our science-based program for phonics, fluency, and comprehension."
             />
@@ -221,7 +223,7 @@ const LearningStarsPage = () => {
             <section className="learning-stars-hero-section">
                 <div className="learning-stars-hero-card" data-aos="fade-up">
                     <div className="ls-hero-content flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-16">
-                        <div className="ls-hero-text w-full lg:w-1/2 text-center lg:text-left" data-aos="fade-right" data-aos-delay="200">
+                        <div className="ls-hero-text w-full lg:w-1/2 text-center lg:text-left lg:pl-24" data-aos="fade-right" data-aos-delay="200">
                             <h1 className="ls-title">LEARNING STARS</h1>
                             <h2 className="ls-subtitle">Structured literacy support</h2>
                             <p className="ls-description">
@@ -237,7 +239,7 @@ const LearningStarsPage = () => {
             </section>
 
             {/* Why Literacy Support Matters Section */}
-            <section className="why-literacy-section pt-20 pb-16">
+            <section className="why-literacy-section py-20 lg:py-24">
                 <div className="max-w-[1200px] mx-auto px-6 flex flex-col md:flex-row items-center gap-16 lg:gap-24">
                     {/* Left: Light Illustration */}
                     <div className="flex-1 flex justify-center" data-aos="fade-up">
@@ -269,7 +271,7 @@ const LearningStarsPage = () => {
                                 onClick={openCalendly}
                                 className="why-cta-btn"
                             >
-                                BOOK A FREE 15 MINUTE CALL
+                                BOOK A FREE 15-MINUTE CALL
                             </a>
                         </div>
                     </div>
@@ -278,7 +280,7 @@ const LearningStarsPage = () => {
 
 
             {/* What Children Learn Section */}
-            <section className="ls-learn-section pt-12 pb-0 lg:pt-0 lg:pb-0 bg-[var(--color-dark-navy)]">
+            <section className="ls-learn-section py-20 lg:py-24 bg-[var(--color-dark-navy)]">
                 <div className="max-w-[1200px] mx-auto px-6">
                     <div className="text-center mb-10 lg:mb-16" data-aos="fade-up">
                         <h2 className="ls-learn-title">WHAT CHILDREN LEARN</h2>
@@ -316,14 +318,14 @@ const LearningStarsPage = () => {
 
                     <div className="text-center mt-6 lg:mt-8" data-aos="fade-up">
                         <p className="text-white opacity-80 text-base md:text-xl font-light italic font-body">
-                            Together, these skills unlock learning across every subject at school.
+                            Build the foundation skills needed for reading and writing
                         </p>
                     </div>
                 </div>
             </section>
 
             {/* Inside the Program Section */}
-            <section className="ls-inside-program-section bg-[var(--color-dark-navy)]">
+            <section className="ls-inside-program-section py-20 lg:py-24 bg-[var(--color-dark-navy)]">
                 <div className="ls-inside-wrapper">
                     <h2 className="ls-inside-title" data-aos="fade-up">INSIDE THE PROGRAM</h2>
 
@@ -335,14 +337,14 @@ const LearningStarsPage = () => {
 
                         {/* Right: Kids Asset (Carousel) */}
                         <div className="ls-inside-asset ls-kids-asset" data-aos="fade-left">
-                            <img 
-                                src={GlumKidsSvg} 
-                                alt="Six Glum Kids" 
+                            <img
+                                src={GlumKidsSvg}
+                                alt="Six Glum Kids"
                                 className={`ls-carousel-img ${insideSlide === 0 ? 'active' : ''}`}
                             />
-                            <img 
-                                src={InsideProgramPhoto} 
-                                alt="Magnetic Letters Activity" 
+                            <img
+                                src={InsideProgramPhoto}
+                                alt="Magnetic Letters Activity"
                                 className={`ls-carousel-img ls-photo-asset ${insideSlide === 1 ? 'active' : ''}`}
                             />
                         </div>
@@ -351,26 +353,28 @@ const LearningStarsPage = () => {
             </section>
 
             {/* Intentional Teaching Approach Section */}
-            <section className="ls-intentional-section pt-4 lg:pt-0 pb-12 lg:pb-24 bg-[var(--color-dark-navy)]">
+            <section className="ls-intentional-section py-20 lg:py-24 bg-[var(--color-dark-navy)]">
                 <div className="ls-intentional-wrapper px-6">
                     <h2 className="ls-intentional-title mb-0" data-aos="fade-up">
                         AN INTENTIONAL TEACHING APPROACH
                     </h2>
-
-                    <div className="ls-intentional-asset-container mb-0" data-aos="zoom-in">
-                        <img src={IntentionalApproachSvg} alt="An Intentional Teaching Approach" className="ls-intentional-asset" />
-                    </div>
 
                     <div className="ls-intentional-info-box" data-aos="fade-up">
                         <p className="ls-intentional-info-text">
                             Learning Stars is based on how children learn to read and write. Teaching is structured and responsive at each child's point of need.
                         </p>
                     </div>
+
+                    <div className="ls-intentional-asset-container mb-0" data-aos="zoom-in">
+                        <img src={IntentionalApproachSvg} alt="An Intentional Teaching Approach" className="ls-intentional-asset" />
+                    </div>
+
+
                 </div>
             </section>
 
             {/* Research Section with Carousel */}
-            <section className="ls-research-section pt-4 pb-20 bg-[var(--color-dark-navy)]">
+            <section className="ls-research-section py-20 lg:py-24 bg-[var(--color-dark-navy)]">
                 <div className="max-w-[1300px] mx-auto px-6">
                     <div className="ls-research-carousel-wrapper">
                         {researchSlides.map((slide, index) => (
@@ -394,14 +398,18 @@ const LearningStarsPage = () => {
                                         <img src={ResearchIconsSvg} alt="Research Icons" />
                                     </div>
 
-                                    {/* Right Column */}
-                                    <div className={`ls-research-right flex-1 ${slide.panelColor} ${slide.rightHeading ? 'p-10 lg:p-14 lg:pl-20' : 'p-4 lg:p-6'} flex flex-col justify-center relative z-10 overflow-hidden`}>
+                                    {/* Right Column (Transitions) */}
+                                    <div className={`ls-research-right flex-1 ${slide.panelColor} ${slide.rightHeading ? 'p-10 lg:p-14 lg:pl-32' : 'p-4 lg:p-6'} flex flex-col justify-center ${index === 0 ? 'items-center text-center' : 'items-start'} relative z-10 overflow-hidden`}>
                                         {slide.rightHeading && (
-                                            <h2 className={`${slide.headingStyle} mb-8`}>
+                                            <h2 className={`${slide.headingStyle} mb-8 ${index === 0 ? 'text-center ls-research-heading-reduced' : ''}`}>
                                                 {slide.rightHeading}
                                             </h2>
                                         )}
-                                        {slide.rightContent}
+                                        {slide.rightContent && (
+                                            <div className={`w-full ${index === 0 ? 'lg:-translate-x-6' : ''}`}>
+                                                {slide.rightContent}
+                                            </div>
+                                        )}
                                     </div>
                                 </div>
                             </div>
@@ -433,8 +441,8 @@ const LearningStarsPage = () => {
 
                         {/* Right Side: Text lines */}
                         <div className="ls-creator-content py-8 pr-8 pl-0 lg:py-8 lg:pr-16 lg:pl-0 flex-1 flex flex-col justify-center w-full overflow-hidden">
-                            <div className="border-b-2 border-gray-300 border-solid pb-4 w-full -ml-4 pl-12 lg:-ml-12 lg:pl-24">
-                                <h2 className="ls-creator-title text-[#002B49] text-2xl lg:text-3xl font-bold uppercase tracking-wide font-heading mb-0">
+                            <div className="border-b-2 border-gray-300 border-solid pb-0 w-full -ml-4 pl-12 lg:-ml-12 lg:pl-24">
+                                <h2 className="ls-creator-title">
                                     WHY I CREATED LEARNING STARS
                                 </h2>
                             </div>
@@ -456,9 +464,9 @@ const LearningStarsPage = () => {
             </section>
 
             {/* Difference From Tutoring Section */}
-            <section className="ls-difference-section pt-0 pb-0 bg-[var(--color-dark-navy)] text-white overflow-hidden">
+            <section className="ls-difference-section py-20 lg:py-24 bg-[var(--color-dark-navy)] text-white overflow-hidden">
                 <div className="max-w-[1300px] mx-auto px-6">
-                    <h2 className="ls-difference-title text-center text-[#A3C610] text-3xl lg:text-4xl font-extrabold mt-20 mb-4 uppercase tracking-wide font-heading" data-aos="fade-up">
+                    <h2 className="ls-difference-title" data-aos="fade-up">
                         HOW LEARNING STARS IS DIFFERENT FROM TUTORING
                     </h2>
 
@@ -505,7 +513,7 @@ const LearningStarsPage = () => {
             </section>
 
             {/* Ready for Clarity Section */}
-            <section className="ls-clarity-section pt-0 pb-4 bg-[var(--color-dark-navy)] mt-0 mb-0">
+            <section className="ls-clarity-section py-20 lg:py-24 bg-[var(--color-dark-navy)] mt-0 mb-0">
                 <div className="max-w-[1200px] mx-auto px-6">
                     <div className="ls-clarity-container bg-[#5E3FB2] rounded-[40px] p-12 lg:p-20 flex flex-col lg:flex-row items-center gap-12 lg:gap-20 shadow-2xl" data-aos="zoom-in">
                         {/* Left Side: Asset */}
@@ -514,8 +522,8 @@ const LearningStarsPage = () => {
                         </div>
 
                         {/* Right Side: Text */}
-                        <div className="ls-clarity-content w-full lg:w-1/2 text-white lg:-ml-10 lg:-mt-6">
-                            <h2 className="text-[#FBB03B] text-3xl lg:text-4xl font-extrabold mb-5 uppercase tracking-wide font-heading">
+                        <div className="ls-clarity-content w-full lg:w-1/2 text-white lg:-ml-10 lg:-mt-12">
+                            <h2 className="ls-clarity-title">
                                 READY FOR CLARITY?
                             </h2>
                             <p className="text-lg lg:text-xl font-body font-light mb-6 leading-relaxed opacity-90">
@@ -534,6 +542,9 @@ const LearningStarsPage = () => {
                                 <p className="relative pl-5">
                                     <span className="absolute left-0 text-[#FBB03B] font-bold">•</span> Comprehension
                                 </p>
+                                <p className="relative pl-5">
+                                    <span className="absolute left-0 text-[#FBB03B] font-bold">•</span> Sentence Structure
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -545,7 +556,7 @@ const LearningStarsPage = () => {
                 <div className="max-w-[1000px] mx-auto px-6" data-aos="fade-up">
                     <form className="ls-booking-form space-y-6" onSubmit={handleAssessmentSubmit}>
                         <div className="text-center mb-10">
-                            <h2 className="text-[#FBB03B] text-2xl lg:text-3xl font-extrabold uppercase tracking-wider font-heading">
+                            <h2 className="ls-booking-title">
                                 BOOK A FREE LITERACY ASSESSMENT
                             </h2>
                         </div>
@@ -606,8 +617,8 @@ const LearningStarsPage = () => {
 
                         {/* Submit Button */}
                         <div className="pt-8 flex justify-center">
-                            <button 
-                                type="submit" 
+                            <button
+                                type="submit"
                                 disabled={isLoading}
                                 className={`ls-booking-btn text-white px-10 py-4 rounded-xl font-bold uppercase tracking-wider shadow-lg transition-all active:scale-95 ${isLoading ? 'opacity-70 cursor-not-allowed' : 'hover:scale-105'}`}
                             >
@@ -632,7 +643,7 @@ const LearningStarsPage = () => {
             <section className="ls-faq-section py-20 bg-[var(--color-dark-navy)]">
                 <div className="max-w-[1200px] mx-auto px-6">
                     <div className="ls-faq-container bg-[#FCF8F2] rounded-[40px] p-8 lg:p-14 shadow-xl" data-aos="fade-up">
-                        <h2 className="text-[#FBB03B] text-center text-2xl lg:text-3xl font-extrabold mb-8 uppercase tracking-wider font-heading">
+                        <h2 className="ls-faq-title">
                             FREQUENTLY ASKED QUESTIONS
                         </h2>
 
@@ -691,11 +702,11 @@ const LearningStarsPage = () => {
                 </div>
             </section>
 
-            <Snackbar 
-                show={snackbar.show} 
-                message={snackbar.message} 
-                type={snackbar.type} 
-                onClose={() => setSnackbar({ ...snackbar, show: false })} 
+            <Snackbar
+                show={snackbar.show}
+                message={snackbar.message}
+                type={snackbar.type}
+                onClose={() => setSnackbar({ ...snackbar, show: false })}
             />
         </div>
     );

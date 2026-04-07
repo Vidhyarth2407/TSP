@@ -122,17 +122,25 @@
     /* Removed the dot in favor of full color */
 }
 
+.overview-btn {
+    background-color: var(--color-lime-green) !important;
+}
+
 .inner-stars-btn {
     background-color: var(--color-orange) !important;
 }
 
 .learning-stars-btn {
-    background-color: var(--color-deep-purple) !important;
+    background-color: var(--color-dark-navy) !important;
 }
 
 .dropdown-item:hover {
     transform: translateY(-3px) scale(1.02);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.overview-btn:hover {
+    background-color: #bce03e !important;
 }
 
 .inner-stars-btn:hover {
@@ -141,14 +149,10 @@
 }
 
 .learning-stars-btn:hover {
-    background-color: #6a57c2 !important;
+    background-color: #1a4273 !important;
     /* Slightly lighter on hover */
 }
 
-/* Ensure Programs text stays navy or turns green on hover */
-.nav-item-dropdown:hover>a {
-    color: var(--color-green) !important;
-}
 
 .mobile-cta {
     display: none;
@@ -305,9 +309,6 @@
         transform: none;
     }
 
-    .nav-item-dropdown:hover>a {
-        color: var(--color-green) !important;
-    }
 
     .wave-text {
         font-size: 14px;
@@ -372,6 +373,7 @@
     background: linear-gradient(90deg, #8BC34A 0%, #03A9F4 100%);
     transform: translateY(-2px);
     box-shadow: 0 6px 15px rgba(3, 169, 244, 0.4);
+    color: white !important;
 }
 
 /* Footer Styles */

@@ -59,4 +59,17 @@
       <path class="st3" d="M1105.17,302.63c-2.54,2.32-6.26-1.1-4.06-3.54,2.45-2.71,6.73,1.09,4.06,3.54Z"/>
     </g>
   </g>
+  <style>
+    .svg-text {
+      font-family: 'Quicksand', 'Nunito', sans-serif;
+      font-size: 32px;
+      font-weight: 500;
+      fill: #ffffff;
+      text-anchor: middle;
+      dominant-baseline: central;
+    }
+  </style>
+  <text x="318.035" y="504.5" class="svg-text">Step by Step</text>
+  <text x="733.065" y="504.5" class="svg-text">Research Informed</text>
+  <text x="1148.085" y="504.5" class="svg-text">Personalised</text>
 </svg>

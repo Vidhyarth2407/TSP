@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
+
 @font-face {
   font-family: 'Nunito';
   src: url('../assets/fonts/Nunito-VariableFont_wght.ttf') format('truetype');
@@ -30,6 +32,7 @@
   --font-heading: 'Quicksand', sans-serif;
   --font-body: 'Quicksand', sans-serif;
   --font-accent: 'Nunito', sans-serif;
+  --font-display: 'Chewy', system-ui;
 
   /* Future Palette */
   --color-yellow-gold: #fcb116;

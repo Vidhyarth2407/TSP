@@ -87,7 +87,7 @@
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    max-width: 1300px;
+    max-width: 1200px;
     margin: 0 auto;
     width: 100%;
 }
@@ -111,20 +111,21 @@
 
 .path-section-container {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
-    max-width: 1300px;
+    max-width: 1200px;
     width: 100%;
     margin: 0 auto;
     gap: 2rem;
+    padding: 6rem 0;
 }
 
 .path-text-content {
-    flex: 1 1 35%;
+    flex: 0 0 40%;
     min-width: 300px;
     text-align: left;
-    padding-left: 4rem;
+    padding-left: 0;
 }
 
 .path-text-content h2 {
@@ -148,7 +149,7 @@
 }
 
 .path-image-content {
-    flex: 1 1 60%;
+    flex: 0 0 60%;
     min-width: 300px;
     display: flex;
     justify-content: flex-end;
@@ -157,10 +158,8 @@
 
 .path-svg {
     width: 100%;
-    max-width: 900px;
+    max-width: 1000px;
     height: auto;
-    transform: scale(1.1);
-    transform-origin: left center;
 }
 
 /* Inner World Section */
@@ -298,26 +297,29 @@
     font-weight: 500;
 }
 
-/* Our Advisor Section */
+.advisor-section {
+    background-color: var(--color-white);
+    padding: 8rem 1rem;
+    width: 100%;
+}
+
 .advisor-section-container {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    max-width: 1250px;
+    max-width: 1200px;
     width: 100%;
-    margin: 0 auto 0 auto;
-    gap: 5rem;
-    background-color: var(--color-white);
-    padding: 6rem 4rem 6rem 0.5rem;
-    border-radius: 40px;
+    margin: 0 auto;
+    gap: 4rem;
 }
 
 .advisor-left {
-    flex: 0 0 57%;
+    flex: 0 0 55%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding-top: 3rem;
+    height: 550px;
+    padding-top: 0;
 }
 
 .advisor-title {
@@ -325,93 +327,85 @@
     color: var(--color-dark-navy);
     font-weight: 800;
     margin-top: 0;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.8rem;
     line-height: 1;
     text-transform: uppercase;
 }
 
 .advisor-subtitle-main {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     color: var(--color-grey-text);
     font-weight: 600;
     margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: 1.5rem;
 }
 
-.advisor-subtitle {
-    font-size: 1.25rem;
-    color: var(--color-dark-navy, var(--color-dark-navy));
-    font-weight: 700;
-    margin-top: -0.2rem;
-    margin-bottom: 0.5rem;
-    text-transform: uppercase;
-}
-
-.advisor-left p {
-    font-size: 1.15rem;
+.advisor-left-text-group p {
+    font-size: 1.1rem;
     color: var(--color-grey-text);
     line-height: 1.7;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0;
     text-align: left;
 }
 
-.advisor-left p strong {
-    color: #444;
+.advisor-left-text-group p strong {
+    color: var(--color-text);
     font-weight: 800;
 }
 
 .advisor-logo-row {
     display: flex;
     align-items: center;
-    gap: 0;
-    margin-top: -5rem;
+    gap: 1.5rem;
+    margin-top: auto;
+    /* Pushes to bottom */
 }
 
-.advisor-logo-img {
-    width: 400px;
+.calm-connect-logo {
+    width: 140px;
     height: auto;
     object-fit: contain;
-    margin-left: -90px;
+    margin-left: 0;
+    transform: translateY(-100px);
 }
 
 .advisor-logo-text {
-    border-left: 1px solid #ccc;
-    padding-left: 0.5rem;
-    margin-left: -6rem;
-    margin-top: 6rem;
+    border-left: 1px solid #ddd;
+    padding-left: 1.5rem;
     display: flex;
     align-items: center;
-    min-height: 100px;
+    min-height: 80px;
+    transform: translateY(-40px);
 }
 
 .advisor-logo-text p {
     margin: 0;
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: var(--color-grey-text);
-    line-height: 1.4;
+    line-height: 1.5;
     text-align: left;
 }
 
 .advisor-right {
     flex: 0 0 40%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
 }
 
 .advisor-card {
     position: relative;
-    width: 340px;
-    height: 520px;
+    width: 320px;
+    height: 420px;
     background-color: var(--color-white);
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-    padding-bottom: 2rem;
-    margin: 50px auto;
+    padding-bottom: 1.2rem;
     overflow: visible;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
 .advisor-card::after {
@@ -429,15 +423,16 @@
 
 .advisor-card-img {
     position: absolute;
-    top: -85px;
-    left: 43%;
-    transform: translateX(-50%) rotate(-4deg);
-    width: 560px;
-    max-width: none;
+    top: -86px;
+    left: 40%;
+    transform: translateX(-50%) rotate(-0deg);
+    width: 510px;
+    max-width: none !important;
     height: auto;
     display: block;
     z-index: 10;
     pointer-events: none;
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.1));
 }
 
 .advisor-card-info {
@@ -454,14 +449,15 @@
     margin: 0;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    line-height: 1.2;
+    line-height: 1.1;
 }
 
 .advisor-role-text {
     font-size: 1.1rem;
     color: #ed0081;
     font-weight: 700;
-    margin: 0.3rem 0 0.1rem 0;
+    margin: 0;
+    line-height: 1.2;
 }
 
 .advisor-board-text {
@@ -559,7 +555,7 @@
 
 .guiding-container {
     position: relative;
-    max-width: 1300px;
+    max-width: 1350px;
     width: 100%;
     margin: 0 auto;
 }

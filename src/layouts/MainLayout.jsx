@@ -10,7 +10,7 @@ const MainLayout = ({ children }) => {
     const location = useLocation();
     // Default to true on initial load
     const [loading, setLoading] = useState(true);
-    const showExploreSection = !['/programs'].includes(location.pathname);
+    const showExploreSection = true; // ExploreSection shows on all pages (handles per-page text internally)
 
     useEffect(() => {
         window.scrollTo(0, 0);

@@ -9,7 +9,6 @@ import ProgramsHero from '../components/Programs/ProgramsHero';
 import InnerStarsProgram from '../components/Programs/InnerStarsProgram';
 import LearningStarsProgram from '../components/Programs/LearningStarsProgram';
 import ProgramComparison from '../components/Programs/ProgramComparison';
-import ProgramCTA from '../components/Programs/ProgramCTA';
 
 const ProgramsPage = () => {
     useEffect(() => {
@@ -48,7 +47,6 @@ const ProgramsPage = () => {
                 <LearningStarsProgram />
             </div>
             <ProgramComparison />
-            <ProgramCTA />
         </div>
     );
 };

@@ -48,14 +48,10 @@ const Header = () => {
                 <nav className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
                     <ul>
                         <li><Link to="/story" onClick={() => setIsMenuOpen(false)}>Story</Link></li>
-                        <li className="nav-item-dropdown max-md:w-full max-md:flex-col max-md:items-start group">
-                            <div className="flex items-center justify-between w-full lg:w-auto gap-2">
-                                <Link to="/programs" onClick={() => setIsMenuOpen(false)}>Programs</Link>
-                                <button className="p-1 md:pointer-events-none text-[var(--color-deep-purple)]" onClick={(e) => { e.preventDefault(); setMobileProgramsOpen(!mobileProgramsOpen); }}>
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className={`transition-transform duration-300 ${mobileProgramsOpen ? 'rotate-180' : ''} group-hover:md:-rotate-180`}><path d="M6 9l6 6 6-6" /></svg>
-                                </button>
-                            </div>
+                        <li className="nav-item-dropdown group">
+                            <Link to="/programs" onClick={() => setIsMenuOpen(false)}>Programs</Link>
                             <div className={`dropdown-menu ${mobileProgramsOpen ? 'mobile-open' : ''}`}>
+                                <Link to="/programs" className="dropdown-item overview-btn" onClick={() => setIsMenuOpen(false)}>Overview</Link>
                                 <Link to="/inner-stars" className="dropdown-item inner-stars-btn" onClick={() => setIsMenuOpen(false)}>Inner Stars</Link>
                                 <Link to="/learning-stars" className="dropdown-item learning-stars-btn" onClick={() => setIsMenuOpen(false)}>Learning Stars</Link>
                             </div>
@@ -81,7 +77,7 @@ const Header = () => {
                     <a className="btn-join font-bold text-white no-underline flex items-center gap-2 cursor-pointer">
                         Book now
                     </a>
-                    <div className="dropdown-menu !left-auto !right-[-20px] !transform-none opacity-0 invisible group-hover:!opacity-100 group-hover:!visible group-hover:!-translate-y-1 transition-all duration-300 mt-4">
+                    <div className="dropdown-menu !left-1/2 !-translate-x-1/2 opacity-0 invisible group-hover:!opacity-100 group-hover:!visible group-hover:!-translate-y-1 transition-all duration-300 mt-4">
                         <a href="#" className="dropdown-item inner-stars-btn" onClick={openInnerStarsCalendly}>Inner Stars</a>
                         <a href="#" className="dropdown-item learning-stars-btn" onClick={openLearningStarsCalendly}>Learning Stars</a>
                     </div>
