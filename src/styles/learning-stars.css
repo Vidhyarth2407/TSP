@@ -120,10 +120,14 @@
     .ls-research-heading-navy,
     .ls-creator-title,
     .ls-difference-title,
-    .ls-clarity-title,
     .ls-booking-title,
     .ls-faq-title {
         font-size: 2.8rem !important;
+    }
+
+    .ls-clarity-title {
+        font-size: 2.8rem !important;
+        white-space: nowrap !important;
     }
 }
 
@@ -197,13 +201,13 @@
 
 .ls-light-svg {
     filter: drop-shadow(0 0 30px rgba(236, 170, 25, 0.2));
-    margin-top: -170px;
+    margin-top: -120px;
     transform: scale(1.1);
 }
 
 @media (max-width: 768px) {
     .ls-light-svg {
-        margin-top: -100px;
+        margin-top: -60px;
         transform: scale(1);
     }
 }
@@ -225,6 +229,9 @@
 
 .why-literacy-content p {
     font-family: var(--font-accent);
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
 }
 
 /* Shared UI Components */
@@ -343,7 +350,7 @@
 
 /* Inside the Program Section */
 .ls-inside-program-section {
-    padding: 5rem 0 40px 0 !important;
+    padding: 3rem 0 !important;
     overflow: hidden;
     background-color: var(--color-dark-navy);
 }
@@ -444,7 +451,7 @@
 
 /* Intentional Teaching Approach Section */
 .ls-intentional-section {
-    padding: 0 0 60px 0;
+    padding: 3rem 0;
     background-color: var(--color-dark-navy);
     overflow: hidden;
 }
@@ -475,6 +482,10 @@
     width: auto;
     max-width: 100%;
     height: auto;
+}
+
+.ls-intentional-cards {
+    display: none;
 }
 
 .ls-intentional-info-box {
@@ -634,18 +645,28 @@
 
 @media (max-width: 1024px) {
     .ls-inside-program-section {
-        display: none;
+        display: none !important;
     }
 
     .ls-kids-asset {
         width: 100%;
-        max-width: 320px;
-        height: 300px;
-        left: 0;
+        max-width: 340px !important;
+        height: 440px !important;
+        left: 0 !important;
         top: 0;
         order: 2;
         display: grid;
         justify-content: center;
+        overflow: hidden !important;
+        border-radius: 20px;
+        border: 4px solid #adc716;
+        background: #002B49;
+    }
+
+    .ls-kids-asset .ls-carousel-img {
+        object-fit: cover !important;
+        height: 100% !important;
+        width: 100% !important;
     }
 
     .ls-inside-title {
@@ -671,17 +692,19 @@
 
     .ls-program-asset {
         width: 100%;
-        max-width: 250px;
+        max-width: 300px;
         left: 0;
-        margin-bottom: 0;
+        margin-bottom: 2rem;
         order: 1;
         display: flex;
         justify-content: center;
     }
 
     .ls-program-asset img {
-        transform: scale(2);
+        transform: scale(1.1);
         transform-origin: center;
+        width: 100%;
+        height: auto;
     }
 
 
@@ -696,37 +719,81 @@
         /* Added bottom margin to separate from research section */
     }
 
+    /* Standardized Headline Sizes for Mobile Consistency */
+    .ls-title,
+    .why-literacy-title,
+    .ls-learn-title,
+    .ls-inside-title,
+    .ls-intentional-title,
+    .ls-research-heading-yellow,
+    .ls-research-heading-white,
+    .ls-research-heading-turquoise,
+    .ls-research-heading-navy,
+    .ls-creator-title,
+    .ls-difference-title,
+    .ls-clarity-title,
+    .ls-booking-title,
+    .ls-faq-title {
+        font-size: 1.7rem !important;
+        line-height: 1.2 !important;
+        margin-bottom: 1.25rem !important;
+        text-align: center !important;
+    }
+
     .ls-intentional-wrapper {
         padding: 0 1rem;
     }
 
-    .ls-intentional-title {
-        font-size: 1.5rem;
-        margin-bottom: 0.5rem;
-        line-height: 1.2;
-        max-width: 320px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
     .ls-intentional-asset-container {
-        margin-top: -60px;
-        /* Reset desktop pull-up */
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        margin-bottom: 1rem;
+        display: none;
     }
 
-    .ls-intentional-asset {
-        max-width: 90%;
-        height: auto;
-        transform: scale(1.1);
-        /* Reduced scale */
+    .ls-intentional-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        width: 100%;
+        max-width: 320px;
+        margin: 1rem auto 0;
+    }
+
+    .ls-intentional-card {
+        width: 100%;
+        background: white;
+        border-radius: 1.2rem;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        border: 2px solid transparent;
+    }
+
+    .ls-intentional-card-top {
+        height: 160px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1.5rem;
+    }
+
+    .ls-intentional-card-top svg {
+        width: 100%;
+        height: 100%;
+        max-width: 120px;
+    }
+
+    .ls-intentional-card-bottom {
+        padding: 0.8rem 1rem;
+        color: white;
+        text-align: center;
+        font-family: var(--font-heading);
+        font-weight: 700;
+        font-size: 1.2rem;
+        text-transform: capitalize;
     }
 
     .ls-intentional-info-box {
-        margin: 0.5rem auto 1.5rem;
+        margin: 0.5rem auto 1rem;
         padding: 0;
         max-width: 90%;
         border: none;
@@ -735,11 +802,11 @@
     .ls-intentional-info-text {
         white-space: normal;
         text-align: center;
-        line-height: 1.4;
-        font-size: 0.95rem;
-        max-width: 280px;
-        /* Forces wrap to roughly 2-3 lines for visual balance */
+        line-height: 1.5;
+        font-size: 1.1rem;
+        max-width: 300px;
         margin: 0 auto;
+        opacity: 0.9;
     }
 
     .ls-icon-strip img {
@@ -757,8 +824,7 @@
     .ls-research-right-carousel-wrapper {
         position: relative;
         width: 100%;
-        min-height: 450px;
-        /* Height for the right side graphics/content on mobile */
+        min-height: auto;
     }
 
     .ls-research-right-carousel-wrapper>div {
@@ -820,7 +886,7 @@
 @media (max-width: 1024px) {
     .ls-creator-container {
         flex-direction: column;
-        margin-top: -5rem;
+        margin-top: 0 !important;
     }
 
     .ls-creator-image-wrapper {
@@ -845,6 +911,12 @@
     .ls-diff-row {
         text-align: center;
         flex-direction: column;
+    }
+
+    .ls-diff-content p {
+        text-align: justify;
+        hyphens: auto;
+        -webkit-hyphens: auto;
     }
 
     .ls-diff-image-wrapper {
@@ -900,6 +972,21 @@
     position: relative;
     overflow: hidden;
     transition: all 0.3s ease;
+    white-space: nowrap;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 0;
+}
+
+@media (max-width: 768px) {
+    .ls-booking-btn {
+        width: auto !important;
+        max-width: 100%;
+        font-size: 0.95rem;
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
 }
 
 .ls-booking-btn:hover {
@@ -942,16 +1029,15 @@
 }
 
 @media (max-width: 768px) {
+
     .ls-research-section {
-        padding-bottom: 6rem !important;
-        /* Increased space at bottom of research */
-        padding-top: 2rem !important;
-        /* Added space at top to prevent touching previous section */
+        padding-top: 4rem !important;
+        padding-bottom: 2rem !important;
     }
 
     .ls-creator-section {
-        padding-top: 4rem !important;
-        /* Increased space at top of creator */
+        padding-top: 1rem !important;
+        padding-bottom: 4rem !important;
     }
 
     .ls-faq-container {
