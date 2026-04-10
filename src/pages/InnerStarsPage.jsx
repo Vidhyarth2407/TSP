@@ -383,7 +383,7 @@ const InnerStarsPage = () => {
                             <img src={InsideALessonSvg} alt="Inside a Lesson" className="inside-lesson-img w-full h-auto origin-top" />
                         </picture>
                         <a onClick={(e) => { e.preventDefault(); setIsSneakPeekOpen(true); }} className="sneak-peek-btn absolute cursor-pointer" style={{ top: '18%', left: '70.3%', transform: 'translate(-50%, -50%)' }}>
-                            Sneak Peak
+                            Sneak Peek
                         </a>
                     </div>
                 </div>
