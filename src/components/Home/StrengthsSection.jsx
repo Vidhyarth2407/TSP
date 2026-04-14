@@ -14,36 +14,42 @@ const StrengthsSection = () => {
         {
             img: BounceBack,
             title: "Bounce Back",
+            alt: "Bounce Back character card representing resilience and coping skills in children’s life skills learning",
             description: "RESILIENCE\nGrowing through challenges.",
             bgColor: "var(--color-yellow-gold)"
         },
         {
             img: StandTall,
             title: "Stand Tall",
+            alt: "Stand Tall character card representing courage and brave choices in children’s life skills learning",
             description: "COURAGE\nTrying even when afraid.",
             bgColor: "var(--color-lime-green)"
         },
         {
             img: KeepGoing,
             title: "Keep Going",
+            alt: "Keep Going character card representing perseverance and persistence in children’s life skills learning",
             description: "PERSEVERANCE\nTrying when it's hard.",
             bgColor: "var(--color-deep-purple)"
         },
         {
             img: ChooseKind,
             title: "Choose Kind",
+            alt: "Choose Kind character card representing kindness and empathy in children’s life skills learning",
             description: "KINDNESS AND EMPATHY\nShowing compassion for self & others.",
             bgColor: "var(--color-red-orange)"
         },
         {
             img: FindTheGood,
             title: "Find the Good",
+            alt: "Find the Good character card representing gratitude and positive thinking in children’s life skills learning",
             description: "GRATITUDE\nNoticing what is good.",
             bgColor: "var(--color-hot-pink)"
         },
         {
             img: StayTrue,
             title: "Stay True",
+            alt: "Stay True character card representing honesty and integrity in children’s life skills learning",
             description: "INTEGRITY\nMaking wise choices.",
             bgColor: "var(--color-teal)"
         }
@@ -69,7 +75,7 @@ const StrengthsSection = () => {
                             <div className="flip-card-front">
                                 <img
                                     src={s.img}
-                                    alt={s.title}
+                                    alt={s.alt}
                                     className="w-full h-auto block drop-shadow-2xl"
                                 />
                             </div>
