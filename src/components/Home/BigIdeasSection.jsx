@@ -10,7 +10,7 @@ const BigIdeasSection = () => {
                 <source media="(max-width: 768px)" srcSet={BigIdeasMobile} />
                 <img
                     src={BigIdeasDesktop}
-                    alt="Big Ideas"
+                    alt="Visual showing how The Starry Path brings life skills education to life through stories, visuals, movement, and practical tools"
                     className="big-ideas-image"
                 />
             </picture>

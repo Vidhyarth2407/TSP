@@ -18,7 +18,7 @@ const InnerStarsSection = () => {
             <div className="w-full mt-12 overflow-hidden" data-aos="fade-up">
                 <img
                     src={Tangle}
-                    alt="Decorative Tangle"
+                    alt="Inner Stars section explaining why children need life skills, resilience, and healthy habits during the primary school years"
                     className="w-full h-auto block"
                     style={{ transform: 'scale(1.1)' }}
                 />

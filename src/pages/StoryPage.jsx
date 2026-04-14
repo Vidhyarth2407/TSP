@@ -4,6 +4,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import '../styles/story.css';
 import SEO from '../components/SEO';
+import HiddenNavigation from '../components/HiddenNavigation';
 
 // SVGs Imports
 import BannerTop from '../assets/Story/BAnner.svg';
@@ -22,11 +23,46 @@ const StoryPage = () => {
         window.scrollTo(0, 0);
     }, []);
 
+    const seoLinks = [
+        { label: "Homepage", to: "/" },
+        { label: "Programs", to: "/programs" }
+    ];
+
+    const schema = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://thestarrypath.com.au/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Our Story",
+                        "item": "https://thestarrypath.com.au/story"
+                    }
+                ]
+            }
+        ]
+    };
+
     return (
         <div className="story-page">
             <SEO
-                title="Our Purpose & Story | Building Character for Life | The Starry Path"
-                description="Discover why The Starry Path was created. Founded by a teacher and psychologist to bridge the gap between education and emotional intelligence for every child."
+                title="Our Story | The Starry Path"
+                description="Learn the story behind The Starry Path, a children’s program created from teaching experience, psychology, and a passion for helping children grow in learning and life."
+                keywords={[
+                    "The Starry Path story",
+                    "founder story children’s program",
+                    "psychology and education for children",
+                    "teacher created children’s program"
+                ]}
+                schema={schema}
             />
             <section className="story-section pt-0" data-aos="fade-in">
                 <picture className="story-hero animated-banner">
@@ -34,7 +70,8 @@ const StoryPage = () => {
                     <img src={BannerTop} alt="Why The Starry Path Exists" className="w-full h-auto block" />
                 </picture>
                 <div className="story-hero-text">
-                    <h4>A child's inner world is made of many&nbsp;pieces </h4>
+                    <h1 className="sr-only">Our Story</h1>
+                    <h2 className="text-xl md:text-2xl font-bold mb-4">A child's inner world is made of many&nbsp;pieces </h2>
                     <p>Understanding how those pieces work together builds habits of mind and&nbsp;character </p>
                 </div>
             </section>
@@ -170,6 +207,7 @@ const StoryPage = () => {
                     <Link to="/programs" className="btn-join font-bold">JOIN THE JOURNEY</Link>
                 </div>
             </section>
+            <HiddenNavigation links={seoLinks} />
         </div >
     );
 };

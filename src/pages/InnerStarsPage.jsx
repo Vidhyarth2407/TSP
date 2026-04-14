@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import emailjs from '@emailjs/browser';
 import { EMAILJS_CONFIG } from '../config/emailConfig';
 import Snackbar from '../components/Snackbar';
 import SEO from '../components/SEO';
+import HiddenNavigation from '../components/HiddenNavigation';
 import '../styles/inner-stars.css';
 
 // Asset Import
@@ -140,7 +141,7 @@ const InnerStarsPage = () => {
             subheading: "A new enrollment request has been received.",
             auto_reply_message: `Our team will carefully review your request for the ${programName} program and will reach out to you soon to discuss the next steps for enrollment.`,
             message: "New enrollment request for Inner Stars.",
-            logo_url: 'https://the-starry-path.vercel.app/Logo.png',
+            logo_url: 'https://thestarrypath.com.au/Logo.png',
             user_name: parentName,
             user_email: form.parent_email.value,
             reply_to: form.parent_email.value,
@@ -173,11 +174,76 @@ const InnerStarsPage = () => {
         });
     };
 
+    const seoLinks = [
+        { label: "Programs", to: "/programs" },
+        { label: "Learning Stars", to: "/learning-stars" },
+        { label: "Homepage", to: "/" },
+        { label: "Book Now", to: "#enrollment-form" }
+    ];
+
+    const schema = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://thestarrypath.com.au/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Programs",
+                        "item": "https://thestarrypath.com.au/programs"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "Inner Stars",
+                        "item": "https://thestarrypath.com.au/inner-stars"
+                    }
+                ]
+            },
+            {
+                "@type": "Service",
+                "name": "Inner Stars Life Skills Program",
+                "description": "A life skills program for children aged 5-12 in Point Cook, building resilience, mindset, and emotional intelligence.",
+                "provider": {
+                    "@type": "EducationalOrganization",
+                    "name": "The Starry Path",
+                    "url": "https://thestarrypath.com.au/"
+                },
+                "areaServed": "Point Cook, VIC",
+                "hasOfferCatalog": {
+                    "@type": "OfferCatalog",
+                    "name": "Inner Stars Sessions",
+                    "itemListElement": [
+                        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Saturday Sessions" } },
+                        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Holiday Intensives" } }
+                    ]
+                }
+            }
+        ]
+    };
+
     return (
         <div className="inner-stars-page">
             <SEO
-                title="Building Resilience & Life Skills for Children | Inner Stars"
-                description="Strengthen your child's emotional intelligence, courage, and resilience with the Inner Stars program. Evidence-based life skills coaching for children aged 5-12."
+                title="Inner Stars | Life Skills Program for Kids Point Cook"
+                description="Inner Stars is a life skills program for children aged 5–12 in Point Cook, helping children build resilience, mindset, emotional intelligence, and positive habits for everyday life."
+                keywords={[
+                    "life skills for kids Point Cook",
+                    "kids life skills program Point Cook",
+                    "resilience for children",
+                    "mindset for kids",
+                    "emotional intelligence for children",
+                    "positive behaviour development",
+                    "life skills program for children"
+                ]}
+                schema={schema}
             />
 
             {/* Hero Section */}
@@ -185,15 +251,20 @@ const InnerStarsPage = () => {
                 <div className="inner-stars-card" data-aos="fade-up">
                     <div className="card-content flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-16">
                         <div className="card-image w-full lg:w-[55%] flex justify-center lg:justify-start" data-aos="fade-right" data-aos-delay="200">
-                            <img src={BoxSvg} alt="Inner Stars Box" className="box-svg-asset" />
+                            <img src={BoxSvg} alt="Illustration of The Starry Path box representing practical tools for children’s life skills, mindset, and resilience" className="box-svg-asset" />
                         </div>
                         <div className="card-text w-full lg:w-[45%] text-center lg:text-left" data-aos="fade-left" data-aos-delay="400">
-                            <h1 className="is-title">INNER STARS</h1>
-                            <h2 className="is-subtitle">Character building</h2>
-                            <p className="is-description">
-                                Habits of minds for resilience<br />
-                                and life skills for learning and life
+                            <h1 className="is-title tracking-widest">INNER STARS</h1>
+                            <h2 className="is-subtitle uppercase tracking-widest" style={{ color: 'var(--color-hot-pink)' }}>Life Skills Program</h2>
+                            <p className="is-description mt-4">
+                                BUILDING RESILIENCE, MINDSET &<br />
+                                EMOTIONAL INTELLIGENCE FOR LIFE.
                             </p>
+                            <div className="mt-8">
+                                <a href="#enrollment-form" className="btn-join inline-block px-10 py-3 rounded-full text-white font-bold uppercase tracking-wider shadow-lg hover:shadow-xl transition-all">
+                                    Book Now
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -290,15 +361,15 @@ const InnerStarsPage = () => {
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-4 lg:gap-12 max-w-[1200px] mx-auto mb-[-60px] md:mb-0" data-aos="fade-up" data-aos-delay="200">
                         <div className="relative w-full aspect-[377.77/424.54] overflow-hidden group hover:-translate-y-2 transition-transform duration-300">
-                            <img src={LifeSkillsSvg} alt="" className="absolute top-0 h-full w-[347.603%] max-w-none" style={{ left: '-13.94%' }} />
+                            <img src={LifeSkillsSvg} alt="Section highlighting life skills in education and the role of Inner Stars in building resilience and mindset for children" className="absolute top-0 h-full w-[347.603%] max-w-none" style={{ left: '-13.94%' }} />
 
                         </div>
                         <div className="relative w-full aspect-[377.77/424.54] overflow-hidden group hover:-translate-y-2 transition-transform duration-300 -mt-[100px] md:mt-0">
-                            <img src={LifeSkillsSvg} alt="" className="absolute top-0 h-full w-[347.603%] max-w-none" style={{ left: '-123.8%' }} />
+                            <img src={LifeSkillsSvg} alt="Section highlighting life skills in education and the role of Inner Stars in building resilience and mindset for children" className="absolute top-0 h-full w-[347.603%] max-w-none" style={{ left: '-123.8%' }} />
 
                         </div>
                         <div className="relative w-full aspect-[377.77/424.54] overflow-hidden group hover:-translate-y-2 transition-transform duration-300 -mt-[100px] md:mt-0">
-                            <img src={LifeSkillsSvg} alt="" className="absolute top-0 h-full w-[347.603%] max-w-none" style={{ left: '-233.66%' }} />
+                            <img src={LifeSkillsSvg} alt="Section highlighting life skills in education and the role of Inner Stars in building resilience and mindset for children" className="absolute top-0 h-full w-[347.603%] max-w-none" style={{ left: '-233.66%' }} />
 
                         </div>
                     </div>
@@ -636,7 +707,7 @@ const InnerStarsPage = () => {
                 type={snackbar.type}
                 onClose={() => setSnackbar({ ...snackbar, show: false })}
             />
-
+            <HiddenNavigation links={seoLinks} />
         </div>
     );
 };

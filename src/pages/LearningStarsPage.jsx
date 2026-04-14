@@ -6,6 +6,7 @@ import emailjs from '@emailjs/browser';
 import { EMAILJS_CONFIG } from '../config/emailConfig';
 import Snackbar from '../components/Snackbar';
 import SEO from '../components/SEO';
+import HiddenNavigation from '../components/HiddenNavigation';
 import '../styles/learning-stars.css';
 
 // Assets
@@ -98,7 +99,7 @@ const LearningStarsPage = () => {
             auto_reply_message: `Our team will carefully review your screening request and will reach out to you soon to confirm the assessment schedule and next steps.`,
             message: userMessage || "No additional notes provided.",
             program: programName,
-            logo_url: 'https://the-starry-path.vercel.app/Logo.png',
+            logo_url: 'https://thestarrypath.com.au/Logo.png',
             // Aliases for common EmailJS template variables
             user_name: parentName,
             user_email: form.parent_email.value,
@@ -233,11 +234,76 @@ const LearningStarsPage = () => {
         }
     ];
 
+    const seoLinks = [
+        { label: "Programs", to: "/programs" },
+        { label: "Inner Stars", to: "/inner-stars" },
+        { label: "Homepage", to: "/" },
+        { label: "Book Now", to: "#assessment-section" }
+    ];
+
+    const schema = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://thestarrypath.com.au/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Programs",
+                        "item": "https://thestarrypath.com.au/programs"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "Learning Stars",
+                        "item": "https://thestarrypath.com.au/learning-stars"
+                    }
+                ]
+            },
+            {
+                "@type": "Service",
+                "name": "Learning Stars Literacy Support",
+                "description": "Structured literacy support for children aged 5-12 in Point Cook, focusing on reading, spelling, and writing mastery.",
+                "provider": {
+                    "@type": "EducationalOrganization",
+                    "name": "The Starry Path",
+                    "url": "https://thestarrypath.com.au/"
+                },
+                "areaServed": "Point Cook, VIC",
+                "serviceType": "Literacy Tutoring",
+                "hasOfferCatalog": {
+                    "@type": "OfferCatalog",
+                    "name": "Literacy Services",
+                    "itemListElement": [
+                        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Literacy Assessment" } },
+                        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Structured Literacy Support" } }
+                    ]
+                }
+            }
+        ]
+    };
+
     return (
         <div className="learning-stars-page">
             <SEO
-                title="Science-Based Literacy Support & Free Assessment | Learning Stars"
-                description="Is your child struggling with reading or spelling? Book a free literacy assessment and join our science-based program for phonics, fluency, and comprehension."
+                title="Learning Stars | Literacy Support for Kids Point Cook"
+                description="Learning Stars provides structured literacy support for children aged 5–12 in Point Cook, helping build reading, spelling, writing, and strong academic foundations."
+                keywords={[
+                    "literacy support Point Cook",
+                    "reading help for kids Point Cook",
+                    "spelling help for children",
+                    "writing support for primary school children",
+                    "structured literacy support",
+                    "primary school tutoring Point Cook"
+                ]}
+                schema={schema}
             />
             {/* Hero Section */}
             <section className="learning-stars-hero-section">
@@ -764,12 +830,23 @@ const LearningStarsPage = () => {
                 </div>
             </section>
 
+            {/* Discovery Links */}
+            <div className="max-w-[1200px] mx-auto px-6 py-8 text-center border-t border-white/10">
+                <div className="flex flex-wrap justify-center gap-x-8 gap-y-4 text-white/60 text-sm uppercase tracking-widest font-bold">
+                    <a href="/" className="hover:text-[var(--color-yellow-gold)] transition-colors">Homepage</a>
+                    <a href="/programs" className="hover:text-[var(--color-yellow-gold)] transition-colors">Programs</a>
+                    <a href="/inner-stars" className="hover:text-[var(--color-yellow-gold)] transition-colors">Inner Stars</a>
+                    <a href="#assessment-section" className="hover:text-[var(--color-yellow-gold)] transition-colors text-[var(--color-yellow-gold)]">Book Assessment</a>
+                </div>
+            </div>
+
             <Snackbar
                 show={snackbar.show}
                 message={snackbar.message}
                 type={snackbar.type}
                 onClose={() => setSnackbar({ ...snackbar, show: false })}
             />
+            <HiddenNavigation links={seoLinks} />
         </div>
     );
 };

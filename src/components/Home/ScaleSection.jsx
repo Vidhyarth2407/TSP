@@ -43,7 +43,7 @@ const ScaleSection = () => {
                             <div className="flex-grow flex items-end justify-center w-full mb-0 pb-0 relative z-0">
                                 <img
                                     src={slide}
-                                    alt={`Balance Scale Visualization ${index + 1}`}
+                                    alt={`Graphic showing that academic learning and life skills both matter in children’s education`}
                                     className={`w-full h-auto object-contain align-bottom ${index === 0 ? 'mb-[0.75rem] md:mb-[1.25rem]' : index === 1 ? 'mb-[0.4rem] md:mb-[0.6rem]' : index === 3 ? 'mb-[-0.5rem] md:mb-[-1rem]' : ''} ${index === currentIndex ? 'animate-seesaw' : ''}`}
                                     style={{ maxHeight: '450px' }}
                                 />

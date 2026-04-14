@@ -3,15 +3,16 @@ import BannerBox from '../../assets/images/Homepage/Homepage Banner.svg';
 
 const Hero = () => {
     return (
-        <section className="hero-section min-h-[50vh] md:min-h-[70vh] flex items-center">
-            <img
-                src={BannerBox}
-                alt="The Starry Path Banner"
-                className="hero-banner"
-                loading="eager"
-                fetchpriority="high"
-
-            />
+        <section className="hero-section py-8 md:py-12 flex flex-col items-center justify-center">
+            <div className="w-full max-w-[1000px] px-4 mx-auto">
+                <img
+                    src={BannerBox}
+                    alt="Life skills and resilience visual showing the balance between exam preparation and preparing children for life"
+                    className="w-full h-auto object-contain drop-shadow-lg"
+                    loading="eager"
+                    fetchpriority="high"
+                />
+            </div>
         </section>
     );
 };

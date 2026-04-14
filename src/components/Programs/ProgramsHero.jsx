@@ -9,12 +9,15 @@ const ProgramsHero = () => {
                     <img src={BoxImg} alt="Inner Strengths Box" className="w-full max-w-[320px] lg:max-w-[420px] h-auto drop-shadow-xl" />
                 </div>
                 <div className="flex-1 text-center lg:text-left" data-aos="fade-left">
-                    <h1 className="font-[var(--font-heading)] text-[var(--color-yellow-gold)] text-2xl md:text-3xl lg:text-5xl mb-2 leading-tight tracking-wide font-bold">
-                        INNER STRENGTHS<br className="hidden lg:block" /> THAT GUIDE.
+                    <h1 className="text-[var(--color-yellow-gold)] text-3xl md:text-5xl lg:text-7xl mb-6 font-[var(--font-heading)] font-bold uppercase tracking-widest">
+                        Programs
                     </h1>
-                    <h2 className="font-[var(--font-heading)] text-[var(--color-teal)] text-2xl md:text-3xl lg:text-5xl mb-6 md:mb-8 leading-tight tracking-wide font-bold">
-                        LITERACY SKILLS<br className="hidden lg:block" /> THAT EMPOWER.
+                    <h2 className="font-[var(--font-heading)] text-white text-xl md:text-2xl lg:text-3xl mb-2 leading-tight tracking-wide font-bold opacity-90">
+                        INNER STRENGTHS THAT GUIDE.
                     </h2>
+                    <h3 className="font-[var(--font-heading)] text-[var(--color-teal)] text-xl md:text-2xl lg:text-3xl mb-6 md:mb-8 leading-tight tracking-wide font-bold">
+                        LITERACY SKILLS THAT EMPOWER.
+                    </h3>
                     <p className="text-lg md:text-xl font-[var(--font-accent)] leading-relaxed text-white max-w-lg mx-auto lg:mx-0 opacity-95 text-center md:text-left">
                         At The Starry Path, children grow inner strengths through the <span className="font-bold">Inner Stars Program</span> and receive targeted literacy support through <span className="font-bold">Learning Stars</span>.
                     </p>

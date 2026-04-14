@@ -14,37 +14,37 @@ const StrengthsSection = () => {
         {
             img: BounceBack,
             title: "Bounce Back",
-            description: "RESILIENCE\nGrowing through challenges.",
+            description: "Bounce Back character card representing resilience and coping skills in children’s life skills learning",
             bgColor: "var(--color-yellow-gold)"
         },
         {
             img: StandTall,
             title: "Stand Tall",
-            description: "COURAGE\nTrying even when afraid.",
+            description: "Stand Tall character card representing courage and brave choices in children’s life skills learning",
             bgColor: "var(--color-lime-green)"
         },
         {
             img: KeepGoing,
             title: "Keep Going",
-            description: "PERSEVERANCE\nTrying when it's hard.",
+            description: "Keep Going character card representing perseverance and persistence in children’s life skills learning",
             bgColor: "var(--color-deep-purple)"
         },
         {
             img: ChooseKind,
             title: "Choose Kind",
-            description: "KINDNESS AND EMPATHY\nShowing compassion for self & others.",
+            description: "Choose Kind character card representing kindness and empathy in children’s life skills learning",
             bgColor: "var(--color-red-orange)"
         },
         {
             img: FindTheGood,
             title: "Find the Good",
-            description: "GRATITUDE\nNoticing what is good.",
+            description: "Find the Good character card representing gratitude and positive thinking in children’s life skills learning",
             bgColor: "var(--color-hot-pink)"
         },
         {
             img: StayTrue,
             title: "Stay True",
-            description: "HONESTY AND INTEGRITY\nMaking choices that feel right.",
+            description: "Stay True character card representing honesty and integrity in children’s life skills learning",
             bgColor: "var(--color-teal)"
         }
     ];
