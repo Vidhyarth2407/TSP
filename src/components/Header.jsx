@@ -60,8 +60,8 @@ const Header = () => {
                             </div>
                             <div className={`dropdown-menu ${mobileProgramsOpen ? 'mobile-open' : ''}`}>
                                 <Link to="/programs" className="dropdown-item overview-btn" onClick={() => setIsMenuOpen(false)}>Overview</Link>
-                                <Link to="/inner-stars" className="dropdown-item inner-stars-btn" onClick={() => setIsMenuOpen(false)}>Inner Stars</Link>
-                                <Link to="/learning-stars" className="dropdown-item learning-stars-btn" onClick={() => setIsMenuOpen(false)}>Learning Stars</Link>
+                                <Link to="/programs/inner-stars" className="dropdown-item inner-stars-btn" onClick={() => setIsMenuOpen(false)}>Inner Stars</Link>
+                                <Link to="/programs/learning-stars" className="dropdown-item learning-stars-btn" onClick={() => setIsMenuOpen(false)}>Learning Stars</Link>
                             </div>
                         </li>
                         <li><span className="nav-disabled">Resources</span></li>
@@ -74,8 +74,8 @@ const Header = () => {
                                 <span className={`inline-block w-2 h-2 border-r-2 border-b-2 border-white mb-1 transition-transform ${mobileBookNowOpen ? '-rotate-[135deg]' : 'rotate-45'}`}></span>
                             </button>
                             <div className={`dropdown-menu mx-auto ${mobileBookNowOpen ? 'mobile-open' : ''}`}>
-                                <Link to="/inner-stars#enrollment-form" className="dropdown-item inner-stars-btn w-full text-center" onClick={() => { setIsMenuOpen(false); setMobileBookNowOpen(false); }}>Inner Stars</Link>
-                                <Link to="/learning-stars#assessment-section" className="dropdown-item learning-stars-btn w-full text-center" onClick={() => { setIsMenuOpen(false); setMobileBookNowOpen(false); }}>Learning Stars</Link>
+                                <Link to="/programs/inner-stars#enrollment-form" className="dropdown-item inner-stars-btn w-full text-center" onClick={() => { setIsMenuOpen(false); setMobileBookNowOpen(false); }}>Inner Stars</Link>
+                                <Link to="/programs/learning-stars#assessment-section" className="dropdown-item learning-stars-btn w-full text-center" onClick={() => { setIsMenuOpen(false); setMobileBookNowOpen(false); }}>Learning Stars</Link>
                             </div>
                         </li>
                     </ul>
@@ -86,8 +86,8 @@ const Header = () => {
                         Book Now
                     </a>
                     <div className="dropdown-menu !left-1/2 !-translate-x-1/2 opacity-0 invisible group-hover:!opacity-100 group-hover:!visible group-hover:!-translate-y-1 transition-all duration-300 mt-4">
-                        <Link to="/inner-stars#enrollment-form" className="dropdown-item inner-stars-btn" onClick={() => setIsMenuOpen(false)}>Inner Stars</Link>
-                        <Link to="/learning-stars#assessment-section" className="dropdown-item learning-stars-btn" onClick={() => setIsMenuOpen(false)}>Learning Stars</Link>
+                        <Link to="/programs/inner-stars#enrollment-form" className="dropdown-item inner-stars-btn" onClick={() => setIsMenuOpen(false)}>Inner Stars</Link>
+                        <Link to="/programs/learning-stars#assessment-section" className="dropdown-item learning-stars-btn" onClick={() => setIsMenuOpen(false)}>Learning Stars</Link>
                     </div>
                 </div>
             </div>

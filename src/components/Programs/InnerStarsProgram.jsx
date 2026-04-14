@@ -32,7 +32,7 @@ const InnerStarsProgram = () => {
                         <strong style={{ color: 'var(--color-dark-navy)' }}>Perfect for:</strong> Every child aged 5-12 because healthy habits of mind matter.
                     </p>
                     <div className="flex justify-center md:justify-start">
-                        <Link to="/inner-stars" className="btn-join uppercase text-sm md:text-xl px-10 py-3 md:px-12 md:py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 font-bold">
+                        <Link to="/programs/inner-stars" className="btn-join uppercase text-sm md:text-xl px-10 py-3 md:px-12 md:py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 font-bold">
                             Learn More
                         </Link>
                     </div>

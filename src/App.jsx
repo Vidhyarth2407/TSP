@@ -6,6 +6,7 @@ import ProgramsPage from './pages/ProgramsPage';
 import StoryPage from './pages/StoryPage';
 import InnerStarsPage from './pages/InnerStarsPage';
 import LearningStarsPage from './pages/LearningStarsPage';
+import BookNowPage from './pages/BookNowPage';
 import './styles/theme.css';
 
 function App() {
@@ -15,12 +16,12 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/programs" element={<ProgramsPage />} />
-          <Route path="/inner-stars" element={<InnerStarsPage />} />
-          <Route path="/learning-stars" element={<LearningStarsPage />} />
+          <Route path="/programs/inner-stars" element={<InnerStarsPage />} />
+          <Route path="/programs/learning-stars" element={<LearningStarsPage />} />
           <Route path="/story" element={<StoryPage />} />
+          <Route path="/book-now" element={<BookNowPage />} />
         </Routes>
       </MainLayout>
-
     </Router>
   );
 }

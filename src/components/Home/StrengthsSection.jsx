@@ -92,7 +92,7 @@ const StrengthsSection = () => {
             </div>
 
             <div className="flex justify-center mb-8 md:mb-16 px-4" data-aos="zoom-in" data-aos-offset="100">
-                <Link to="/inner-stars" className="btn-join font-bold uppercase text-sm md:text-2xl px-6 py-3 md:px-12 md:py-4 w-full md:w-auto rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
+                <Link to="/programs/inner-stars" className="btn-join font-bold uppercase text-sm md:text-2xl px-6 py-3 md:px-12 md:py-4 w-full md:w-auto rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
                     BUILD LIFELONG STRENGTHS
                 </Link>
             </div>

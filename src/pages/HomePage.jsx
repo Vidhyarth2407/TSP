@@ -20,10 +20,10 @@ const HomePage = () => {
 
   const seoLinks = [
     { label: "Programs", to: "/programs" },
-    { label: "Inner Stars", to: "/inner-stars" },
-    { label: "Learning Stars", to: "/learning-stars" },
+    { label: "Inner Stars", to: "/programs/inner-stars" },
+    { label: "Learning Stars", to: "/programs/learning-stars" },
     { label: "Story", to: "/story" },
-    { label: "Book Now", to: "/programs" }
+    { label: "Book Now", to: "/book-now" }
   ];
 
   const schema = {
@@ -85,6 +85,7 @@ const HomePage = () => {
 
   return (
     <div className="home-page">
+      <h1 className="sr-only">The Starry Path</h1>
       <SEO
         title="The Starry Path | Children’s Programs in Point Cook"
         description="The Starry Path offers children’s programs in Point Cook for ages 5–12, including life skills, mindset, and resilience through Inner Stars and literacy support through Learning Stars."

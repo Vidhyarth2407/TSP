@@ -73,7 +73,7 @@ const ProgramCTA = () => {
                 </svg>
 
                 {/* 🔘 Button - Using footer-wave-button for consistency with ExploreSection */}
-                <Link to="/inner-stars#enrollment-form" className="footer-wave-button flex items-center justify-center text-center no-underline" data-aos="zoom-in">
+                <Link to="/programs/inner-stars#enrollment-form" className="footer-wave-button flex items-center justify-center text-center no-underline" data-aos="zoom-in">
                     START YOUR CHILD'S JOURNEY
                 </Link>
             </div>

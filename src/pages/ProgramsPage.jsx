@@ -35,9 +35,9 @@ const ProgramsPage = () => {
     }, []);
 
     const seoLinks = [
-        { label: "Inner Stars", to: "/inner-stars" },
-        { label: "Learning Stars", to: "/learning-stars" },
-        { label: "Book Now", to: "#assessment-section" }
+        { label: "Inner Stars", to: "/programs/inner-stars" },
+        { label: "Learning Stars", to: "/programs/learning-stars" },
+        { label: "Book Now", to: "/book-now" }
     ];
 
     const schema = {
@@ -53,14 +53,14 @@ const ProgramsPage = () => {
                         "position": 1,
                         "name": "Inner Stars",
                         "description": "Mindset, resilience, and life skills development for children.",
-                        "url": "https://thestarrypath.com.au/inner-stars"
+                        "url": "https://thestarrypath.com.au/programs/inner-stars"
                     },
                     {
                         "@type": "ListItem",
                         "position": 2,
                         "name": "Learning Stars",
                         "description": "Structured literacy support for reading, spelling, and writing mastery.",
-                        "url": "https://thestarrypath.com.au/learning-stars"
+                        "url": "https://thestarrypath.com.au/programs/learning-stars"
                     }
                 ]
             }

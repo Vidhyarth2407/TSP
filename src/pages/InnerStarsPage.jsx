@@ -176,9 +176,9 @@ const InnerStarsPage = () => {
 
     const seoLinks = [
         { label: "Programs", to: "/programs" },
-        { label: "Learning Stars", to: "/learning-stars" },
+        { label: "Learning Stars", to: "/programs/learning-stars" },
         { label: "Homepage", to: "/" },
-        { label: "Book Now", to: "#enrollment-form" }
+        { label: "Book Now", to: "/book-now" }
     ];
 
     const schema = {
@@ -203,7 +203,7 @@ const InnerStarsPage = () => {
                         "@type": "ListItem",
                         "position": 3,
                         "name": "Inner Stars",
-                        "item": "https://thestarrypath.com.au/inner-stars"
+                        "item": "https://thestarrypath.com.au/programs/inner-stars"
                     }
                 ]
             },
@@ -707,6 +707,15 @@ const InnerStarsPage = () => {
                 type={snackbar.type}
                 onClose={() => setSnackbar({ ...snackbar, show: false })}
             />
+            {/* SEO Footer for links */}
+            <div className="is-seo-footer py-12 bg-white border-t border-gray-100">
+                <div className="flex flex-wrap justify-center gap-x-8 gap-y-4 text-[#002B49]/40 text-sm uppercase tracking-widest font-bold">
+                    <Link to="/" className="hover:text-[var(--color-hot-pink)] transition-colors">Homepage</Link>
+                    <Link to="/programs" className="hover:text-[var(--color-hot-pink)] transition-colors">Programs</Link>
+                    <Link to="/programs/learning-stars" className="hover:text-[var(--color-hot-pink)] transition-colors">Learning Stars</Link>
+                    <Link to="/book-now" className="hover:text-[var(--color-hot-pink)] transition-colors text-[var(--color-hot-pink)]">Book Now</Link>
+                </div>
+            </div>
             <HiddenNavigation links={seoLinks} />
         </div>
     );

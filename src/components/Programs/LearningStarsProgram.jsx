@@ -32,7 +32,7 @@ const LearningStarsProgram = () => {
                         <strong style={{ color: 'var(--color-dark-navy)' }}>Perfect for:</strong> Children who find reading, spelling, writing or school work harder than expected.
                     </p>
                     <div className="flex justify-center md:justify-start">
-                        <Link to="/learning-stars" className="btn-join uppercase text-sm md:text-xl px-10 py-3 md:px-12 md:py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 font-bold">
+                        <Link to="/programs/learning-stars" className="btn-join uppercase text-sm md:text-xl px-10 py-3 md:px-12 md:py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 font-bold">
                             Learn More
                         </Link>
                     </div>

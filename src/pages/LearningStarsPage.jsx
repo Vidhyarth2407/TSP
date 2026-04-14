@@ -33,7 +33,7 @@ import InsideProgramPhoto from '../assets/images/Learning Star/Image_TSP.png';
 
 const LearningStarsPage = () => {
     const location = useLocation();
-    const [openFaq, setOpenFaq] = React.useState(0);
+    const [openFaq, setOpenFaq] = useState(0);
     const [currentSlide, setCurrentSlide] = useState(0);
     const [insideSlide, setInsideSlide] = useState(0);
     const [snackbar, setSnackbar] = useState({ show: false, message: '', type: 'success' });
@@ -236,9 +236,9 @@ const LearningStarsPage = () => {
 
     const seoLinks = [
         { label: "Programs", to: "/programs" },
-        { label: "Inner Stars", to: "/inner-stars" },
+        { label: "Inner Stars", to: "/programs/inner-stars" },
         { label: "Homepage", to: "/" },
-        { label: "Book Now", to: "#assessment-section" }
+        { label: "Book Now", to: "/book-now" }
     ];
 
     const schema = {
@@ -263,7 +263,7 @@ const LearningStarsPage = () => {
                         "@type": "ListItem",
                         "position": 3,
                         "name": "Learning Stars",
-                        "item": "https://thestarrypath.com.au/learning-stars"
+                        "item": "https://thestarrypath.com.au/programs/learning-stars"
                     }
                 ]
             },
@@ -386,7 +386,7 @@ const LearningStarsPage = () => {
                                 <div className="ls-flip-card-inner">
                                     {/* Front: Original Asset */}
                                     <div className="ls-flip-card-front flex items-center justify-center p-0">
-                                        <img src={skill.icon} alt="Skill icon" className="w-full h-full object-contain" />
+                                        <img src={skill.icon} alt={`${skill.title.replace('\n', ' ')} illustration`} className="w-full h-full object-contain" />
                                     </div>
                                     {/* Back: Text on Colored Background */}
                                     <div
@@ -833,10 +833,10 @@ const LearningStarsPage = () => {
             {/* Discovery Links */}
             <div className="max-w-[1200px] mx-auto px-6 py-8 text-center border-t border-white/10">
                 <div className="flex flex-wrap justify-center gap-x-8 gap-y-4 text-white/60 text-sm uppercase tracking-widest font-bold">
-                    <a href="/" className="hover:text-[var(--color-yellow-gold)] transition-colors">Homepage</a>
-                    <a href="/programs" className="hover:text-[var(--color-yellow-gold)] transition-colors">Programs</a>
-                    <a href="/inner-stars" className="hover:text-[var(--color-yellow-gold)] transition-colors">Inner Stars</a>
-                    <a href="#assessment-section" className="hover:text-[var(--color-yellow-gold)] transition-colors text-[var(--color-yellow-gold)]">Book Assessment</a>
+                    <Link to="/" className="hover:text-[var(--color-yellow-gold)] transition-colors">Homepage</Link>
+                    <Link to="/programs" className="hover:text-[var(--color-yellow-gold)] transition-colors">Programs</Link>
+                    <Link to="/programs/inner-stars" className="hover:text-[var(--color-yellow-gold)] transition-colors">Inner Stars</Link>
+                    <Link to="/book-now" className="hover:text-[var(--color-yellow-gold)] transition-colors text-[var(--color-yellow-gold)]">Book Now</Link>
                 </div>
             </div>
 

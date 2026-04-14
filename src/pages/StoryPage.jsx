@@ -120,7 +120,7 @@ const StoryPage = () => {
                             as essential as reading or numeracy.
                         </p>
 
-                        <Link to="/inner-stars" className="btn-inner-world">Build Lifelong Strengths</Link>
+                        <Link to="/programs/inner-stars" className="btn-inner-world">Build Lifelong Strengths</Link>
                     </div>
                 </div>
             </section>
