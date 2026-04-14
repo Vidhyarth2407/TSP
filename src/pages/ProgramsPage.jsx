@@ -44,23 +44,6 @@ const ProgramsPage = () => {
         "@context": "https://schema.org",
         "@graph": [
             {
-                "@type": "BreadcrumbList",
-                "itemListElement": [
-                    {
-                        "@type": "ListItem",
-                        "position": 1,
-                        "name": "Home",
-                        "item": "https://thestarrypath.com.au/"
-                    },
-                    {
-                        "@type": "ListItem",
-                        "position": 2,
-                        "name": "Programs",
-                        "item": "https://thestarrypath.com.au/programs"
-                    }
-                ]
-            },
-            {
                 "@type": "ItemList",
                 "name": "The Starry Path Children's Programs",
                 "description": "Life skills and literacy programs for children aged 5-12 in Point Cook.",

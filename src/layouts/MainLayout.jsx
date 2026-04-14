@@ -3,6 +3,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import ExploreSection from '../components/ExploreSection';
 import Loader from '../components/Loader';
+import Breadcrumbs from '../components/Breadcrumbs';
 
 import { useLocation } from 'react-router-dom';
 
@@ -46,6 +47,7 @@ const MainLayout = ({ children }) => {
 
             <Header />
             <main className="content min-h-screen">
+                <Breadcrumbs />
                 {children}
             </main>
             {showExploreSection && <ExploreSection />}
