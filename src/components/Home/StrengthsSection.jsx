@@ -14,37 +14,37 @@ const StrengthsSection = () => {
         {
             img: BounceBack,
             title: "Bounce Back",
-            description: "Bounce Back character card representing resilience and coping skills in children’s life skills learning",
+            description: "RESILIENCE\nGrowing through challenges.",
             bgColor: "var(--color-yellow-gold)"
         },
         {
             img: StandTall,
             title: "Stand Tall",
-            description: "Stand Tall character card representing courage and brave choices in children’s life skills learning",
+            description: "COURAGE\nTrying even when afraid.",
             bgColor: "var(--color-lime-green)"
         },
         {
             img: KeepGoing,
             title: "Keep Going",
-            description: "Keep Going character card representing perseverance and persistence in children’s life skills learning",
+            description: "PERSEVERANCE\nTrying when it's hard.",
             bgColor: "var(--color-deep-purple)"
         },
         {
             img: ChooseKind,
             title: "Choose Kind",
-            description: "Choose Kind character card representing kindness and empathy in children’s life skills learning",
+            description: "KINDNESS AND EMPATHY\nShowing compassion for self & others.",
             bgColor: "var(--color-red-orange)"
         },
         {
             img: FindTheGood,
             title: "Find the Good",
-            description: "Find the Good character card representing gratitude and positive thinking in children’s life skills learning",
+            description: "GRATITUDE\nNoticing what is good.",
             bgColor: "var(--color-hot-pink)"
         },
         {
             img: StayTrue,
             title: "Stay True",
-            description: "Stay True character card representing honesty and integrity in children’s life skills learning",
+            description: "INTEGRITY\nMaking wise choices.",
             bgColor: "var(--color-teal)"
         }
     ];

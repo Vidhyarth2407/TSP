@@ -67,7 +67,7 @@ const StoryPage = () => {
             <section className="story-section pt-0" data-aos="fade-in">
                 <picture className="story-hero animated-banner">
                     <source media="(max-width: 768px)" srcSet={BannerMobile} />
-                    <img src={BannerTop} alt="Why The Starry Path Exists" className="w-full h-auto block" />
+                    <img src={BannerTop} alt="Inner Stars section showing six life skills strengths for children including resilience, courage, perseverance, kindness, gratitude, and integrity" className="w-full h-auto block" />
                 </picture>
                 <div className="story-hero-text">
                     <h1 className="sr-only">Our Story</h1>
