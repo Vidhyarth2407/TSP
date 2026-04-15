@@ -595,7 +595,7 @@ const LearningStarsPage = () => {
             <section className="ls-difference-section pt-4 pb-12 lg:py-16 bg-[var(--color-dark-navy)] text-white overflow-hidden">
                 <div className="max-w-[1300px] mx-auto px-6">
                     <h2 className="ls-difference-title" data-aos="fade-up">
-                        HOW LEARNING STARS IS DIFFERENT FROM TUTORING
+                        HOW LEARNING STARS IS DIFFERENT <br /> FROM TUTORING
                     </h2>
 
                     <div className="ls-difference-rows lg:-mt-10">
