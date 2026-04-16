@@ -38,22 +38,22 @@
 
 .inner-stars-card {
     background-color: var(--color-dark-navy);
-    border-radius: 10px;
-    padding: 1.15rem 1.5rem;
+    border-radius: 25px;
+    padding: 2.5rem 1.5rem;
     width: 100%;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.4);
 }
 
 @media (min-width: 768px) {
     .inner-stars-card {
-        border-radius: 20px;
-        padding: 1.75rem 4rem;
+        border-radius: 40px;
+        padding: 3rem 4rem;
     }
 }
 
 @media (min-width: 1024px) {
     .inner-stars-card {
-        padding: 2rem 5rem;
+        padding: 4rem 6rem;
     }
 }
 
@@ -86,7 +86,7 @@
     font-size: 2rem !important;
     font-weight: 800 !important;
     letter-spacing: 0.05em !important;
-    text-transform: uppercase !important;
+    text-transform: uppercase;
     line-height: 1.1 !important;
     margin-bottom: 1.5rem !important;
     text-align: center !important;
@@ -97,14 +97,14 @@
     font-size: 2rem !important;
     font-weight: 800 !important;
     letter-spacing: 0.05em !important;
-    text-transform: uppercase !important;
+    text-transform: uppercase;
     line-height: 1.1 !important;
     margin-bottom: 0.25rem !important;
     text-align: left !important;
     transform: translateX(-0.5rem);
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     .is-title {
         text-align: center !important;
         transform: none !important;
@@ -127,19 +127,17 @@
     left: -0.55rem;
 }
 
-@media (min-width: 1024px) {
-
+@media (min-width: 768px) {
     .is-title,
     .why-title,
     .is-section-title,
     .is-diff-title,
     .ls-join-section-title {
-        font-size: 2.8rem !important;
+        font-size: 2.5rem !important;
     }
 
     .is-subtitle {
-        font-size: 1.8rem;
-        /* Reduced from 2.1rem */
+        font-size: 1.5rem;
     }
 }
 
@@ -161,16 +159,13 @@
     }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     .inner-stars-card {
-        flex-direction: column;
-        text-align: center;
-        padding: 3rem 2rem;
-        gap: 2rem;
+        padding: 3rem 1.5rem 2rem;
     }
 
     .is-title {
-        font-size: 2.5rem;
+        font-size: 2.1rem;
     }
 }
 
@@ -331,7 +326,7 @@
     color: white !important;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     .why-title {
         font-size: 2rem;
     }

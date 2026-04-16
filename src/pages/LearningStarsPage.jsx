@@ -340,7 +340,7 @@ const LearningStarsPage = () => {
                             <h1 className="ls-title">LEARNING STARS</h1>
                             <h2 className="ls-subtitle">Structured literacy support</h2>
                             <p className="ls-description">
-                                Foundations for reading and writing<br className="hidden lg:block" />
+                                Foundations for reading and writing{" "}<br className="hidden lg:block" />
                                 for school success
                             </p>
                         </div>

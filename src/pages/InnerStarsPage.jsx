@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -42,6 +42,8 @@ const InnerStarsPage = () => {
     const [openFaq, setOpenFaq] = useState(0);
     const [snackbar, setSnackbar] = useState({ show: false, message: '', type: 'success' });
     const [isLoading, setIsLoading] = useState(false);
+    const [activeTestimonial, setActiveTestimonial] = useState(0);
+    const testimonialTimerRef = useRef(null);
 
     const slides = [
         {
@@ -101,6 +103,29 @@ const InnerStarsPage = () => {
         handleHashScroll();
     }, [location]);
 
+    const testimonials = [
+        {
+            text: "As a mum, I've been amazed by the positive impact Inner Stars has had. My child is learning to understand their feelings, and I've noticed they are better able to express themselves and calm down when upset. I feel so grateful to have found a program that nurtures both the heart and the mind.",
+            author: "— Mansi, parent of a 5 year old"
+        },
+        {
+            text: "Thank you for starting this initiative. My daughter likes to attend all sessions and is learning a lot about her big emotions in a fun and playful way. I am hopeful it would help her to deal with emotions and life gradually by following all strategies and frameworks to understand self and the world. I definitely recommend The Starry Path way to learn life skills to all the children to make them stronger and resilient.",
+            author: "— Shruti K, parent of a 5 year old"
+        }
+    ];
+
+    const startTestimonialAutoplay = () => {
+        if (testimonialTimerRef.current) clearInterval(testimonialTimerRef.current);
+        testimonialTimerRef.current = setInterval(() => {
+            setActiveTestimonial((prev) => (prev + 1) % testimonials.length);
+        }, 5000);
+    };
+
+    const handleTestimonialDotClick = (index) => {
+        setActiveTestimonial(index);
+        startTestimonialAutoplay();
+    };
+
     useEffect(() => {
         AOS.init({ duration: 1000, once: false });
         emailjs.init(EMAILJS_CONFIG.PUBLIC_KEY);
@@ -109,8 +134,13 @@ const InnerStarsPage = () => {
             setCurrentSlide((prev) => (prev + 1) % slides.length);
         }, 5000);
 
+        startTestimonialAutoplay();
+
         return () => {
             clearInterval(timer);
+            if (testimonialTimerRef.current) {
+                clearInterval(testimonialTimerRef.current);
+            }
         };
     }, []);
 
@@ -249,22 +279,17 @@ const InnerStarsPage = () => {
             {/* Hero Section */}
             <section className="inner-stars-hero-section">
                 <div className="inner-stars-card" data-aos="fade-up">
-                    <div className="card-content flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-16">
-                        <div className="card-image w-full lg:w-[55%] flex justify-center lg:justify-start" data-aos="fade-right" data-aos-delay="200">
-                            <img src={BoxSvg} alt="The Starry Path box illustration representing practical tools for children’s life skills, mindset, and resilience" className="box-svg-asset" />
+                    <div className="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-16 lg:gap-24">
+                        <div className="w-full md:w-[50%] flex justify-center md:justify-end" data-aos="fade-right" data-aos-delay="200">
+                            <img src={BoxSvg} alt="Inner Stars Box" className="box-svg-asset max-w-[320px] md:max-w-none md:w-full h-auto" />
                         </div>
-                        <div className="card-text w-full lg:w-[45%] text-center lg:text-left" data-aos="fade-left" data-aos-delay="400">
+                        <div className="w-full md:w-[50%] text-center md:text-left" data-aos="fade-left" data-aos-delay="400">
                             <h1 className="is-title tracking-widest">INNER STARS</h1>
-                            <h2 className="is-subtitle uppercase tracking-widest" style={{ color: 'var(--color-hot-pink)' }}>Life Skills Program</h2>
+                            <h2 className="is-subtitle" style={{ color: 'var(--color-teal)', textTransform: 'none', letterSpacing: 'normal' }}>Character building</h2>
                             <p className="is-description mt-4">
-                                BUILDING RESILIENCE, MINDSET &<br />
-                                EMOTIONAL INTELLIGENCE FOR LIFE.
+                                Habits of minds for resilience<br className="hidden md:block" />
+                                and life skills for learning and life
                             </p>
-                            <div className="mt-8">
-                                <a href="#enrollment-form" className="btn-join inline-block px-10 py-3 rounded-full text-white font-bold uppercase tracking-wider shadow-lg hover:shadow-xl transition-all">
-                                    Book Now
-                                </a>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -353,9 +378,9 @@ const InnerStarsPage = () => {
             <section className="life-skills-section is-standard-section-py bg-[var(--color-white)] text-center">
                 <div className="max-w-[1280px] mx-auto px-6">
                     <div data-aos="fade-up">
-                        <h2 className="is-section-title">LIFE SKILLS IN EDUCATION</h2>
+                        <h2 className="is-section-title" style={{ textTransform: 'none' }}>Life Skills in Education</h2>
                         <p className="life-skills-subtitle text-[var(--color-grey-text)] text-lg md:text-xl max-w-2xl mx-auto opacity-80 mb-8 md:mb-12">
-                            Inner Stars brings life skills into education by building resilience
+                            Teaching life lessons and core human values for resilience and character development
                         </p>
                     </div>
 
@@ -461,12 +486,12 @@ const InnerStarsPage = () => {
                         <div className="text-center mb-8 md:mb-12">
                             <h2 className="is-diff-title">HOW INNER STARS IS DIFFERENT</h2>
                         </div>
-                        <div className="flex flex-col lg:flex-row items-center justify-between w-full max-w-[1050px] mx-auto gap-12 lg:gap-16">
-                            <div className="w-full lg:w-[45%] flex justify-center lg:justify-end">
-                                <img src={InnerStarsDifferentSvg} alt="Different" className="w-[90%] max-w-[450px]  scale-110 lg:scale-125 lg:origin-right" />
+                        <div className="flex flex-col md:flex-row items-center justify-between w-full max-w-[1050px] mx-auto gap-12 md:gap-16">
+                            <div className="w-full md:w-[45%] flex justify-center md:justify-end">
+                                <img src={InnerStarsDifferentSvg} alt="Different" className="w-[90%] max-w-[450px]  scale-110 md:scale-125 md:origin-right" />
                             </div>
-                            <div className="w-full lg:w-1/2 flex flex-col justify-center">
-                                <h3 className="text-[var(--color-hot-pink)] font-bold text-xl lg:text-2xl mb-6">INNER STARS BUILDS:</h3>
+                            <div className="w-full md:w-1/2 flex flex-col justify-center">
+                                <h3 className="text-[var(--color-hot-pink)] font-bold text-xl md:text-2xl mb-6">INNER STARS BUILDS:</h3>
                                 <ul className="space-y-4 mb-10 text-white">
                                     <li className="flex items-start"><span className="mr-4">•</span>Everyday language children use in real life</li>
                                     <li className="flex items-start"><span className="mr-4">•</span>Simple visuals they can remember</li>
@@ -495,7 +520,7 @@ const InnerStarsPage = () => {
                                 <ul className="ls-join-card-list">
                                     <li>Two inner strengths<br /> each term</li>
                                     <li>All six strengths explored<br /> over the year</li>
-                                    <li>Builds skills step by step<br />through the term</li>
+                                    <li>Builds skills step-by-step<br />through the term</li>
                                 </ul>
                             </div>
                         </div>
@@ -508,7 +533,7 @@ const InnerStarsPage = () => {
                                     <li>Two inner strengths<br /> at a time</li>
                                     <li>Immersive, hands on,<br /> and fun</li>
                                     <li>Ideal for school holiday<br /> learning</li>
-                                    <li>*Starting mid 2026</li>
+                                    <li>Coming soon</li>
                                 </ul>
                             </div>
                         </div>
@@ -560,7 +585,7 @@ const InnerStarsPage = () => {
                             {[
                                 {
                                     q: "Is this program for all children?",
-                                    a: "Yes. Inner Stars is designed for children aged 5 to 10. It supports children who are doing well at school and those who are still developing, by building strong habits of mind that support learning and life."
+                                    a: "Yes. Inner Stars is designed for children aged 5-12. It supports children who are doing well at school and those who are still developing, by building strong habits of mind that support learning and life."
                                 },
                                 {
                                     q: "Is this counselling or therapy?",
@@ -591,7 +616,7 @@ const InnerStarsPage = () => {
                                             {openFaq === index ? '−' : '+'}
                                         </span>
                                     </button>
-                                    <div className={`ls-faq-answer overflow-hidden transition-all duration-300 ${openFaq === index ? 'max-h-64 pb-3' : 'max-h-0'}`}>
+                                    <div className={`ls-faq-answer overflow-hidden transition-all duration-300 ${openFaq === index ? 'max-h-[500px] pb-3' : 'max-h-0'}`}>
                                         <p className="text-[#4A4A4A] text-[1rem] lg:text-[1.1rem] font-body font-light leading-relaxed text-justify" style={{ textJustify: 'inter-word' }}>
                                             {faq.a}
                                         </p>
@@ -607,11 +632,40 @@ const InnerStarsPage = () => {
             <section className="is-testimonial-section pt-4 pb-16 lg:pt-6 lg:pb-24">
                 <div className="max-w-[1200px] mx-auto px-6">
                     <div className="testimonial-container relative bg-[#002147] rounded-[2.5rem] p-10 lg:p-20 overflow-hidden" data-aos="zoom-in">
-                        <div className="testimonial-card relative bg-[#f15a24] rounded-[2rem] p-8 lg:p-16 z-10 flex flex-col items-center text-center">
-                            <p className="testimonial-text text-white text-lg lg:text-2xl font-medium leading-relaxed mb-8 px-4 lg:px-12">
-                                As a mum, I've been amazed by the positive impact Inner Stars has had. My child is learning to understand their feelings, and I've noticed they are better able to express themselves and calm down when upset. I feel so grateful to have found a program that nurtures both the heart and the mind.
-                            </p>
-                            <p className="text-[#002147] font-bold">— Mansi, parent of a 5 year old</p>
+                        <div className="relative flex flex-col items-center">
+                            {testimonials.map((testimonial, index) => (
+                                <div
+                                    key={index}
+                                    className={`testimonial-card w-full z-10 bg-[#b0d236] rounded-[2rem] p-10 lg:p-20 flex flex-col items-center text-center overflow-hidden transition-all duration-700 ${index === activeTestimonial ? 'opacity-100 translate-x-0 relative' : 'opacity-0 translate-x-12 absolute pointer-events-none'}`}
+                                >
+                                    {/* Opening Quote */}
+                                    <svg className="absolute -top-2 left-4 lg:top-4 lg:left-8 w-16 h-16 lg:w-24 lg:h-24 text-[#002147] opacity-10" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M14.017 21L14.017 18C14.017 16.899 15.015 15 16.015 15H19.015V12C19.015 9.791 17.224 8 15.015 8H14.017V5H15.015C18.881 5 22.015 8.134 22.015 12V21H14.017ZM3.015 21L3.015 18C3.015 16.899 4.012 15 5.012 15H8.012V12C8.012 9.791 6.221 8 4.012 8H3.015V5H4.012C7.878 5 11.012 8.134 11.012 12V21H3.015Z" />
+                                    </svg>
+
+                                    <p className="testimonial-text text-[#002147] text-lg lg:text-2xl font-medium leading-relaxed mb-8 px-4 lg:px-12 relative z-10">
+                                        {testimonial.text}
+                                    </p>
+                                    <p className="text-[#002147] font-bold relative z-10">{testimonial.author}</p>
+
+                                    {/* Closing Quote */}
+                                    <svg className="absolute -bottom-2 right-4 lg:bottom-4 lg:right-8 w-16 h-16 lg:w-24 lg:h-24 text-[#002147] opacity-10" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M10.983 3L10.983 6C10.983 7.101 9.985 9 8.985 9H5.985V12C5.985 14.209 7.776 16 9.985 16H10.983V19H9.985C6.119 19 2.985 15.866 2.985 12V3H10.983ZM22.015 3L22.015 6C22.015 7.101 21.018 9 20.018 9H17.018V12C17.018 14.209 18.809 16 21.018 16H22.015V19H21.018C17.222 19 14.018 15.866 14.018 12V3H22.015Z" />
+                                    </svg>
+                                </div>
+                            ))}
+
+                            {/* Carousel Dots */}
+                            <div className="flex justify-center gap-3 mt-8 relative z-20">
+                                {testimonials.map((_, index) => (
+                                    <button
+                                        key={index}
+                                        onClick={() => handleTestimonialDotClick(index)}
+                                        className={`w-3 h-3 rounded-full transition-all duration-300 ${index === activeTestimonial ? 'bg-[#b0d236] w-8' : 'bg-white/30 hover:bg-white/50'}`}
+                                        aria-label={`Go to testimonial ${index + 1}`}
+                                    />
+                                ))}
+                            </div>
                         </div>
                     </div>
                 </div>

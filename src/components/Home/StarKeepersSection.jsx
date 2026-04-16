@@ -64,7 +64,7 @@ const StarKeepersSection = () => {
                         MEET THE STAR KEEPERS
                     </h2>
                     <p className="font-[var(--font-accent)] text-base md:text-lg leading-relaxed max-w-md mx-auto md:mx-0 opacity-90 text-justify md:text-left">
-                        Created by an experienced teacher with a background in psychology, The Starry Path blends child development research with intentional, engaging learning.
+                        Created by an experienced teacher with a background in psychology, The Starry Path blends child development research with intentional and engaging learning.
                     </p>
                 </div>
             </div>

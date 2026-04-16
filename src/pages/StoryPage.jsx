@@ -83,14 +83,14 @@ const StoryPage = () => {
                         <h2>WHY THE STARRY{" "}<br className="hidden md:block" />PATH EXISTS?</h2>
                         <p className="path-highlight">
                             Education builds knowledge and&nbsp;skills. <br />
-                            <strong>Habits of mind help children use them
+                            <strong>Habits of mind help children use them{" "}
                                 <br className="hidden md:block" />
                                 in real&nbsp;situations.</strong>
                         </p>
                         <p>
-                            Meaningful learning builds life&nbsp;skills
+                            Meaningful learning builds life&nbsp;skills{" "}
                             <br className="hidden md:block" />
-                            for real&nbsp;life. These habits of mind&nbsp;should
+                            for real&nbsp;life. These habits of mind&nbsp;should{" "}
                             <br className="hidden md:block" />
                             be part of <strong>every child's&nbsp;education.</strong>
                         </p>

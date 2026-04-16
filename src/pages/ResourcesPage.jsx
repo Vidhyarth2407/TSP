@@ -33,15 +33,8 @@ const ResourcesPage = () => {
     }, []);
 
     const handlePostClick = (post) => {
-        // Generate a Title-Cased slug to match the user's requested style
-        // Example: "How Technology is Changing Everyday Life" -> "How-Technology-is-Changing-Everyday-Life"
-        const customSlug = post.title
-            .replace(/<[^>]*>/g, '') // Remove HTML tags from title
-            .trim()
-            .replace(/\s+/g, '-')    // Replace spaces with hyphens
-            .replace(/[^\w-]/g, ''); // Remove special characters
-
-        navigate(`/resources/blogs-post/${customSlug}`);
+        // Using the built-in WordPress slug (already lowercase) for URLs
+        navigate(`/resources/blogs-post/${post.slug}`);
         window.scrollTo({ top: 0, behavior: 'smooth' });
     };
 
