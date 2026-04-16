@@ -27,6 +27,11 @@ const Breadcrumbs = () => {
     pathnames.forEach((name, index) => {
         currentPath += `/${name}`;
         
+        // Skip 'blogs-post' from breadcrumbs as requested
+        if (name === 'blogs-post') {
+            return;
+        }
+
         // Logical nesting for Specific Programs
         if ((name === 'inner-stars' || name === 'learning-stars') && !breadcrumbItems.find(i => i.to === '/programs')) {
             // If we are on a specific program page but haven't added "Programs" yet (due to flat routing)

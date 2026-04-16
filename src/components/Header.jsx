@@ -64,7 +64,7 @@ const Header = () => {
                                 <Link to="/programs/learning-stars" className="dropdown-item learning-stars-btn" onClick={() => setIsMenuOpen(false)}>Learning Stars</Link>
                             </div>
                         </li>
-                        <li><span className="nav-disabled">Resources</span></li>
+                        <li><Link to="/resources" onClick={() => setIsMenuOpen(false)}>Resources</Link></li>
                         <li className="mobile-cta nav-item-dropdown max-md:w-full max-md:flex-col text-center">
                             <button
                                 className="btn-join font-bold w-full flex items-center justify-center gap-2 group mx-auto"
