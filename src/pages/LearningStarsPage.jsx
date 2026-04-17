@@ -20,6 +20,7 @@ import ComprehensionSvg from '../assets/images/Learning Star/Comprehension.svg';
 import SentenceStructureSvg from '../assets/images/Learning Star/sentence structure.svg';
 
 import InsideProgramSvg from '../assets/images/Learning Star/Inside a Program.svg';
+import InsideTheProgramSvg from '../assets/images/Learning Star/Inside the Program.svg';
 import GlumKidsSvg from '../assets/images/Learning Star/6 glum kids.svg';
 import IntentionalApproachSvg from '../assets/images/Learning Star/An intentional teaching approach.svg';
 import ResearchIconsSvg from '../assets/images/Learning Star/The Research Icons.svg';
@@ -437,9 +438,9 @@ const LearningStarsPage = () => {
             {/* Inside the Program Section */}
             <section className="ls-inside-program-section py-12 lg:py-16 bg-[var(--color-dark-navy)]">
                 <div className="ls-inside-wrapper">
-                    <h2 className="ls-inside-title" data-aos="fade-up">INSIDE THE PROGRAM</h2>
+                    <h2 className="ls-inside-title hidden lg:block" data-aos="fade-up">INSIDE THE PROGRAM</h2>
 
-                    <div className="ls-inside-content">
+                    <div className="ls-inside-content hidden lg:block">
                         {/* Left: Program Asset (Books) */}
                         <div className="ls-inside-asset ls-program-asset" data-aos="fade-right">
                             <img src={InsideProgramSvg} alt="Inside the Program" />
@@ -458,6 +459,11 @@ const LearningStarsPage = () => {
                                 className={`ls-carousel-img ls-photo-asset ${insideSlide === 1 ? 'active' : ''}`}
                             />
                         </div>
+                    </div>
+
+                    {/* Mobile View: Single Integrated SVG */}
+                    <div className="ls-mobile-integrated-svg lg:hidden w-full flex justify-center px-1 mt-6" data-aos="zoom-in">
+                        <img src={InsideTheProgramSvg} alt="Inside the Program Overview" className="w-full max-w-[850px] h-auto drop-shadow-xl" />
                     </div>
                 </div>
             </section>
