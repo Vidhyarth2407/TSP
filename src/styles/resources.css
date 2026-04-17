@@ -245,8 +245,15 @@
 
 @media (max-width: 768px) {
     .blog-reader-container { padding-top: 6rem; }
-    .reader-title { font-size: 2.2rem; }
-    .reader-meta { flex-direction: column; align-items: flex-start; gap: 1rem; margin-bottom: 2rem; }
+    .reader-title { font-size: 2rem; }
+    .reader-meta { 
+        flex-direction: row; 
+        flex-wrap: wrap;
+        align-items: center; 
+        gap: 1.5rem 1rem; 
+        margin-bottom: 2.5rem; 
+        font-size: 0.9rem;
+    }
     .reader-featured-image-wrapper { border-radius: 1.5rem; margin-bottom: 2rem; }
     .resources-grid { grid-template-columns: 1fr; }
 }

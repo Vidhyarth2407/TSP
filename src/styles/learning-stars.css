@@ -711,7 +711,7 @@
 
 @media (max-width: 1024px) {
     .ls-inside-program-section {
-        display: none !important;
+        display: block !important;
     }
 
     .ls-kids-asset {
@@ -935,6 +935,14 @@
 
     .ls-icon-strip {
         display: none !important;
+    }
+
+    .ls-research-text {
+        text-align: left !important;
+    }
+
+    .ls-research-bullets {
+        text-align: left !important;
     }
 }
 

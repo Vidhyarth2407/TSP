@@ -149,14 +149,14 @@ const LearningStarsPage = () => {
             leftHeading: "THE RESEARCH BEHIND OUR APPROACH",
             leftText: (
                 <>
-                    <p>Research across Australian literacy<br />organisations is consistent:</p>
+                    <p>Research across Australian literacy <br className="hidden lg:block" /> organisations is consistent:</p>
                     <ul className="ls-research-bullets space-y-4">
-                        <li>Foundational reading skills must<br />be taught directly and practised</li>
-                        <li>Early intervention leads to stronger<br />long term outcomes</li>
+                        <li>Foundational reading skills must <br className="hidden lg:block" /> be taught directly and practised</li>
+                        <li>Early intervention leads to stronger <br className="hidden lg:block" /> long term outcomes</li>
                     </ul>
                 </>
             ),
-            rightHeading: <>LEARNING STARS<br />HELPS CHILDREN:</>,
+            rightHeading: <>LEARNING STARS <br className="hidden lg:block" /> HELPS CHILDREN:</>,
             rightContent: (
                 <div className="flex justify-center w-full">
                     <ul className="ls-research-checklist text-white space-y-1.5 text-xl lg:text-2xl font-light text-left inline-block">
@@ -176,10 +176,10 @@ const LearningStarsPage = () => {
             leftHeading: "THE RESEARCH BEHIND OUR APPROACH",
             leftText: (
                 <>
-                    <p>Research across Australian literacy<br />organisations is consistent:</p>
+                    <p>Research across Australian literacy <br className="hidden lg:block" /> organisations is consistent:</p>
                     <ul className="ls-research-bullets space-y-4">
-                        <li>Foundational reading skills must<br />be taught directly and practised</li>
-                        <li>Early intervention leads to stronger<br />long term outcomes</li>
+                        <li>Foundational reading skills must <br className="hidden lg:block" /> be taught directly and practised</li>
+                        <li>Early intervention leads to stronger <br className="hidden lg:block" /> long term outcomes</li>
                     </ul>
                 </>
             ),
@@ -200,10 +200,10 @@ const LearningStarsPage = () => {
             leftHeading: "THE RESEARCH BEHIND OUR APPROACH",
             leftText: (
                 <>
-                    <p>Research across Australian literacy<br />organisations is consistent:</p>
+                    <p>Research across Australian literacy <br className="hidden lg:block" /> organisations is consistent:</p>
                     <ul className="ls-research-bullets space-y-4">
-                        <li>Foundational reading skills must<br />be taught directly and practised</li>
-                        <li>Early intervention leads to stronger<br />long term outcomes</li>
+                        <li>Foundational reading skills must <br className="hidden lg:block" /> be taught directly and practised</li>
+                        <li>Early intervention leads to stronger <br className="hidden lg:block" /> long term outcomes</li>
                     </ul>
                 </>
             ),
@@ -361,7 +361,7 @@ const LearningStarsPage = () => {
 
                     {/* Right: Text Content */}
                     <div className="flex-1 text-white" data-aos="fade-left">
-                        <h2 className="why-literacy-title mb-8">WHY LITERACY<br />SUPPORT MATTERS</h2>
+                        <h2 className="why-literacy-title mb-8">WHY LITERACY <br className="hidden lg:block" /> SUPPORT MATTERS</h2>
 
                         <div className="why-literacy-content space-y-6 text-lg lg:text-xl font-light opacity-90 leading-relaxed">
                             <p>
@@ -539,7 +539,7 @@ const LearningStarsPage = () => {
                             >
                                 <div className="ls-research-container flex flex-col lg:flex-row items-stretch">
                                     {/* Left Column */}
-                                    <div className="ls-research-left flex-1 ls-navy-panel p-10 lg:p-14 lg:pr-20 flex flex-col justify-center relative z-10">
+                                    <div className="ls-research-left flex-1 ls-navy-panel p-6 md:p-10 lg:p-14 lg:pr-20 flex flex-col justify-center relative z-10">
                                         <h2 className="ls-research-heading-yellow mb-8">
                                             {slide.leftHeading}
                                         </h2>
@@ -554,7 +554,7 @@ const LearningStarsPage = () => {
                                     </div>
 
                                     {/* Right Column (Transitions) */}
-                                    <div className={`ls-research-right flex-1 ${slide.panelColor} ${slide.rightHeading ? 'p-10 lg:p-14 lg:pl-32' : 'p-4 lg:p-6'} flex flex-col justify-center ${index === 0 ? 'items-center text-center' : 'items-start'} relative z-10 overflow-hidden`}>
+                                    <div className={`ls-research-right flex-1 ${slide.panelColor} ${slide.rightHeading ? 'p-6 md:p-10 lg:p-14 lg:pl-32' : 'p-4 lg:p-6'} flex flex-col justify-center ${index === 0 ? 'items-center text-center' : 'items-start'} relative z-10 overflow-hidden`}>
                                         {slide.rightHeading && (
                                             <h2 className={`${slide.headingStyle} mb-8 ${index === 0 ? 'text-center ls-research-heading-reduced' : ''}`}>
                                                 {slide.rightHeading}
