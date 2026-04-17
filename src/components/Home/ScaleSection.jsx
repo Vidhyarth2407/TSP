@@ -7,21 +7,21 @@ import Slide4 from '../../assets/images/Homepage/Both Matter_4.svg';
 
 // Array of slides with descriptive alt text for SEO
 const slides = [
-    { 
-        src: Slide1, 
-        alt: "Graphic showing exam preparation and life skills both matter in children’s education" 
+    {
+        src: Slide1,
+        alt: "Graphic showing exam preparation and life skills both matter in children’s education"
     },
-    { 
-        src: Slide2, 
-        alt: "Graphic showing academic learning and understanding a child’s inner world both matter in education" 
+    {
+        src: Slide2,
+        alt: "Graphic showing academic learning and understanding a child’s inner world both matter in education"
     },
-    { 
-        src: Slide3, 
-        alt: "Graphic showing practical life safety and emotional resilience both matter in children’s learning" 
+    {
+        src: Slide3,
+        alt: "Graphic showing practical life safety and emotional resilience both matter in children’s learning"
     },
-    { 
-        src: Slide4, 
-        alt: "Graphic showing academic learning and real-life decision making both matter in children’s education" 
+    {
+        src: Slide4,
+        alt: "Graphic showing academic learning and real-life decision making both matter in children’s education"
     }
 ];
 
@@ -43,7 +43,7 @@ const ScaleSection = () => {
 
     return (
         <section className="scale-section py-12 md:py-20 px-4 max-w-[1200px] mx-auto text-center relative min-h-[50vh] md:min-h-[75vh] flex flex-col justify-center overflow-hidden">
-            <h2 className="text-[var(--color-dark-navy)] font-[var(--font-heading)] text-2xl md:text-4xl mb-2 md:mb-4 uppercase tracking-wide px-2 w-full font-bold" data-aos="fade-up">
+            <h2 className="text-[var(--color-dark-navy)] font-[var(--font-heading)] text-2xl md:text-4xl mb-6 md:mb-4 uppercase tracking-wide px-2 w-full font-bold" data-aos="fade-up">
                 ACADEMICS + LIFE SKILLS = REAL EDUCATION
             </h2>
 
@@ -61,7 +61,7 @@ const ScaleSection = () => {
                                 <img
                                     src={slide.src}
                                     alt={slide.alt}
-                                    className={`w-full h-auto object-contain align-bottom ${index === 0 ? 'mb-[0.75rem] md:mb-[1.25rem]' : index === 1 ? 'mb-[0.4rem] md:mb-[0.6rem]' : index === 3 ? 'mb-[-0.5rem] md:mb-[-1rem]' : ''} ${index === currentIndex ? 'animate-seesaw' : ''}`}
+                                    className={`w-full h-auto object-contain align-bottom ${index === 0 ? 'mb-[0.65rem] md:mb-[1.25rem]' : index === 1 ? 'mb-[0.20rem] md:mb-[0.6rem]' : index === 2 ? 'mb-[-0.25rem] md:mb-[0.6rem]' : index === 3 ? 'mb-[-0.80rem] md:mb-[-1rem]' : ''} ${index === currentIndex ? 'animate-seesaw' : ''}`}
                                     style={{ maxHeight: '450px' }}
                                 />
                             </div>
@@ -71,7 +71,7 @@ const ScaleSection = () => {
 
                 {/* Static Purple Bar - Always visible at the bottom */}
                 <div className="relative w-full max-w-[700px] z-20 px-2 md:px-0">
-                    <div className="bg-[#512DA8] text-white py-2 md:py-3.5 px-4 md:px-8 rounded-xl md:rounded-2xl w-full text-center shadow-2xl flex items-center justify-center">
+                    <div className="bg-[#512DA8] text-white py-3 md:py-4 px-4 md:px-8 rounded-xl md:rounded-2xl w-full text-center shadow-2xl flex items-center justify-center">
                         <span className="font-[var(--font-heading)] uppercase tracking-wider text-xs md:text-lg leading-tight font-bold">
                             HABITS OF MIND FOR REAL-LIFE LEARNING
                         </span>
