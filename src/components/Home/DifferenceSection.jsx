@@ -1,11 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Puzzle from '../../assets/images/Homepage/Puzzle.svg';
+import MobilePuzzle from '../../assets/images/Programs/Mobile Puzzle.svg';
 
 const DifferenceSection = () => {
     return (
         <React.Fragment>
-            <section className="bg-[var(--color-yellow-gold)] text-white py-12 md:py-32 px-6 md:px-12 rounded-[20px] md:rounded-[30px] mx-4 md:mx-auto max-w-[1200px] my-8 md:my-16 relative shadow-2xl">
+            <section className="bg-[var(--color-yellow-gold)] text-white py-12 md:py-32 px-2 md:px-12 rounded-[20px] md:rounded-[30px] mx-4 md:mx-auto max-w-[1200px] my-8 md:my-16 relative shadow-2xl">
                 <div className="text-center mb-8 md:mb-12" data-aos="fade-down">
                     <h2 className="text-2xl md:text-4xl font-[var(--font-heading)] uppercase tracking-wide font-bold">
                         WHAT MAKES US DIFFERENT
@@ -19,10 +20,17 @@ const DifferenceSection = () => {
                         <p className="text-[var(--color-dark-navy)] font-[var(--font-accent)] text-lg md:text-xl self-center md:ml-8 font-bold">
                             The Starry Path integrates
                         </p>
+                        {/* Desktop & Tablet Version */}
                         <img
                             src={Puzzle}
                             alt="Life skills and resilience visual showing the balance between exam preparation and preparing children for life"
-                            className="w-full max-w-[600px] object-contain"
+                            className="hidden md:block w-full max-w-[600px] object-contain"
+                        />
+                        {/* Mobile Version */}
+                        <img
+                            src={MobilePuzzle}
+                            alt="Life skills and resilience visual showing the balance between exam preparation and preparing children for life"
+                            className="block md:hidden w-full max-w-[600px] object-contain scale-125"
                         />
                     </div>
 

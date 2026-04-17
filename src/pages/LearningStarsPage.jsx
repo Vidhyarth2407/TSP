@@ -136,12 +136,12 @@ const LearningStarsPage = () => {
     };
 
     const skills = [
-        { icon: PhonemicSvg, title: "PHONEMIC\nAWARENESS", color: 'var(--color-yellow-gold)', delay: 100 },
-        { icon: SpellingSvg, title: "DECODING THROUGH\nPHONICS & SPELLING", color: 'var(--color-hot-pink)', delay: 200 },
-        { icon: ReadingFluencySvg, title: "READING\nFLUENCY", color: 'var(--color-red-orange)', delay: 300 },
-        { icon: VocabularySvg, title: "VOCABULARY\n& MORPHOLOGY", color: 'var(--color-lime-green)', delay: 400 },
-        { icon: ComprehensionSvg, title: "READING\nCOMPREHENSION", color: 'var(--color-teal)', delay: 500 },
-        { icon: SentenceStructureSvg, title: "SENTENCE STRUCTURE\nFOR CLEAR WRITING", color: 'var(--color-deep-purple)', delay: 600 }
+        { icon: PhonemicSvg, title: "PHONEMIC\nAWARENESS", colorClass: 'ls-color-yellow', delay: 100 },
+        { icon: SpellingSvg, title: "DECODING THROUGH\nPHONICS & SPELLING", colorClass: 'ls-color-pink', delay: 200 },
+        { icon: ReadingFluencySvg, title: "READING\nFLUENCY", colorClass: 'ls-color-orange', delay: 300 },
+        { icon: VocabularySvg, title: "VOCABULARY\n& MORPHOLOGY", colorClass: 'ls-color-green', delay: 400 },
+        { icon: ComprehensionSvg, title: "READING\nCOMPREHENSION", colorClass: 'ls-color-teal', delay: 500 },
+        { icon: SentenceStructureSvg, title: "SENTENCE STRUCTURE\nFOR CLEAR WRITING", colorClass: 'ls-color-purple', delay: 600 }
     ];
 
     const researchSlides = [
@@ -410,13 +410,15 @@ const LearningStarsPage = () => {
                             >
                                 <div className="ls-flip-card-inner">
                                     {/* Front: Original Asset */}
-                                    <div className="ls-flip-card-front flex items-center justify-center p-0">
+                                    <div
+                                        className="ls-flip-card-front flex items-center justify-center p-0"
+                                        style={{ backgroundColor: '#FCF8F2' }}
+                                    >
                                         <img src={skill.icon} alt={`${skill.title.replace('\n', ' ')} illustration`} className="w-full h-full object-contain" />
                                     </div>
                                     {/* Back: Text on Colored Background */}
                                     <div
-                                        className="ls-flip-card-back flex items-center justify-center p-8 text-center shadow-lg"
-                                        style={{ backgroundColor: skill.color }}
+                                        className={`ls-flip-card-back flex items-center justify-center p-8 text-center shadow-lg ${skill.colorClass}`}
                                     >
                                         <h3 className="text-white text-xl lg:text-2xl font-extrabold uppercase tracking-wider font-heading leading-tight whitespace-pre-line">
                                             {skill.title}

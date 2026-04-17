@@ -4,7 +4,7 @@ import Tangle from '../../assets/images/Homepage/Tangle.svg';
 
 const InnerStarsSection = () => {
     return (
-        <section className="py-20 lg:py-24 px-4 max-w-[1200px] mx-auto relative text-center">
+        <section className="py-20 lg:py-24 px-8 max-w-[1200px] mx-auto relative text-center">
             <div className="max-w-5xl mx-auto mb-16" data-aos="fade-up">
                 <h2 className="text-2xl md:text-4xl text-[var(--color-dark-navy)] mb-6 uppercase leading-tight font-[var(--font-heading)] font-bold text-left md:text-center">
                     WHY DOES YOUR CHILD <br className="block md:hidden" /> NEED INNER STARS?

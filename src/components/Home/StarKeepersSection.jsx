@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom';
 
 const StarKeepersSection = () => {
     return (
-        <section className="bg-[var(--color-dark-navy)] text-white py-12 md:py-16 px-4 rounded-[20px] md:rounded-[30px] mx-4 md:mx-auto max-w-[1200px] mt-20 mb-12 md:my-24 relative overflow-visible shadow-2xl">
-            <div className="flex flex-col md:flex-row items-center justify-center gap-12 max-w-5xl mx-auto">
+        <section className="bg-[var(--color-dark-navy)] text-white py-12 md:py-16 px-8 rounded-[20px] md:rounded-[30px] mx-4 md:mx-auto max-w-[1200px] mt-20 mb-12 md:my-24 relative overflow-visible shadow-2xl">
+            <div className="flex flex-col pb-[50px] md:flex-row items-center justify-center gap-8 md:gap-12 max-w-5xl mx-auto">
 
                 {/* Left: Umbrella Image Container */}
-                <div className="relative flex-1 flex flex-col items-center md:items-center justify-center" data-aos="fade-right">
+                <div className="relative flex-1 flex flex-col items-center md:items-center justify-center pb-6 md:pb-0" data-aos="fade-right">
                     <div className="bg-transparent rounded-[40px] p-6 pb-16 w-full max-w-[500px] relative z-10 flex flex-col items-center">
                         <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 647.9 623.69" className="w-full h-auto">
                             <defs>
@@ -51,8 +51,8 @@ const StarKeepersSection = () => {
                         </svg>
                     </div>
                     {/* Button overlapping the bottom of the card */}
-                    <div className="relative -mt-10 md:-mt-20 z-20 flex justify-center md:block">
-                        <Link to="/story" className="btn-join font-bold uppercase whitespace-nowrap text-sm px-8 py-3 shadow-md" style={{ borderRadius: '10px' }}>
+                    <div className="relative -mt-24 md:-mt-40 z-20 flex justify-center">
+                        <Link to="/story" className="btn-join font-bold uppercase whitespace-nowrap text-lg md:text-xl px-14 py-4 shadow-xl hover:scale-105 active:scale-95 transition-all duration-300" style={{ borderRadius: '15px' }}>
                             READ OUR STORY
                         </Link>
                     </div>

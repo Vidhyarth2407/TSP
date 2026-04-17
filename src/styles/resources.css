@@ -27,7 +27,7 @@
     border-radius: 2rem;
     overflow: hidden;
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-    box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
     height: 100%;
     cursor: pointer;
 }
@@ -35,7 +35,7 @@
 
 .resource-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 
 .card-image-wrapper {
@@ -187,7 +187,7 @@
     border-radius: 2.5rem;
     overflow: hidden;
     margin-bottom: 4rem;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
 }
 
 .reader-featured-image-wrapper img {
@@ -209,8 +209,8 @@
     margin-bottom: 2rem;
 }
 
-.blog-content h1, 
-.blog-content h2, 
+.blog-content h1,
+.blog-content h2,
 .blog-content h3 {
     font-family: var(--font-heading);
     color: var(--color-dark-navy);
@@ -219,8 +219,13 @@
     margin-bottom: 1.5rem;
 }
 
-.blog-content h2 { font-size: 2.5rem; }
-.blog-content h3 { font-size: 2rem; }
+.blog-content h2 {
+    font-size: 2.5rem;
+}
+
+.blog-content h3 {
+    font-size: 2rem;
+}
 
 .blog-content img {
     border-radius: 2rem;
@@ -240,20 +245,35 @@
 }
 
 @media (max-width: 1024px) {
-    .reader-title { font-size: 2.5rem; }
+    .reader-title {
+        font-size: 2.5rem;
+    }
 }
 
 @media (max-width: 768px) {
-    .blog-reader-container { padding-top: 6rem; }
-    .reader-title { font-size: 2rem; }
-    .reader-meta { 
-        flex-direction: row; 
+    .blog-reader-container {
+        padding-top: 6rem;
+    }
+
+    .reader-title {
+        font-size: 2rem;
+    }
+
+    .reader-meta {
+        flex-direction: row;
         flex-wrap: wrap;
-        align-items: center; 
-        gap: 1.5rem 1rem; 
-        margin-bottom: 2.5rem; 
+        align-items: center;
+        gap: 1.5rem 1rem;
+        margin-bottom: 2.5rem;
         font-size: 0.9rem;
     }
-    .reader-featured-image-wrapper { border-radius: 1.5rem; margin-bottom: 2rem; }
-    .resources-grid { grid-template-columns: 1fr; }
+
+    .reader-featured-image-wrapper {
+        border-radius: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .resources-grid {
+        grid-template-columns: 1fr;
+    }
 }

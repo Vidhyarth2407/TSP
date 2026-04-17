@@ -181,11 +181,6 @@ const StoryPage = () => {
                     <div className="advisor-right">
                         <div className="advisor-card">
                             <img src={Aakriti} alt="Aakriti - Our Advisor" className="advisor-card-img" />
-                            <div className="advisor-card-info">
-                                <h4 className="advisor-name-text">AAKRITI MALIK</h4>
-                                <p className="advisor-role-text">Clinical Psychologist</p>
-                                <p className="advisor-board-text">New Zealand Psychologists Board</p>
-                            </div>
                         </div>
                     </div>
                 </div>

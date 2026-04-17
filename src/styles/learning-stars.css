@@ -353,7 +353,7 @@
     width: 100%;
     height: 100%;
     text-align: center;
-    transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: transform 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     transform-style: preserve-3d;
 }
 
@@ -370,7 +370,7 @@
     backface-visibility: hidden;
     border-radius: 1.5rem;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-    border: 2px solid transparent;
+    border: none;
 }
 
 @media (min-width: 1024px) {
@@ -382,22 +382,22 @@
 }
 
 .ls-flip-card-front {
-    background-color: transparent;
+    background-color: #FCF8F2;
+    /* Matching the light background of the creator section */
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .ls-flip-card-front img {
-    width: 100%;
-    height: auto;
+    width: 85%;
+    height: 85%;
     object-fit: contain;
-    transform: scale(1.2);
-    transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: transform 2s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .ls-flip-card:hover .ls-flip-card-front img {
-    transform: scale(1.25);
+    transform: scale(1.05);
 }
 
 .ls-flip-card-back {
@@ -405,7 +405,32 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.1), 0 10px 30px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Color utility classes for flip cards */
+.ls-color-yellow {
+    background-color: var(--color-yellow-gold) !important;
+}
+
+.ls-color-pink {
+    background-color: var(--color-hot-pink) !important;
+}
+
+.ls-color-orange {
+    background-color: var(--color-red-orange) !important;
+}
+
+.ls-color-green {
+    background-color: var(--color-lime-green) !important;
+}
+
+.ls-color-teal {
+    background-color: var(--color-teal) !important;
+}
+
+.ls-color-purple {
+    background-color: var(--color-deep-purple) !important;
 }
 
 /* Inside the Program Section */
