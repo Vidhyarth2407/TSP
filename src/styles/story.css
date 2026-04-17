@@ -776,9 +776,9 @@
         /* Reduced from 2rem */
     }
 
-    .charvi-right p {
-        text-align: justify;
-    }
+    /* .charvi-right p {
+        /* text-align: justify; */
+    /* } */
 
     .charvi-img {
         width: 100%;

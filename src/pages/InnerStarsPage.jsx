@@ -617,7 +617,7 @@ const InnerStarsPage = () => {
                                         </span>
                                     </button>
                                     <div className={`ls-faq-answer overflow-hidden transition-all duration-300 ${openFaq === index ? 'max-h-[500px] pb-3' : 'max-h-0'}`}>
-                                        <p className="text-[#4A4A4A] text-[1rem] lg:text-[1.1rem] font-body font-light leading-relaxed text-justify" style={{ textJustify: 'inter-word' }}>
+                                        <p className="text-[#4A4A4A] text-[1rem] lg:text-[1.1rem] font-body font-light leading-relaxed" style={{ textJustify: 'inter-word' }}>
                                             {faq.a}
                                         </p>
                                     </div>

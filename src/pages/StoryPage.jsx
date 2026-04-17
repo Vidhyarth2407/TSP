@@ -151,9 +151,9 @@ const StoryPage = () => {
                         <p>As a teacher with a background in psychology, I've always noticed what's missing in education: <strong>the human skills of character, values, and healthy<br /> habits of&nbsp;mind.</strong></p>
                         <p>This belief is deeply&nbsp;personal.</p>
                         <p>As a teenager and young adult, I lived through a life-threatening medical condition that tested resilience and grit more than&nbsp;once.</p>
-                        <p>The Starry Path grew from that lived experience and one simple question:<br />If we teach children how the world works, <strong>why not also teach them how<br />their mind&nbsp;works?</strong></p>
+                        <p>The Starry Path grew from that lived experience and one simple question:<br />If we teach children how the world works, <strong>why not also teach them how their mind&nbsp;works?</strong></p>
                         <p>These aren't skills for later. They're skills for&nbsp;childhood.</p>
-                        <p><strong>By bringing psychology and education together, </strong>I created a practical,<br />child-friendly way to help children understand their thoughts, emotions, and connections. The foundations that shape how they learn and who they&nbsp;become.</p>
+                        <p><strong>By bringing psychology and education together, </strong>I created a practical, child-friendly way to help children understand their thoughts, emotions, and connections. The foundations that shape how they learn and who they&nbsp;become.</p>
                         <p>As a mum, what I want most for my child is simple:<br />to understand herself, to try again, and to act with&nbsp;courage.</p>
                         <p>That is the purpose of The Starry Path:<br /><strong>helping children understand themselves and grow with&nbsp;strength.</strong></p>
                     </div>

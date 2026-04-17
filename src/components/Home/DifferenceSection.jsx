@@ -34,19 +34,19 @@ const DifferenceSection = () => {
                         <ul className="space-y-4 font-[var(--font-accent)] text-lg" style={{ color: '#122f52', wordSpacing: '-0.02em', hyphens: 'auto', wordBreak: 'break-word', textJustify: 'inter-word' }}>
                             <li className="flex items-start gap-4">
                                 <span className="mt-1 text-xl leading-none flex-shrink-0" style={{ color: '#122f52' }}>•</span>
-                                <span className="leading-tight text-justify">Understanding self and thinking frameworks</span>
+                                <span className="leading-tight">Understanding self and thinking frameworks</span>
                             </li>
                             <li className="flex items-start gap-4">
                                 <span className="mt-1 text-xl leading-none flex-shrink-0" style={{ color: '#122f52' }}>•</span>
-                                <span className="leading-tight text-justify">Evidence-aligned tools that turn research into everyday practice</span>
+                                <span className="leading-tight">Evidence-aligned tools that turn research into everyday practice</span>
                             </li>
                             <li className="flex items-start gap-4">
                                 <span className="mt-1 text-xl leading-none flex-shrink-0" style={{ color: '#122f52' }}>•</span>
-                                <span className="leading-tight text-justify">Healthy habits of mind</span>
+                                <span className="leading-tight">Healthy habits of mind</span>
                             </li>
                             <li className="flex items-start gap-4">
                                 <span className="mt-1 text-xl leading-none flex-shrink-0" style={{ color: '#122f52' }}>•</span>
-                                <span className="leading-tight text-justify">Skills that sustain learning far beyond the classroom</span>
+                                <span className="leading-tight">Skills that sustain learning far beyond the classroom</span>
                             </li>
                         </ul>
                     </div>

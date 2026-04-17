@@ -285,9 +285,7 @@
 
 .why-literacy-content p {
     font-family: var(--font-accent);
-    text-align: justify;
-    hyphens: auto;
-    -webkit-hyphens: auto;
+    text-align: left;
 }
 
 /* Shared UI Components */
@@ -579,8 +577,8 @@
     .ls-intentional-info-text {
         white-space: normal !important;
         max-width: 95% !important;
-        text-align: justify !important;
-        margin-left: rem !important;
+        text-align: center !important;
+        margin-left: 0 !important;
     }
 }
 
@@ -982,9 +980,7 @@
     }
 
     .ls-diff-content p {
-        text-align: justify;
-        hyphens: auto;
-        -webkit-hyphens: auto;
+        text-align: left;
     }
 
     .ls-diff-image-wrapper {
