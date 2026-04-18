@@ -171,7 +171,7 @@
 
 @media (max-width: 768px) {
     .inner-stars-card {
-        padding: 3rem 1.5rem 2rem;
+        padding: 3rem 2rem 2rem;
     }
 
     .is-title {
@@ -189,7 +189,7 @@
     }
 
     .inner-stars-card {
-        padding: 2.5rem 1.5rem;
+        padding: 2.5rem 2rem;
         border-radius: 30px;
     }
 
@@ -243,7 +243,7 @@
     }
 
     .carousel-card {
-        padding: 2.5rem 1.5rem !important;
+        padding: 2.5rem 2rem !important;
         gap: 2rem !important;
         height: auto !important;
     }
@@ -372,12 +372,12 @@
 
 @media (max-width: 768px) {
     .testimonial-container {
-        padding: 4rem 1.5rem;
+        padding: 4rem 2rem;
         border-radius: 30px;
     }
 
     .testimonial-card {
-        padding: 4rem 1.5rem;
+        padding: 4rem 2rem;
         border-radius: 20px;
     }
 

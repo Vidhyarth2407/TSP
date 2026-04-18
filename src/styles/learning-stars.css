@@ -9,7 +9,7 @@
     background-color: var(--color-dark-navy);
 }
 
-.header.header-learning-stars ~ .content {
+.header.header-learning-stars~.content {
     background-color: var(--color-dark-navy);
 }
 

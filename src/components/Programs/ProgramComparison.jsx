@@ -4,12 +4,12 @@ import MobilePuzzleImg from '../../assets/images/Programs/Mobile Puzzle.svg';
 
 const ProgramComparison = () => {
     return (
-        <section className="max-w-7xl mx-auto px-6 py-12 text-center">
+        <section className="max-w-7xl mx-auto px-8 py-12 text-center">
             <h2 className="text-3xl md:text-4xl font-[var(--font-heading)] text-[var(--color-dark-navy)] mb-12 uppercase font-bold">
                 WHICH PROGRAM IS RIGHT FOR YOUR CHILD?
             </h2>
 
-            <div className="w-full max-w-4xl mx-auto flex flex-col items-center justify-center my-8 md:my-12 px-0 md:px-4" data-aos="zoom-in">
+            <div className="w-full max-w-4xl mx-auto flex flex-col items-center justify-center my-8 md:my-12 px-8 md:px-4" data-aos="zoom-in">
                 {/* Desktop Version */}
                 <img
                     src={PuzzleImg}
@@ -27,7 +27,7 @@ const ProgramComparison = () => {
                 </svg>
             </div>
 
-            <div className="w-full max-w-3xl mx-auto my-8 divide-y divide-gray-200 border-t border-gray-200" data-aos="fade-up">
+            <div className="w-full max-w-3xl mx-auto my-8 divide-y divide-gray-200 border-t border-gray-200 px-8 md:px-0" data-aos="fade-up">
                 <div className="py-6">
                     <h5 className="text-xl font-[var(--font-heading)] text-[var(--color-dark-navy)] uppercase font-bold">SOME CHILDREN BENEFIT <br className='md:hidden' /> FROM BOTH</h5>
                 </div>

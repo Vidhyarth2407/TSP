@@ -237,7 +237,8 @@
 
 @media (max-width: 768px) {
     .programs-hero {
-        padding: 2rem 1rem;
+        padding: 2rem 2rem;
+        /* Matches px-8 (2rem) as requested */
         min-height: auto;
     }
 
@@ -258,7 +259,8 @@
         flex-direction: column;
         text-align: center;
         gap: 2rem;
-        padding: 2rem 1rem;
+        padding: 2rem 2rem;
+        /* Standardized to px-8 padding */
     }
 
     .comparison-section {

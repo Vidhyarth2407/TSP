@@ -297,7 +297,7 @@ const InnerStarsPage = () => {
 
             {/* Why Strengths Matter Section */}
             <section className="why-carousel-section is-standard-section-py overflow-hidden">
-                <div className="max-w-[1280px] mx-auto px-6 relative h-auto">
+                <div className="max-w-[1280px] mx-auto px-8 relative h-auto">
                     <div className="carousel-card bg-white rounded-[2rem] p-8 md:p-12 lg:p-16 h-auto flex flex-col lg:flex-row items-center gap-8 lg:gap-24 relative overflow-hidden shadow-sm">
 
                         <div className="flex-1 order-2 lg:order-1 flex flex-col w-full h-full">
@@ -376,7 +376,7 @@ const InnerStarsPage = () => {
 
             {/* Life Skills Section */}
             <section className="life-skills-section is-standard-section-py bg-[var(--color-white)] text-center">
-                <div className="max-w-[1280px] mx-auto px-6">
+                <div className="max-w-[1280px] mx-auto px-8">
                     <div data-aos="fade-up">
                         <h2 className="is-section-title" style={{ textTransform: 'none' }}>Life Skills in Education</h2>
                         <p className="life-skills-subtitle text-[var(--color-grey-text)] text-lg md:text-xl max-w-2xl mx-auto opacity-80 mb-8 md:mb-12 leading-[1.1]">
@@ -403,7 +403,7 @@ const InnerStarsPage = () => {
 
             {/* What Children Learn Section */}
             <section className="what-children-learn-section is-standard-section-py">
-                <div className="max-w-[1280px] mx-auto px-6">
+                <div className="max-w-[1280px] mx-auto px-8">
                     <div data-aos="fade-up" className="text-center mb-8 lg:mb-12">
                         <h2 className="is-section-title">WHAT CHILDREN LEARN</h2>
                     </div>
@@ -463,7 +463,7 @@ const InnerStarsPage = () => {
 
             {/* Inside a Lesson Section */}
             <section className="inside-a-lesson-section is-standard-section-py">
-                <div className="max-w-[1280px] mx-auto px-6">
+                <div className="max-w-[1280px] mx-auto px-8">
                     <div data-aos="fade-up" className="text-center mb-8 lg:mb-12">
                         <h2 className="is-section-title" style={{ color: 'var(--color-dark-navy)', textTransform: 'none' }}>INSIDE A LESSON</h2>
                     </div>
@@ -481,7 +481,7 @@ const InnerStarsPage = () => {
 
             {/* How Different Section */}
             <section className="how-different-section is-standard-section-py">
-                <div className="max-w-[1280px] mx-auto px-6">
+                <div className="max-w-[1280px] mx-auto px-8">
                     <div className="bg-[var(--color-dark-navy)] rounded-[2.5rem] lg:rounded-[4rem] px-8 py-10 lg:px-16 lg:py-16 flex flex-col shadow-lg" data-aos="fade-up">
                         <div className="text-left md:text-center mb-8 md:mb-12">
                             <h2 className="is-diff-title">HOW INNER STARS <br className='md:hidden' /> IS DIFFERENT</h2>
@@ -507,7 +507,7 @@ const InnerStarsPage = () => {
 
             {/* Two Ways To Join Section */}
             <section className="two-ways-to-join-section is-standard-section-py bg-white">
-                <div className="max-w-[1000px] mx-auto px-6">
+                <div className="max-w-[1000px] mx-auto px-8">
                     <div className="text-center mb-0 lg:mb-4" data-aos="fade-up">
                         <h2 className="ls-join-section-title">TWO WAYS TO JOIN</h2>
                     </div>
@@ -548,7 +548,7 @@ const InnerStarsPage = () => {
 
             {/* Enrollment Section */}
             <section id="enrollment-form" className="ls-enrollment-section is-standard-section-py">
-                <div className="max-w-[800px] mx-auto px-6">
+                <div className="max-w-[800px] mx-auto px-8">
                     <div className="text-center mb-12" data-aos="fade-up">
                         <h2 className="is-enroll-title">SECURE YOUR CHILD'S PLACE</h2>
                     </div>
@@ -575,7 +575,7 @@ const InnerStarsPage = () => {
             </section>
 
             <section className="ls-faq-section py-12 bg-white">
-                <div className="max-w-[1200px] mx-auto px-6">
+                <div className="max-w-[1200px] mx-auto px-8">
                     <div className="ls-faq-container bg-[#FCF8F2] rounded-[40px] p-8 lg:p-14 shadow-xl" data-aos="fade-up">
                         <h2 className="ls-faq-title">
                             FREQUENTLY ASKED QUESTIONS
@@ -630,7 +630,7 @@ const InnerStarsPage = () => {
 
             {/* Testimonial Section */}
             <section className="is-testimonial-section pt-4 pb-16 lg:pt-6 lg:pb-24">
-                <div className="max-w-[1200px] mx-auto px-6">
+                <div className="max-w-[1200px] mx-auto px-8">
                     <div className="testimonial-container relative bg-[#002147] rounded-[2.5rem] p-10 lg:p-20 overflow-hidden" data-aos="zoom-in">
                         <div className="relative flex flex-col items-center">
                             {testimonials.map((testimonial, index) => (

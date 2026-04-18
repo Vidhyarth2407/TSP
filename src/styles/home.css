@@ -131,7 +131,7 @@
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
     .section {
-        padding: 40px 1rem;
+        padding: 40px 2rem;
     }
 
     .section-title {
@@ -140,8 +140,8 @@
     }
 
     .hero-section {
-        padding: 2rem 5%;
-        /* Increased horizontal margin for tablet/mobile */
+        padding: 2rem 2rem;
+        /* Matches px-8 (2rem) as requested */
         min-height: auto;
     }
 
@@ -169,12 +169,12 @@
     }
 
     .difference-section {
-        padding: 2rem 1rem;
+        padding: 2rem 2rem;
         margin: 2rem auto;
     }
 
     .star-keepers-section {
-        padding: 2rem 1rem;
+        padding: 2rem 2rem;
     }
 
     .big-ideas-section {

@@ -4,7 +4,7 @@ import BoxImg from '../../assets/images/Programs/Box.svg';
 const ProgramsHero = () => {
     return (
         <section className="max-w-[1280px] mx-4 md:mx-10 xl:mx-auto mt-6">
-            <div className="bg-[#002147] text-white rounded-xl md:rounded-2xl py-8 md:py-12 lg:py-16 px-6 md:px-12 lg:px-16 flex flex-col lg:flex-row items-center gap-10 lg:gap-16 shadow-2xl">
+            <div className="bg-[#002147] text-white rounded-xl md:rounded-2xl py-8 md:py-12 lg:py-16 px-8 md:px-12 lg:px-16 flex flex-col lg:flex-row items-center gap-10 lg:gap-16 shadow-2xl">
                 <div className="flex-1 w-full flex justify-center lg:justify-start" data-aos="fade-right">
                     <img
                         src={BoxImg}

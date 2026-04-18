@@ -6,12 +6,12 @@ const InnerStarsProgram = () => {
     return (
         <>
             <div className="max-w-[1280px] mx-4 md:mx-10 xl:mx-auto mt-12 mb-8" data-aos="fade-up">
-                <div className="w-full py-4 md:py-6 bg-[var(--color-orange)] text-white text-lg md:text-3xl font-[var(--font-heading)] text-center uppercase rounded-xl md:rounded-2xl shadow-2xl px-4 flex items-center justify-center font-bold">
+                <div className="w-full py-4 md:py-6 bg-[var(--color-orange)] text-white text-lg md:text-3xl font-[var(--font-heading)] text-center uppercase rounded-xl md:rounded-2xl shadow-2xl px-8 flex items-center justify-center font-bold">
                     Life skills for every child. <br className='md:hidden' /> Ages 5-12.
                 </div>
             </div>
 
-            <section className="max-w-7xl mx-auto px-6 py-8 flex flex-col md:flex-row items-center gap-10 md:gap-24">
+            <section className="max-w-7xl mx-auto px-8 py-8 flex flex-col md:flex-row items-center gap-10 md:gap-24">
                 <div className="flex-1 flex flex-col items-center text-center" data-aos="zoom-in">
                     <img src={InnerStarsImg} alt="Inner Stars" className="w-[240px] md:w-[360px] h-auto mb-4 drop-shadow-xl" />
                 </div>

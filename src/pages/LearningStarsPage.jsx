@@ -354,7 +354,7 @@ const LearningStarsPage = () => {
 
             {/* Why Literacy Support Matters Section */}
             <section className="why-literacy-section py-12 lg:py-16">
-                <div className="max-w-[1200px] mx-auto px-6 flex flex-col md:flex-row items-center gap-16 lg:gap-24">
+                <div className="max-w-[1200px] mx-auto px-8 flex flex-col md:flex-row items-center gap-16 lg:gap-24">
                     {/* Left: Light Illustration */}
                     <div className="flex-1 flex justify-center" data-aos="fade-up">
                         <img src={LightSvg} alt="Literacy Support Illustration" className="ls-light-svg w-full max-w-[450px]" />
@@ -393,7 +393,7 @@ const LearningStarsPage = () => {
 
             {/* What Children Learn Section */}
             <section className="ls-learn-section py-12 lg:py-16 bg-[var(--color-dark-navy)]">
-                <div className="max-w-[1200px] mx-auto px-6">
+                <div className="max-w-[1200px] mx-auto px-8">
                     <div className="text-center mb-10 lg:mb-16" data-aos="fade-up">
                         <h2 className="ls-learn-title">WHAT CHILDREN LEARN</h2>
                         <p className="ls-learn-subtitle mt-4 text-white opacity-90 text-lg md:text-xl font-body">
@@ -536,7 +536,7 @@ const LearningStarsPage = () => {
 
             {/* Research Section with Carousel */}
             <section className="ls-research-section py-12 lg:py-16 bg-[var(--color-dark-navy)]">
-                <div className="max-w-[1300px] mx-auto px-6">
+                <div className="max-w-[1300px] mx-auto px-8">
                     <div className="ls-research-carousel-wrapper">
                         {researchSlides.map((slide, index) => (
                             <div
@@ -593,7 +593,7 @@ const LearningStarsPage = () => {
 
             {/* Why I Created Learning Stars Section */}
             <section className="ls-creator-section py-12 lg:py-16 bg-[var(--color-dark-navy)]">
-                <div className="max-w-[1200px] mx-auto px-6">
+                <div className="max-w-[1200px] mx-auto px-8">
                     <div className="ls-creator-container relative bg-[#FCF8F2] rounded-[30px] flex flex-col lg:flex-row shadow-lg">
                         {/* Left Side: Image */}
                         <div className="ls-creator-image-wrapper p-6 lg:p-0 lg:w-[43%] z-10 lg:-ml-11 lg:-mr-12 lg:-my-24 flex items-center shrink-0">
@@ -626,7 +626,7 @@ const LearningStarsPage = () => {
 
             {/* Difference From Tutoring Section */}
             <section className="ls-difference-section pt-4 pb-12 lg:py-16 bg-[var(--color-dark-navy)] text-white overflow-hidden">
-                <div className="max-w-[1300px] mx-auto px-6">
+                <div className="max-w-[1300px] mx-auto px-8">
                     <h2 className="ls-difference-title" data-aos="fade-up">
                         HOW LEARNING STARS IS DIFFERENT <br className='hidden lg:block' /> FROM TUTORING
                     </h2>
@@ -675,7 +675,7 @@ const LearningStarsPage = () => {
 
             {/* Ready for Clarity Section */}
             <section className="ls-clarity-section py-12 lg:py-16 bg-[var(--color-dark-navy)] mt-0 mb-0">
-                <div className="max-w-[1200px] mx-auto px-6">
+                <div className="max-w-[1200px] mx-auto px-8">
                     <div className="ls-clarity-container bg-[#5E3FB2] rounded-[40px] p-12 lg:p-20 flex flex-col lg:flex-row items-center gap-12 lg:gap-20 shadow-2xl" data-aos="zoom-in">
                         {/* Left Side: Asset */}
                         <div className="ls-clarity-image-wrapper w-full lg:w-1/2 flex justify-center">
@@ -714,7 +714,7 @@ const LearningStarsPage = () => {
 
             {/* Assessment Booking Form Section */}
             <section id="assessment-section" className="ls-booking-section py-12 lg:py-16 bg-[var(--color-dark-navy)]">
-                <div className="max-w-[1000px] mx-auto px-6" data-aos="fade-up">
+                <div className="max-w-[1000px] mx-auto px-8" data-aos="fade-up">
                     <form className="ls-booking-form space-y-6" onSubmit={handleAssessmentSubmit}>
                         <div className="text-center mb-10">
                             <h2 className="ls-booking-title">
@@ -802,7 +802,7 @@ const LearningStarsPage = () => {
 
             {/* FAQ Section */}
             <section className="ls-faq-section py-12 bg-transparent">
-                <div className="max-w-[1200px] mx-auto px-6">
+                <div className="max-w-[1200px] mx-auto px-8">
                     <div className="ls-faq-container" data-aos="fade-up">
                         <h2 className="ls-faq-title">
                             FREQUENTLY ASKED QUESTIONS
@@ -864,7 +864,7 @@ const LearningStarsPage = () => {
             </section>
 
             {/* Discovery Links */}
-            <div className="max-w-[1200px] mx-auto px-6 py-8 text-center border-t border-white/10">
+            <div className="max-w-[1200px] mx-auto px-8 py-8 text-center border-t border-white/10">
                 <div className="flex flex-wrap justify-center gap-x-8 gap-y-4 text-white/60 text-sm uppercase tracking-widest font-bold">
                     <Link to="/" className="hover:text-[var(--color-yellow-gold)] transition-colors">Homepage</Link>
                     <Link to="/programs" className="hover:text-[var(--color-yellow-gold)] transition-colors">Programs</Link>

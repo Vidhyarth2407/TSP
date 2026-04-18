@@ -4,7 +4,7 @@ import Star from '../../assets/images/Homepage/Star.svg';
 
 const StarSection = () => {
     return (
-        <section className="bg-transparent py-16 px-4 max-w-[1200px] mx-auto text-left relative">
+        <section className="bg-transparent py-16 px-8 max-w-[1200px] mx-auto text-left relative">
             <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 max-w-[1000px] mx-auto">
 
                 {/* Left: Star Image */}
