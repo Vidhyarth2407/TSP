@@ -438,7 +438,7 @@ const LearningStarsPage = () => {
             {/* Inside the Program Section */}
             <section className="ls-inside-program-section py-12 lg:py-16 bg-[var(--color-dark-navy)]">
                 <div className="ls-inside-wrapper">
-                    <h2 className="ls-inside-title hidden lg:block" data-aos="fade-up">INSIDE THE PROGRAM</h2>
+                    <h2 className="ls-inside-title" data-aos="fade-up">INSIDE THE PROGRAM</h2>
 
                     <div className="ls-inside-content hidden lg:block">
                         {/* Left: Program Asset (Books) */}

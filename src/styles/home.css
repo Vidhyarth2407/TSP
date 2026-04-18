@@ -1,6 +1,8 @@
 /* Home Page Global */
 .home-page {
     width: 100%;
+    background-color: var(--color-off-white);
+    min-height: 100vh;
 }
 
 /* Hero Section */
@@ -8,7 +10,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    background-color: var(--color-bg);
+    background-color: transparent;
     padding: 2rem 5%;
     /* Adds margin on left and right */
 }
@@ -88,7 +90,7 @@
 
 /* Difference Section */
 .difference-section {
-    background-color: var(--color-bg);
+    background-color: var(--color-off-white);
     color: var(--color-text);
     padding: 4rem;
     border-radius: 20px;
@@ -108,7 +110,7 @@
 
 /* Star Keepers */
 .star-keepers-section {
-    background-color: var(--color-bg);
+    background-color: var(--color-off-white);
     color: var(--color-text);
     padding: 4rem 1rem;
     border-radius: 20px;

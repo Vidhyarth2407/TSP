@@ -8,6 +8,8 @@ const Header = () => {
     const [mobileBookNowOpen, setMobileBookNowOpen] = useState(false);
     const location = useLocation();
     const isLearningStars = location.pathname.includes('/learning-stars');
+    const isInnerStars = location.pathname.includes('/inner-stars');
+    const isOffWhiteBg = location.pathname === '/' || location.pathname.includes('/resources');
 
     const openInnerStarsCalendly = (e) => {
         e.preventDefault();
@@ -28,7 +30,7 @@ const Header = () => {
     };
 
     return (
-        <header className={`header ${isLearningStars ? 'header-learning-stars' : ''}`}>
+        <header className={`header ${isLearningStars ? 'header-learning-stars' : ''} ${isInnerStars ? 'header-white' : ''}`}>
             <div className="header-container">
                 <Link to="/" className="logo-container">
                     <img src={Logo} alt="The Starry Path" className="logo" />
@@ -50,7 +52,16 @@ const Header = () => {
                         <li><Link to="/story" onClick={() => setIsMenuOpen(false)}>Story</Link></li>
                         <li className="nav-item-dropdown group">
                             <div className="flex items-center justify-between w-full md:w-auto">
-                                <Link to="/programs" onClick={() => setIsMenuOpen(false)}>Programs</Link>
+                                <span
+                                    className="cursor-pointer"
+                                    onClick={() => {
+                                        if (window.innerWidth <= 768) {
+                                            setMobileProgramsOpen(!mobileProgramsOpen);
+                                        }
+                                    }}
+                                >
+                                    Programs
+                                </span>
                                 <button
                                     className="md:hidden ml-4 p-2"
                                     onClick={(e) => { e.preventDefault(); setMobileProgramsOpen(!mobileProgramsOpen); }}

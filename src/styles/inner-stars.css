@@ -3,6 +3,15 @@
     min-height: 100vh;
 }
 
+/* Header Styles for Inner Stars Page */
+.header.header-white {
+    background-color: white !important;
+}
+
+.header.header-white ~ .content {
+    background-color: white !important;
+}
+
 /* Standard Section Spacing */
 .is-standard-section-py {
     padding-top: 4rem !important;

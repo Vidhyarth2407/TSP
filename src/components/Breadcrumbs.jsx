@@ -5,6 +5,7 @@ import SEO from './SEO';
 const Breadcrumbs = () => {
     const location = useLocation();
     const isLearningStars = location.pathname.includes('/learning-stars');
+    const isOffWhiteBg = location.pathname === '/' || location.pathname.includes('/resources');
     const pathnames = location.pathname.split('/').filter((x) => x);
 
     // Don't show breadcrumbs on the homepage
@@ -27,7 +28,7 @@ const Breadcrumbs = () => {
     let currentPath = '';
     pathnames.forEach((name, index) => {
         currentPath += `/${name}`;
-        
+
         // Skip 'blogs-post' from breadcrumbs as requested
         if (name === 'blogs-post') {
             return;
@@ -53,8 +54,8 @@ const Breadcrumbs = () => {
             "@type": "ListItem",
             "position": index + 1,
             "name": item.label,
-            "item": item.to === '/' 
-                ? "https://thestarrypath.com.au/" 
+            "item": item.to === '/'
+                ? "https://thestarrypath.com.au/"
                 : `https://thestarrypath.com.au${item.to}`
         }))
     };

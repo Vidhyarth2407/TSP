@@ -8,6 +8,7 @@
     left: 0;
 }
 
+
 .header-container {
     display: flex;
     align-items: center;
@@ -18,7 +19,7 @@
 
 .logo {
     height: auto;
-    width: 120px;
+    width: 150px;
     display: block;
 }
 
@@ -35,6 +36,7 @@
 }
 
 .nav-menu a,
+.nav-menu span,
 .nav-disabled {
     color: var(--color-deep-purple);
     text-decoration: none;
@@ -45,7 +47,8 @@
     transition: color 0.3s ease;
 }
 
-.nav-menu a {
+.nav-menu a,
+.nav-menu span {
     cursor: pointer;
 }
 
@@ -53,7 +56,8 @@
     cursor: default;
 }
 
-.nav-menu a:hover {
+.nav-menu a:hover,
+.nav-menu span:hover {
     color: var(--color-yellow-gold);
 }
 
@@ -641,8 +645,8 @@
 .content {
     flex: 1;
     width: 100%;
-    padding-top: 100px;
-    /* Space for fixed header */
+    padding-top: 140px;
+    /* Space for larger fixed header */
 }
 
 .programs-page {
@@ -738,6 +742,7 @@
     position: relative;
     z-index: 10;
 }
+
 
 .breadcrumbs-container {
     max-width: 1200px;
