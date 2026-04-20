@@ -361,7 +361,7 @@ const InnerStarsPage = () => {
                         </div>
                     </div>
 
-                    <div className="carousel-dots flex justify-center gap-4 py-8">
+                    <div className="carousel-dots flex justify-center gap-4 py-4">
                         {slides.map((_, index) => (
                             <button
                                 key={index}
