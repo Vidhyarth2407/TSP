@@ -645,10 +645,10 @@
     .sneak-peek-btn {
         top: 48% !important;
         /* Move down for mobile */
-        font-size: 0.5rem !important;
-        padding: 0.2rem 0.4rem !important;
-        border-width: 1px !important;
+        font-size: 0.42rem !important;
+        padding: 0.15rem 0.35rem !important;
         left: 65% !important;
+        border-radius: 5px !important;
         /* Move more left for mobile */
     }
 
