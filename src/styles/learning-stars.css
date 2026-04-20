@@ -442,7 +442,7 @@
 
 /* Inside the Program Section */
 .ls-inside-program-section {
-    padding: 3rem 0 1rem 0 !important;
+    padding: 0rem 0 1rem 0 !important;
     overflow: hidden;
     background-color: var(--color-dark-navy);
 }
