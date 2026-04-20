@@ -17,13 +17,13 @@ const ProgramsHero = () => {
                         <h1 className="sr-only">
                             Programs
                         </h1>
-                        <h2 className="font-[var(--font-heading)] text-[var(--color-yellow-gold)] text-2xl md:text-4xl lg:text-6xl mb-4 leading-tight lg:leading-tight tracking-tight font-bold text-center md:text-left uppercase">
+                        <h2 className="programs-hero-title text-[var(--color-yellow-gold)] mb-4 tracking-tight text-center md:text-left">
                             INNER STRENGTHS <br className="xl:hidden" /> THAT GUIDE.
                         </h2>
-                        <h3 className="font-[var(--font-heading)] text-[var(--color-teal)] text-2xl md:text-4xl lg:text-6xl mb-6 md:mb-8 leading-tight lg:leading-tight tracking-tight font-bold text-center md:text-left uppercase">
+                        <h3 className="programs-hero-title text-[var(--color-teal)] mb-6 md:mb-8 tracking-tight text-center md:text-left">
                             LITERACY SKILLS <br className="xl:hidden" /> THAT EMPOWER.
                         </h3>
-                        <p className="text-lg md:text-xl lg:text-2xl font-[var(--font-accent)] leading-relaxed text-white max-w-lg lg:mx-0 opacity-95 text-center md:text-left">
+                        <p className="text-md md:text-lg lg:text-xl font-[var(--font-accent)] leading-relaxed text-white max-w-lg lg:mx-0 opacity-95 text-center md:text-left">
                             At The Starry Path, children grow <br className="xl:hidden" /> inner strengths through the <span className="font-bold">Inner Stars Program</span> and receive targeted literacy support through <span className="font-bold">Learning Stars</span>.
                         </p>
                     </div>
