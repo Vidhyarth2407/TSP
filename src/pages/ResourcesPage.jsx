@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { blogService } from '../services/blogService';
 import '../styles/resources.css';
-import HomepageBanner from '../assets/images/Homepage/Homepage Banner.svg';
+// import HomepageBanner from '../assets/images/Homepage/Homepage Banner.svg';
+import ResourcesBanner from '../assets/resources/Resources Banner.svg'
 import SEO from '../components/SEO';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -51,7 +52,7 @@ const ResourcesPage = () => {
             <div className="resources-hero container mx-auto px-4 mb-2" data-aos="fade-up">
                 <div className="flex flex-col items-center text-center">
                     <div className="puzzle-hero flex justify-center mb-12 w-full">
-                        <img src={HomepageBanner} alt="The Starry Path Banner" className="max-w-6xl w-full h-auto" />
+                        <img src={ResourcesBanner} alt="The Starry Path Banner" className="max-w-6xl w-full h-auto" />
                     </div>
                     <h1 className="text-4xl md:text-5xl font-bold text-[var(--color-navy)] tracking-[0.1em] mb-4">Resources to Support Your Child</h1>
                     <div className="w-24 h-1.5 bg-[var(--color-hot-pink)] rounded-full mb-8"></div>
