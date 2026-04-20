@@ -51,8 +51,8 @@ const ResourcesPage = () => {
 
             <div className="resources-hero container mx-auto px-4 mb-0" data-aos="fade-up">
                 <div className="flex flex-col items-center text-center">
-                    <div className="puzzle-hero flex justify-center mb-2 w-full pl-10 md:pl-64">
-                        <img src={ResourcesBanner} alt="The Starry Path Banner" className="w-[125%] md:w-full max-w-none md:max-w-7xl h-auto mx-auto transform translate-x-[2%]" />
+                    <div className="puzzle-hero flex justify-center mb-2 w-full pl-6 md:pl-24 lg:pl-64">
+                        <img src={ResourcesBanner} alt="The Starry Path Banner" className="w-[125%] md:w-[110%] lg:w-full max-w-none md:max-w-5xl lg:max-w-7xl h-auto mx-auto transform translate-x-[2%]" />
                     </div>
                     <br className='hidden md:block' /><br className='hidden md:block' />
                     <h1 className="text-2xl md:text-5xl lg:text-6xl font-bold text-[var(--color-navy)] tracking-tight uppercase mb-4">Resources to Support <br className='block md:hidden' /> Your Child</h1>

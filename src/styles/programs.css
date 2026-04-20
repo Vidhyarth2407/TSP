@@ -283,3 +283,68 @@
         /* Hide divider on mobile stack */
     }
 }
+
+/* iPad / Tablet Responsiveness (769px - 1100px) */
+@media (min-width: 769px) and (max-width: 1100px) {
+    .programs-hero {
+        padding: 4rem 3rem;
+        min-height: 450px;
+    }
+
+    .programs-hero-container {
+        gap: 2rem;
+    }
+
+    .programs-hero-text h1 {
+        font-size: 2.2rem;
+    }
+
+    .programs-hero-text h2 {
+        font-size: 1.6rem;
+    }
+
+    .programs-hero-image img {
+        max-width: 380px;
+    }
+
+    .program-section {
+        flex-direction: column;
+        text-align: center;
+        gap: 3rem;
+        padding: 3rem 2.5rem;
+    }
+
+    .program-visual img {
+        width: 280px;
+    }
+
+    .program-info {
+        width: 100%;
+        max-width: 650px;
+    }
+
+    .program-info h3 {
+        font-size: 2rem;
+    }
+
+    .program-info li {
+        text-align: left;
+    }
+
+    .comparison-section {
+        padding: 0 2rem;
+    }
+
+    .comparison-grid {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .box-orange, .box-navy {
+        border-radius: 25px;
+    }
+
+    .comparison-divider {
+        display: none;
+    }
+}

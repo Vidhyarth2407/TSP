@@ -934,3 +934,162 @@
         z-index: 2;
     }
 }
+
+/* iPad / Tablet Responsiveness (769px - 1100px) */
+@media (min-width: 769px) and (max-width: 1100px) {
+    .story-section {
+        padding: 3rem 2.5rem;
+    }
+
+    .path-section-container {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .path-text-content {
+        flex: 1;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .path-text-content h2 br {
+        display: none;
+    }
+
+    .path-image-content {
+        flex: 1;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .path-svg {
+        max-width: 650px;
+    }
+
+    .inner-world-card {
+        padding: 4rem 3rem;
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .inner-world-image,
+    .inner-world-text {
+        flex: 1;
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .inner-world-text h3 br {
+        display: none;
+    }
+
+    .charvi-section-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .charvi-left,
+    .charvi-right {
+        flex: 1;
+        width: 100%;
+        text-align: center;
+    }
+
+    .charvi-left {
+        align-items: center;
+    }
+
+    .charvi-img {
+        width: 100%;
+        max-width: 550px;
+        margin: 2rem auto 0 auto;
+        transform: scale(1.15);
+    }
+
+    .charvi-right p {
+        text-align: left;
+    }
+
+    .advisor-section-container {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 4rem;
+    }
+
+    .advisor-left,
+    .advisor-right {
+        flex: 1;
+        width: 100%;
+    }
+
+    .advisor-left {
+        text-align: left;
+    }
+
+    .advisor-logo-row {
+        justify-content: flex-start;
+        margin-top: 3rem;
+    }
+
+    .advisor-right {
+        justify-content: center;
+    }
+
+    .advisor-card {
+        margin: 80px auto 20px auto;
+    }
+
+    .guiding-content {
+        right: 5%;
+        width: 45%;
+    }
+
+    .guiding-content h2 {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .guiding-content h3 {
+        font-size: 1.15rem;
+        margin-bottom: 2rem;
+    }
+
+    .guiding-content p {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .guiding-btn-wrapper {
+        margin-top: -1.5rem;
+    }
+
+    .purpose-label-container {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 0 1.5rem;
+    }
+
+    .purpose-label-left {
+        border-radius: 15px 15px 0 0;
+        justify-content: center;
+        padding: 1.25rem 2rem;
+    }
+
+    .purpose-label-right {
+        border: 3px solid var(--color-lime-green);
+        border-top: none;
+        border-radius: 0 0 15px 15px;
+        margin-left: 0;
+        padding: 2rem 2rem;
+        text-align: center;
+    }
+
+    .purpose-label-right p {
+        font-size: 1.1rem;
+        text-align: center;
+        width: 100%;
+    }
+}

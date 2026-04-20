@@ -625,6 +625,171 @@
     }
 }
 
+/* Tablet / Medium Screen Optimization Range (768px - 1300px) */
+@media (min-width: 768px) and (max-width: 1300px) {
+
+    /* Inside the Program Section */
+    .ls-inside-wrapper {
+        padding: 0 2rem;
+    }
+
+    .ls-inside-title {
+        text-align: center !important;
+        padding-left: 0 !important;
+        width: 100%;
+        top: 0;
+        margin-bottom: 4rem !important;
+    }
+
+    .ls-inside-content {
+        gap: 2.5rem;
+        padding-top: 60px !important;
+        align-items: center;
+    }
+
+    .ls-program-asset {
+        width: 620px;
+        left: 100px;
+    }
+
+    .ls-program-asset img {
+        transform: scale(1.1);
+    }
+
+    .ls-kids-asset {
+        width: 380px;
+        left: -40px;
+        top: 0 !important;
+    }
+
+    .ls-kids-illustration-asset,
+    .ls-photo-asset {
+        transform: scale(1.1);
+    }
+
+    /* Intentional Teaching Approach */
+    .ls-intentional-section {
+        padding: 4rem 0 !important;
+    }
+
+    .ls-intentional-wrapper {
+        flex-direction: column-reverse !important;
+        gap: 0rem;
+    }
+
+    .ls-intentional-asset-container {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .ls-intentional-asset {
+        transform: scale(0.9);
+        transform-origin: center;
+    }
+
+    .ls-intentional-title {
+        margin-top: 0 !important;
+        margin-bottom: 2rem !important;
+    }
+
+    .ls-intentional-info-box {
+        margin-bottom: 1rem !important;
+    }
+
+    /* Research Section Tablet Horizontal Layout */
+    .ls-research-left,
+    .ls-research-right-carousel-wrapper {
+        flex: 0 0 50% !important;
+        width: 50%;
+        height: 100% !important;
+    }
+
+    .ls-research-container,
+    .ls-research-carousel-wrapper,
+    .ls-research-slide {
+        flex-direction: row !important;
+        height: 600px !important;
+        min-height: auto !important;
+        gap: 0;
+    }
+
+    .ls-navy-panel,
+    .ls-orange-panel,
+    .ls-white-panel,
+    .ls-yellow-panel {
+        border-radius: 40px 0 0 40px !important;
+        height: 100% !important;
+        padding: 3rem 2rem !important;
+    }
+
+    .ls-white-panel,
+    .ls-orange-panel,
+    .ls-yellow-panel {
+        border-radius: 0 40px 40px 0 !important;
+        border-left: none !important;
+        border-right: 2px solid #5E3FB2 !important;
+    }
+
+    .ls-icon-strip {
+        display: none !important;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%) scale(0.6) !important;
+        z-index: 500 !important;
+        width: 0;
+        height: 100%;
+        pointer-events: none;
+    }
+
+    .ls-icon-strip img {
+        min-height: 800px;
+        width: auto;
+        max-width: none;
+    }
+
+    .ls-research-right {
+        padding-left: 2rem !important;
+        /* Removed space for icons as they are hidden on tablet */
+    }
+
+    .ls-research-heading-reduced {
+        font-size: 1.5rem !important;
+        text-align: left;
+        margin-bottom: 1.5rem !important;
+    }
+
+    .ls-research-text {
+        text-align: left !important;
+        padding: 0 !important;
+        width: 100%;
+    }
+
+    .ls-research-bullets {
+        display: block;
+        text-align: left;
+        font-size: 0.9rem;
+    }
+
+    .ls-research-image-content {
+        padding: 1rem !important;
+        height: 100% !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Big Six Literacy Diagram / Reading Rope Tablet Scaling */
+    .ls-big-six-container,
+    .ls-rope-container {
+        transform: scale(0.6);
+        transform-origin: center;
+    }
+}
+
 /* Research Section */
 .ls-research-container {
     border-radius: 40px;
@@ -752,7 +917,7 @@
     width: 100%;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 767px) {
     .ls-inside-program-section {
         display: block !important;
     }
@@ -800,8 +965,6 @@
         transform: scale(1.1);
         transform-origin: center;
     }
-
-
 
     /* Intentional Teaching Approach Mobile Fixes */
     .ls-intentional-section {
@@ -974,6 +1137,7 @@
         text-align: left !important;
     }
 }
+
 
 /* Difference From Tutoring Section */
 .ls-difference-section {

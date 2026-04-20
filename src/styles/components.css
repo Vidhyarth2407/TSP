@@ -383,6 +383,36 @@
     }
 }
 
+/* iPad / Tablet Responsiveness (769px - 1100px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .header {
+        padding: 1rem 2rem;
+    }
+
+    .nav-menu ul {
+        gap: 1.25rem;
+    }
+
+    .nav-menu a,
+    .nav-menu span,
+    .nav-disabled {
+        font-size: 1.1rem;
+    }
+
+    .cta-container {
+        margin-left: 1.5rem;
+    }
+
+    .btn-join {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.95rem;
+    }
+
+    .logo {
+        width: 130px;
+    }
+}
+
 .btn-join {
     background: linear-gradient(90deg, #E91E63 0%, #673AB7 100%);
     color: white !important;

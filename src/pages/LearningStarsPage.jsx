@@ -440,7 +440,7 @@ const LearningStarsPage = () => {
                 <div className="ls-inside-wrapper">
                     <h2 className="ls-inside-title" data-aos="fade-up">INSIDE THE PROGRAM</h2>
 
-                    <div className="ls-inside-content hidden lg:block">
+                    <div className="ls-inside-content hidden md:block">
                         {/* Left: Program Asset (Books) */}
                         <div className="ls-inside-asset ls-program-asset" data-aos="fade-right">
                             <img src={InsideProgramSvg} alt="Inside the Program" />
@@ -462,7 +462,7 @@ const LearningStarsPage = () => {
                     </div>
 
                     {/* Mobile View: Single Integrated SVG */}
-                    <div className="ls-mobile-integrated-svg lg:hidden w-full flex justify-center px-1 mt-6" data-aos="zoom-in">
+                    <div className="ls-mobile-integrated-svg md:hidden w-full flex justify-center px-1 mt-6" data-aos="zoom-in">
                         <img src={InsideTheProgramSvg} alt="Inside the Program Overview" className="w-full max-w-[850px] h-auto drop-shadow-xl" />
                     </div>
                 </div>
