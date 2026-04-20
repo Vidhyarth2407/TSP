@@ -115,7 +115,7 @@ const StoryPage = () => {
                         <h3>But rarely do they <br className='md:hidden' /> learn about the world
                             within them.</h3>
                         <p className="sub-text">
-                            Understanding their inner world should be<br />
+                            Understanding their inner world should be
                             as essential as reading or numeracy.
                         </p>
 

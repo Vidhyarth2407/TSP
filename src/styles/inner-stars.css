@@ -643,12 +643,12 @@
     }
 
     .sneak-peek-btn {
-        top: 56% !important;
+        top: 48% !important;
         /* Move down for mobile */
         font-size: 0.5rem !important;
         padding: 0.2rem 0.4rem !important;
         border-width: 1px !important;
-        left: 67% !important;
+        left: 65% !important;
         /* Move more left for mobile */
     }
 
@@ -757,6 +757,8 @@
     .sneak-peek-btn {
         font-size: 0.85rem;
         padding: 0.5rem 1rem;
+        top: 18% !important;
+        left: 70.3% !important;
     }
 }
 
